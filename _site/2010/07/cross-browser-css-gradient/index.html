@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta name="description" content="meine erde" />
+    <meta name="author" content="Holger Just" />
+  
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+  
+    <title>Cross-browser CSS gradient || meine erde</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/pygments.css" />
+    <!--
+    <link rel="stylesheet" media="handheld" href="css/handheld.css" />
+    -->
+    
+    <link href="/feed.atom" rel="alternate" title="meine erde || Entries (Atom)" type="application/atom+xml" />
+  </head>
+  <!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
+  <!--[if IE 7 ]> <body class="ie ie7"> <![endif]-->
+  <!--[if IE 8 ]> <body class="ie ie8"> <![endif]-->
+  <!--[if IE 9 ]> <body class="ie ie9"> <![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!--> <body class="non-ie"> <!--<![endif]-->
+    <header>
+  <div id="navbar">
+  <ul class="sites">
+    <li><a href="http://dev.holgerjust.de">Home of Code</a></li>
+    <li><a class="active" href="http://meine-er.de">Blog</a></li>
+    <li><a href="http://hlgr.de">Tumblr</a></li>
+    <li><a href="http://holgerjust.de">About</a></li>
+  </ul>
+  
+  <ul class="actions">
+    <li><a href="http://dev.holgerjust.de">Sign In</a></li>
+  </ul>
+</div>
+
+<div id="title"><p>
+  <a href="/"><em>m</em>eine <em>e</em>rde</a>
+</p></div>
+
+</header>
+<div id="main">
+  <address class="vcard author">
+  <a class="url fn" href="http://meine-er.de">
+    Holger Just
+  </a>
+</address>
+
+<div id="post">
+  <h1>Cross-browser CSS gradient</h1>
+  <p>Recently, I released a new version of the Redmine <a href="http://dev.holgerjust.de/news/10">Checkout plugin</a>. This release sports a nifty protocol selector with buttons styled entirely in CSS (as good as it gets). To be able to support as many browsers as possibly while not having to fall back to pixel graphics I had to apply some tricks which I want to describe here.</p>
+
+<p><img src="/media/entry/2010/07/26/button_gradient.png" alt="Button with gradient" class="left" /> The buttons take most of their appearance from a background gradient with a light color at the top and a darker color at the bottom. This gives them some kind of three-dimensional effect compared to the plain-colored background. We are going to style the unselected button on the right. The left selected button is styled equivalent with just some different colors.</p>
+
+<p>An unselected standard button is styled as follows:</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="css"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="nt">ul</span><span class="nf">#checkout_protocols</span> <span class="nt">li</span> <span class="nt">a</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="o">:</span> <span class="m">#eee</span><span class="p">;</span>
+  <span class="k">background</span><span class="o">:</span>  <span class="sx">url(button.svg)</span> <span class="m">0</span> <span class="m">0</span> <span class="k">no-repeat</span><span class="p">;</span> <span class="c">/* Opera  needs an &quot;image&quot; :( - using svg for this so it will scale properly without looking too ugly */</span>
+  <span class="k">background</span><span class="o">:</span> <span class="o">-</span><span class="n">khtml</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="n">linear</span><span class="o">,</span> <span class="k">left</span> <span class="k">top</span><span class="o">,</span> <span class="k">left</span> <span class="k">bottom</span><span class="o">,</span> <span class="n">from</span><span class="p">(</span><span class="m">#f8f8f8</span><span class="p">)</span><span class="o">,</span> <span class="n">to</span><span class="p">(</span><span class="m">#ddd</span><span class="p">));</span> <span class="c">/* Konqueror */</span>
+  <span class="k">background</span><span class="o">:</span> <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="n">linear</span><span class="o">,</span> <span class="k">left</span> <span class="k">top</span><span class="o">,</span> <span class="k">left</span> <span class="k">bottom</span><span class="o">,</span> <span class="n">from</span><span class="p">(</span><span class="m">#f8f8f8</span><span class="p">)</span><span class="o">,</span> <span class="n">to</span><span class="p">(</span><span class="m">#ddd</span><span class="p">));</span>   <span class="c">/* Webkit (Chrome, Safari, ...) */</span>
+  <span class="k">background</span><span class="o">:</span> <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="k">top</span><span class="o">,</span>  <span class="m">#f8f8f8</span><span class="o">,</span>  <span class="m">#ddd</span><span class="p">);</span> <span class="c">/* Gecko (Firefox, ...) */</span>
+  <span class="n">filter</span><span class="o">:</span><span class="n">progid</span><span class="o">:</span><span class="n">DXImageTransform</span><span class="o">.</span><span class="n">Microsoft</span><span class="o">.</span><span class="n">gradient</span><span class="p">(</span><span class="n">startColorstr</span><span class="o">=</span><span class="s1">&#39;#f8f8f8&#39;</span><span class="o">,</span> <span class="n">endColorstr</span><span class="o">=</span><span class="s1">&#39;#dddddd&#39;</span><span class="p">);</span> <span class="c">/* IE 5.5 - 7 */</span>
+  <span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="n">filter</span><span class="o">:</span> <span class="n">progid</span><span class="o">:</span><span class="n">DXImageTransform</span><span class="o">.</span><span class="n">Microsoft</span><span class="o">.</span><span class="n">gradient</span><span class="p">(</span><span class="n">startColorstr</span><span class="o">=</span><span class="s1">&#39;#f8f8f8&#39;</span><span class="o">,</span> <span class="n">endColorstr</span><span class="o">=</span><span class="s1">&#39;#dddddd&#39;</span><span class="p">);</span> <span class="c">/* IE 8 */</span>
+  <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+
+<p>As you can see, there are a multitude of rules which each target a specific browser. This is required as there is no standard defined on gradients yet. However every major browser supports a technique for this – just in its own syntax.</p>
+
+<p>The first rule on line 2 (and also line 3 as seen later) works as a default here. It is used in browsers which do not support one of the following rules. It forces a background color which does not look too bad and at least keeps the GUI element usable. Lines 3–8 each target a specific browser family to use a gradient instead of the simple background.</p>
+
+<h2>KHTML (Konqueror) and Webkit (Chrome, Safari, ...)</h2>
+
+<p>Let's start with line 4 and 5. These rules target KHTML browsers (like Konqueror) and the similar Webkit browsers (Chrome, Safari, ...) respectively. The rules are structured as follows (more information can be found in the <a href="http://developer.apple.com/safari/library/documentation/internetweb/conceptual/safarivisualeffectsprogguide/Gradients/Gradients.html">Safari documentation</a>)</p>
+
+<ul>
+<li><code>linear</code> — The gradient type. Can be one of <em>linear</em> or <em>radial</em></li>
+<li><code>left top</code> — The starting point of the gradient. This is a X-Y coordinate.</li>
+<li><code>left bottom</code> — The end point of the gradient. This is a X-Y coordinate.</li>
+<li><code>from(#f8f8f8)</code> — The start color.</li>
+<li><code>to(#ddd)</code> — The end color.</li>
+</ul>
+
+
+<h2>Gecko (Firefox, Mozilla, ...)</h2>
+
+<p>Line 6 targets Gecko-based browsers like Firefox, Thunderbird or Mozilla. These define the gradient type inside the actual rule name. So <code>-moz-linear-gradient</code> defines, well, a linear gradient while <code>-moz-radiant-gradient</code> defines a radiant gradient. We obviously use <code>-moz-linear-gradient</code> here.</p>
+
+<ul>
+<li><code>top</code> — Starting point of the gradient.</li>
+<li><code>#f8f8f8</code> — Start color.</li>
+<li><code>#ddd</code> — End color.</li>
+</ul>
+
+
+<h2>Internet Explorer</h2>
+
+<p>Line 7-9 focus on Internet Explorer. Here we use filters which are very old IE-only features, originally invented to allow DHTML animations. They are rather slow and show strange behavior sometimes, but it the only way to get gradients to IE.- On the other hand, these even work on IE 5.5. The HTML element must have <a href="http://www.satzansatz.de/cssd/onhavinglayout.html">layout</a>. So we use <code>position: relative</code> in line 9. If you omit this, it is showing some really strange renderings. The parameters of the filters should be rather self-explaining. As the filter syntax has slightly changed from IE7 to IE8 we include both variants here. Additional documentation is available from <a href="http://msdn.microsoft.com/en-us/library/ms532997%28VS.85%29.aspx">Microsoft</a>.</p>
+
+<h2>Opera</h2>
+
+<p>And finally there is Opera. This browser is targeted in line 3. Unfortunately Opera does not support the concept of a gradient out of the box, so we have to develop a fallback here. Fortunately though, it supports <a href="http://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG</a> out of the box which allows us to define the gradient in an XML format to still benefit from the vector definition and not having to fallback to a pixel representation. As this is a fallback, it must be defined atop of the other rules which then overwrite this rule if one them is supported. If the SVG rule was put at the bottom, it would have a higher priority and all browsers would attempt to use it.</p>
+
+<p>This technique, however, allows us to even target browsers which do not match one of the explicitly supported browsers but do support SVG.</p>
+
+<p>The referenced SVG is rather simple:</p>
+
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><code class="xml"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</code></pre></div></td><td class="code"><div class="highlight"><pre><span class="cp">&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot; &quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot;&gt;</span>
+<span class="nt">&lt;svg</span> <span class="na">width=</span><span class="s">&quot;100%&quot;</span> <span class="na">height=</span><span class="s">&quot;100%&quot;</span> <span class="na">version=</span><span class="s">&quot;1.1&quot;</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2000/svg&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;defs&gt;</span>
+    <span class="nt">&lt;linearGradient</span> <span class="na">id=</span><span class="s">&quot;gradient&quot;</span> <span class="na">x1=</span><span class="s">&quot;100%&quot;</span> <span class="na">y1=</span><span class="s">&quot;100%&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;stop</span> <span class="na">offset=</span><span class="s">&quot;0%&quot;</span> <span class="na">style=</span><span class="s">&quot;stop-color:#ddd; stop-opacity:1&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;stop</span> <span class="na">offset=</span><span class="s">&quot;100%&quot;</span> <span class="na">style=</span><span class="s">&quot;stop-color:#f8f8f8; stop-opacity:1&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/linearGradient&gt;</span>
+  <span class="nt">&lt;/defs&gt;</span>
+  <span class="nt">&lt;rect</span> <span class="na">width=</span><span class="s">&quot;100%&quot;</span> <span class="na">height=</span><span class="s">&quot;100%&quot;</span> <span class="na">style=</span><span class="s">&quot;fill:url(#gradient)&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</pre></div>
+</td></tr></table>
+
+
+<p>Note that the start color is defined on <code>offset="100%"</code> and the end color on <code>offset="0%"</code>.</p>
+
+</div>
+
+<div id="related">
+  <h2>Related Posts</h2>
+  <ul class="posts">
+    
+      <li><span>16 Aug 2010</span> &raquo; <a href="/2010/08/foobar">Foo Bar!</a></li>
+    
+      <li><span>15 Aug 2010</span> &raquo; <a href="/2010/08/demo">A demo post</a></li>
+    
+      <li><span>25 Jul 2010</span> &raquo; <a href="/2010/07/blar">Demo</a></li>
+    
+  </ul>
+</div>
+
+</div>
+<div id="byline"><em>m</em>eine <em>e</em>rde</div>
+<footer>
+  <div id="blog-info">
+  <h2>Holger Just</h2>
+  <p>
+    This is my personal website about computers, operating systems, teh
+    internets and my way around it. Sometimes you will find a short blip
+    of my offline life.
+  </p>
+  <p>
+    More about me can be found on
+    <a href="http://twitter.com/meineerde">Twitter</a> and
+    <a href="http://xing.com/profile/Holger_Just">Xing</a>. You can also
+    write an e-mail to <em>web (at) meine-er.de</em>.
+  </p>
+</div>
+<ul id="twitter_list" class="hfeed">
+  <li class="hentry">
+    <address class="vcard author hidden">
+      <a class="url fn" href="http://twitter.com/meineerde">Holger Just</a>
+    </address>
+    <a class="twitter_date" href="http://twitter.com/meineerde/21428291279" rel="bookmark"><abbr class="published" title="2010-08-17T21:45:49+02:00">about 11 hours ago</abbr></a>
+    <span class="entry-content">Spaten Hell ist tatsächlich richtig gut trinkbar. Und mach weniger Kopfschmerzen als Augustiner.</span>
+  </li>
+  <li class="hentry">
+    <address class="vcard author hidden">
+      <a class="url fn" href="http://twitter.com/meineerde">Holger Just</a>
+    </address>
+    <a class="twitter_date" href="http://twitter.com/meineerde/21427186139" rel="bookmark"><abbr class="published" title="2010-08-17T21:26:27+02:00">about 11 hours ago</abbr></a>
+    <span class="entry-content">RT <a class="twitter_user" href="http://twitter.com/Storagezilla">@Storagezilla</a>: Illumos: We're forking and competing against Oracle Solaris.  <a href="http://bit.ly/d8aLEk">http://bit.ly/d8aLEk</a></span>
+  </li>
+  <li class="hentry">
+    <address class="vcard author hidden">
+      <a class="url fn" href="http://twitter.com/meineerde">Holger Just</a>
+    </address>
+    <a class="twitter_date" href="http://twitter.com/meineerde/21406038857" rel="bookmark"><abbr class="published" title="2010-08-17T16:11:22+02:00">about 16 hours ago</abbr></a>
+    <span class="entry-content">RT <a class="twitter_user" href="http://twitter.com/butterplanet">@butterplanet</a>: Irre, dieses Street View und was es mit der Privatsphäre macht! Und als Nächstes? Bücher, in denen alle Telefonummern und Adressen stehen?</span>
+  </li>
+  <li class="hentry">
+    <address class="vcard author hidden">
+      <a class="url fn" href="http://twitter.com/meineerde">Holger Just</a>
+    </address>
+    <a class="twitter_date" href="http://twitter.com/meineerde/21406006386" rel="bookmark"><abbr class="published" title="2010-08-17T16:10:54+02:00">about 16 hours ago</abbr></a>
+    <span class="entry-content">RT <a class="twitter_user" href="http://twitter.com/linuxtippse">@linuxtippse</a>: Streetview? Was? <a href="http://is.gd/elHt3">http://is.gd/elHt3</a> &quot;Verweigere jemand die Auskunft, drohe ein &quot;Zwangsgeld&quot; von bis zu 5000 Euro.&quot; - DAS ist schlimm!</span>
+  </li>
+  <li class="hentry">
+    <address class="vcard author hidden">
+      <a class="url fn" href="http://twitter.com/meineerde">Holger Just</a>
+    </address>
+    <a class="twitter_date" href="http://twitter.com/meineerde/21405827868" rel="bookmark"><abbr class="published" title="2010-08-17T16:08:21+02:00">about 16 hours ago</abbr></a>
+    <span class="entry-content"><a class="twitter_user" href="http://twitter.com/konstantinhaase">@konstantinhaase</a> FTL would be the acronym you were searching for.</span>
+  </li>
+</ul>
+
+</footer>
+
+    <!-- Javascript at the bottom for fast page loading -->
+  </body>
+</html>

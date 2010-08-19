@@ -1,0 +1,72 @@
+---
+layout: blog
+title: Cross-browser CSS gradient
+---
+Recently, I released a new version of the Redmine [Checkout plugin](http://dev.holgerjust.de/news/10). This release sports a nifty protocol selector with buttons styled entirely in CSS (as good as it gets). To be able to support as many browsers as possibly while not having to fall back to pixel graphics I had to apply some tricks which I want to describe here.
+
+<img src="/media/entry/2010/07/26/button_gradient.png" alt="Button with gradient" class="left" /> The buttons take most of their appearance from a background gradient with a light color at the top and a darker color at the bottom. This gives them some kind of three-dimensional effect compared to the plain-colored background. We are going to style the unselected button on the right. The left selected button is styled equivalent with just some different colors.
+
+An unselected standard button is styled as follows:
+
+{% highlight css linenos=table %}
+ul#checkout_protocols li a {
+  background-color: #eee;
+  background:  url(button.svg) 0 0 no-repeat; /* Opera  needs an "image" :( - using svg for this so it will scale properly without looking too ugly */
+  background: -khtml-gradient(linear, left top, left bottom, from(#f8f8f8), to(#ddd)); /* Konqueror */
+  background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#ddd));   /* Webkit (Chrome, Safari, ...) */
+  background: -moz-linear-gradient(top,  #f8f8f8,  #ddd); /* Gecko (Firefox, ...) */
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f8f8', endColorstr='#dddddd'); /* IE 5.5 - 7 */
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f8f8', endColorstr='#dddddd'); /* IE 8 */
+  position: relative;
+}
+{% endhighlight %}
+
+As you can see, there are a multitude of rules which each target a specific browser. This is required as there is no standard defined on gradients yet. However every major browser supports a technique for this – just in its own syntax.
+
+The first rule on line 2 (and also line 3 as seen later) works as a default here. It is used in browsers which do not support one of the following rules. It forces a background color which does not look too bad and at least keeps the GUI element usable. Lines 3–8 each target a specific browser family to use a gradient instead of the simple background.
+
+## KHTML (Konqueror) and Webkit (Chrome, Safari, ...)
+
+Let's start with line 4 and 5. These rules target KHTML browsers (like Konqueror) and the similar Webkit browsers (Chrome, Safari, ...) respectively. The rules are structured as follows (more information can be found in the [Safari documentation](http://developer.apple.com/safari/library/documentation/internetweb/conceptual/safarivisualeffectsprogguide/Gradients/Gradients.html))
+
+* `linear` — The gradient type. Can be one of *linear* or *radial*
+* `left top` — The starting point of the gradient. This is a X-Y coordinate.
+* `left bottom` — The end point of the gradient. This is a X-Y coordinate.
+* `from(#f8f8f8)` — The start color.
+* `to(#ddd)` — The end color.
+
+## Gecko (Firefox, Mozilla, ...)
+
+Line 6 targets Gecko-based browsers like Firefox, Thunderbird or Mozilla. These define the gradient type inside the actual rule name. So `-moz-linear-gradient` defines, well, a linear gradient while `-moz-radiant-gradient` defines a radiant gradient. We obviously use `-moz-linear-gradient` here.
+
+* `top` — Starting point of the gradient.
+* `#f8f8f8` — Start color.
+* `#ddd` — End color.
+
+## Internet Explorer
+
+Line 7-9 focus on Internet Explorer. Here we use filters which are very old IE-only features, originally invented to allow DHTML animations. They are rather slow and show strange behavior sometimes, but it the only way to get gradients to IE.- On the other hand, these even work on IE 5.5. The HTML element must have [layout](http://www.satzansatz.de/cssd/onhavinglayout.html). So we use `position: relative` in line 9. If you omit this, it is showing some really strange renderings. The parameters of the filters should be rather self-explaining. As the filter syntax has slightly changed from IE7 to IE8 we include both variants here. Additional documentation is available from [Microsoft](http://msdn.microsoft.com/en-us/library/ms532997%28VS.85%29.aspx).
+
+## Opera
+
+And finally there is Opera. This browser is targeted in line 3. Unfortunately Opera does not support the concept of a gradient out of the box, so we have to develop a fallback here. Fortunately though, it supports [SVG](http://en.wikipedia.org/wiki/Scalable_Vector_Graphics) out of the box which allows us to define the gradient in an XML format to still benefit from the vector definition and not having to fallback to a pixel representation. As this is a fallback, it must be defined atop of the other rules which then overwrite this rule if one them is supported. If the SVG rule was put at the bottom, it would have a higher priority and all browsers would attempt to use it.
+
+This technique, however, allows us to even target browsers which do not match one of the explicitly supported browsers but do support SVG.
+
+The referenced SVG is rather simple:
+
+{% highlight xml linenos=table %}
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="100%" y1="100%">
+      <stop offset="0%" style="stop-color:#ddd; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8f8f8; stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" style="fill:url(#gradient)"/>
+</svg>
+{% endhighlight %}
+
+Note that the start color is defined on `offset="100%"` and the end color on `offset="0%"`.

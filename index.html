@@ -1,0 +1,23 @@
+---
+layout: meine-er.de
+title: meine erde
+---
+<div id="posts" class="hfeed">
+  <address class="vcard author">
+    <a class="url fn" href="http://meine-er.de">Holger Just</a>
+  </address>
+  {% assign last_year = '' %}{% assign last_month = '' %}
+  {% for post in site.posts %}
+    {% capture year %}{{post.date | date:"%Y"}}{% endcapture %}
+    {% capture month %}{{ post.date | date:"%B" }}{% endcapture %}
+    {% unless last_year == year %}
+      <h2>{{year}}</h2><h3>{{month}}</h3>
+    {% else %}
+      {% unless last_month == month %}
+        <h3>{{month}}</h3>
+      {% endunless %}
+    {% endunless %}
+    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% assign last_year = year %}{% assign last_month = month %}
+  {% endfor %}
+</div>
