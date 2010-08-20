@@ -1,4 +1,4 @@
-.highlighttable {
+.highlighttable, .highlight {
     margin: .5em 0 1em;
 }
 
@@ -10,15 +10,11 @@
     padding: 0;
 } 
 
-.highlighttable .highlight { width: auto; }
-.highlighttable .highlight pre {
-    /* force a rough max width */
-    width: 51.5em;
-}
+.highlighttable .highlight { width: auto; margin: 0;}
+.highlighttable .highlight pre { width: 45.875em; }
 
 .highlight { 
-  /* force a rough max width */
-  width: 54em;
+  width: 49.1875em; /* 800px - 1px border - 12 px padding = 790px */
   overflow: auto;
 
   background-color: #fafafa;
