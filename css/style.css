@@ -86,6 +86,11 @@ pre, code, kbd, samp, tt { font-family: InconsolataMedium, monospace, sans-serif
 body, select, input, textarea { color: #444; }
 /* http://www.aestheticallyloyal.com/public/optimize-legibility/ */ 
 h1,h2,h3,h4,h5,h6 { font-weight: bold; text-rendering: optimizeLegibility; }
+h1, h2, h3 { color: #555; border-bottom: 1px solid #444; margin: 1em 0 .5em; }
+h1 { font-size: 2em;}
+h2 { font-size: 1.5em;}
+h3, h4, h5, h6 { font-size: 1em;}
+
 
 /* Accessible focus treatment: http://people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active { outline: none; }
@@ -236,7 +241,7 @@ body { background: #333; }
 #title em, #byline em { color: #eee; font-style: normal; }
 
 #main {
-  padding: 3em 4em 2em 2em;
+  padding: 1em 4em 2em 2em; /* 2em additional top padding via first h1 */
   width: 50em;
   background: #fff;
   -moz-box-shadow: 3px 3px 15px #000;
