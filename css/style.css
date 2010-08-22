@@ -130,9 +130,7 @@ button {  width: auto; overflow: visible; }
 
 address { display: none; visibility: hidden; }
 
-/* 
- * Non-semantic helper classes 
- */
+/* NON-SEMANTIC HELPER CLASSES */
 
 /* for image replacement */
 .ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; }
@@ -151,6 +149,10 @@ address { display: none; visibility: hidden; }
 /* Hide visually and from screenreaders, but maintain layout */
 .invisible { visibility: hidden; }
 
+.left { float: left; margin: .5em .5em .5em 0;}
+.right { float: right; margin: .5em 0 .5em .5em;}
+.center { display: block; margin: .5em auto; }
+
 /* >> The Magnificent CLEARFIX << */
 .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 .clearfix { display: inline-block; }
@@ -162,6 +164,7 @@ address { display: none; visibility: hidden; }
  */
  
 body { background: #333; }
+p { margin-bottom: 1em;}
 
 #navbar {
   background: #000;
@@ -241,9 +244,10 @@ body { background: #333; }
 #title em, #byline em { color: #eee; font-style: normal; }
 
 #main {
-  padding: 1em 4em 2em 2em; /* 2em additional top padding via first h1 */
-  width: 50em;
+  padding: 1em 4em 2em 3em; /* 2em additional top padding via first h1 */
+  width: 49em;
   background: #fff;
+  box-shadow: 3px 3px 15px #000;
   -moz-box-shadow: 3px 3px 15px #000;
   -webkit-box-shadow: 3px 3px 15px #000;
   filter:progid:DXImageTransform.Microsoft.Shadow(color='#222222', Direction=135, Strength=6);
@@ -251,7 +255,31 @@ body { background: #333; }
 
 #byline { padding: .75em 0 1.5em;}
 
+footer {
+  background-color: #000;
+  padding: 1em 4em 2em 3em; /* 2em additional top padding via first h1 */
+}
 
+footer h1, footer h2, hooter h3 {
+  border: 0 none;
+}
+footer #info {
+  float: left;
+  width: 25em;
+}
+
+footer #twitter {
+  border-left: 26em #000 solid;
+}
+
+footer #twitter ul, footer #twitter li {
+  margin-left: 0;
+  list-style-type: none;
+}
+
+footer #twitter ul {
+  margin-bottom: 1em;
+}
 
 
 
@@ -263,21 +291,14 @@ body { background: #333; }
   * { background: transparent !important; color: #444 !important; text-shadow: none !important; }
 
   a, a:visited { color: #444 !important; text-decoration: underline; }
-
   a:after { content: " (" attr(href) ")"; } 
-
   abbr:after { content: " (" attr(title) ")"; }
-  
   .ir a:after { content: ""; }  /* Don't show links for images */
-  
   pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  
   img { page-break-inside: avoid; }
 
   @page { margin: 0.5cm; }
-
   p, h2, h3 { orphans: 3; widows: 3; }
-
   h2, h3{ page-break-after: avoid; }
 }
 
@@ -300,8 +321,6 @@ body { background: #333; }
 /* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome)  
    Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
 @media screen and (max-device-width: 480px) {
-  
-  
   /* Prevent iOS, WinMobile from adjusting font size */
   html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } 
 }
