@@ -70,7 +70,7 @@ end
 tweets = Twitter::Search.new.from(twitter_user).per_page(fetch_tweets).entries
 exit 1 if tweets.empty?
 
-result = ['<ul id="twitter_list" class="hfeed">']
+result = ['<ul class="hfeed">']
 tweets.each do |t|
   d = Time.parse(t.created_at)
   
@@ -82,7 +82,7 @@ tweets.each do |t|
   # link hash tags
   text.gsub!(/(\A|\s+)#([\w]+)/, '\1<a class="twitter_hash" rel="tag" href="http://search.twitter.com/search?q=%23\2">#\2</a>')
   # link users
-  text.gsub!(/(\A|\s+)@([\w\-]+)/, '\1<a class="twitter_user" href="http://twitter.com/\2">@\2</a>')
+  text.gsub!(/@([\w\-]+)/, '<a class="twitter_user" href="http://twitter.com/\1">@\1</a>')
   
   # get display name of user
   user_name = Twitter.user(t.from_user).name rescue t.from_user
