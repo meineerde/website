@@ -1,1 +1,0 @@
-# require File.dirname(__FILE__) + '/data_sources/static.rb'

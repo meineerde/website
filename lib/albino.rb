@@ -41,10 +41,6 @@
 # Chris Wanstrath // chris@ozmm.org
 #         GitHub // http://github.com
 #
-require 'rubygems'
-require 'open3'
-require 'win32/open3' if RUBY_PLATFORM.match /win32/
-
 class Albino
   @@bin = 'pygmentize'
 
@@ -62,14 +58,12 @@ class Albino
   end
 
   def execute(command)
-    output = ''
-    Open3.popen3(command) do |stdin, stdout, stderr|
-      stdin.puts @target
-      stdin.close
-      output = stdout.read.strip
-      [stdout, stderr].each { |io| io.close }
+    output = IO.popen(command, mode='r+') do |p|
+      p.write @target
+      p.close_write
+      p.read.strip
     end
-    output
+    output || ''
   end
 
   def colorize(options = {})
