@@ -108,10 +108,6 @@ select, input, textarea { font: 99% sans-serif; }
 pre, code, kbd, samp, tt {
   font-family: Inconsolata, monospace, sans-serif; }
 
-/* 
- * minimal base styles 
- */
-
 body, select, input, textarea { color: #444; }
 
 /* http://www.aestheticallyloyal.com/public/optimize-legibility/ */
@@ -231,7 +227,10 @@ address {
    Author: 
 */
 
-body { background: #333; }
+body { background-color: #000;}
+header, #main  {
+  background-color: #333;
+}
 p { margin-bottom: 1em; }
 
 #navbar {
@@ -271,7 +270,7 @@ p { margin-bottom: 1em; }
       text-shadow: 0 0 10px #fff; } }
 }
 
-#title, #main, #byline {
+#title, #content, #byline {
   clear: both;
   margin: 0 auto;
   width: 56em; }
@@ -280,11 +279,12 @@ p { margin-bottom: 1em; }
   p {
     font-size: 2em;
     font-weight: bold;
-    margin: 1.25em .375em 16px 0;
+    padding: 1.25em .375em .5em 0;
+    margin: 0;
     line-height: 1.25em; }
-  text-rendering: optimizeLegibility; }
+}
 
-#byline {
+#title, #byline {
   text-rendering: optimizeLegibility; }
 
 #title {
@@ -305,11 +305,11 @@ p { margin-bottom: 1em; }
   color: #eee;
   font-style: normal; }
 
-#main {
+#content {
   padding: 1em 4em 2em 3em;
   /* 2em additional top padding via first h1 */
   width: 49em;
-  background: #fff;
+  background: #eee;
   box-shadow: 3px 3px 15px #000;
   -moz-box-shadow: 3px 3px 15px #000;
   -webkit-box-shadow: 3px 3px 15px #000;
@@ -319,13 +319,12 @@ p { margin-bottom: 1em; }
   padding: .75em 0 1.5em; }
 
 footer {
-  background-color: #000;
   padding: 1em 4em 2em 3em;
   /* 2em additional top padding via first h1 */
   h1, h2 {
     border: 0 none; } }
 
-hooter h3 {
+footer h3 {
   border: 0 none; }
 
 footer {
@@ -333,7 +332,7 @@ footer {
     float: left;
     width: 25em; }
   #twitter {
-    border-left: 26em #000 solid;
+    border-left: 27em #000 solid;
     ul, li {
       margin-left: 0;
       list-style-type: none; }
