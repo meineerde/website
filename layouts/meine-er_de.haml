@@ -1,0 +1,8 @@
+%header
+  = render('meine-er_de_header', :item => @item, :content => content)
+#main
+  = yield
+#byline
+  <em>m</em>eine <em>e</em>rde
+%footer
+  = render('meine-er_de_footer', :item => @item, :content => content)

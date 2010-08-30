@@ -1,7 +1,7 @@
 # A list of file extensions that nanoc will consider to be textual rather than
 # binary. If an item with an extension not in this list is found,  the file
 # will be considered as binary.
-text_extensions: [ 'css', 'erb', 'haml', 'htm', 'html', 'js', 'less', 'markdown', 'md', 'php', 'rb', 'sass', 'scss', 'txt', 'xhtml', 'xml' ]
+text_extensions: [ 'css', 'erb', 'haml', 'htm', 'html', 'js', 'less', 'markdown', 'md', 'textile', 'php', 'rb', 'sass', 'scss', 'txt', 'xhtml', 'xml' ]
 
 # The path to the directory where all generated files will be written to. This
 # can be an absolute path starting with a slash, but it can also be path
@@ -25,17 +25,9 @@ enable_output_diff: false
 # “layout/” directories in the site directory.
 data_sources:
   -
-    # The type is the identifier of the data source. By default, this will be
-    # `filesystem_unified`.
     type: filesystem_unified
-
-    # The path where items should be mounted (comparable to mount points in
-    # Unix-like systems). This is “/” by default, meaning that items will have
-    # “/” prefixed to their identifiers. If the items root were “/en/”
-    # instead, an item at content/about.html would have an identifier of
-    # “/en/about/” instead of just “/about/”.
     items_root: /
-
-    # The path where layouts should be mounted. The layouts root behaves the
-    # same as the items root, but applies to layouts rather than items.
     layouts_root: /
+  -
+    type: static
+    items_root: /static/
