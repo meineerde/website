@@ -1,5 +1,6 @@
---
+---
 title: Cross-browser CSS gradient
+created_at: 2010-07-26
 ---
 
 Recently, I released a new version of the Redmine "Checkout plugin":http://dev.holgerjust.de/news/10. This release sports a nifty protocol selector with buttons styled entirely in CSS (as good as it gets). To be able to support as many browsers as possibly while not having to fall back to pixel graphics I had to apply some tricks which I want to describe here.
@@ -8,7 +9,7 @@ Recently, I released a new version of the Redmine "Checkout plugin":http://dev.h
 
 An unselected standard button is styled as follows:
 
-<% highlight :css, :linenos => 'table' do %>
+<% highlight :css, :linenos => :table do %>
 ul#checkout_protocols li a {
   background-color: #eee;
   background:  url(button.svg) 0 0 no-repeat; /* Opera  needs an "image" :( - using svg for this so it will scale properly without looking too ugly */

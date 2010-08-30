@@ -228,10 +228,11 @@ address {
 */
 
 body { background-color: #000;}
+p { margin-bottom: 1em; }
+
 header, #main  {
   background-color: #333;
 }
-p { margin-bottom: 1em; }
 
 #navbar {
   background: #000;
@@ -275,35 +276,26 @@ p { margin-bottom: 1em; }
   margin: 0 auto;
   width: 56em; }
 
-#title {
+#title, #byline {
+  font-family: "Trebuchet MS",Helvetica,Verdana,sans-serif;
+  text-rendering: optimizeLegibility;
+  color: #9ac13a;
+  text-decoration: none;
+
   p {
     font-size: 2em;
     font-weight: bold;
     padding: 1.25em .375em .5em 0;
     margin: 0;
     line-height: 1.25em; }
-}
-
-#title, #byline {
-  text-rendering: optimizeLegibility; }
-
-#title {
-  font-family: "Trebuchet MS",Helvetica,Verdana,sans-serif;
-  color: #9ac13a;
-  text-decoration: none;
   a {
-    font-family: "Trebuchet MS",Helvetica,Verdana,sans-serif;
     color: #9ac13a;
-    text-decoration: none; } }
-
-#byline {
-  font-family: "Trebuchet MS",Helvetica,Verdana,sans-serif;
-  color: #9ac13a;
-  text-decoration: none; }
-
-#title em, #byline em {
-  color: #eee;
-  font-style: normal; }
+    text-decoration: none; }
+  em {
+    color: #eee;
+    font-style: normal;
+  }
+}
 
 #content {
   padding: 1em 4em 2em 3em;
@@ -319,15 +311,20 @@ p { margin-bottom: 1em; }
   padding: .75em 0 1.5em; }
 
 footer {
+  color: #777;
+
   padding: 1em 4em 2em 3em;
   /* 2em additional top padding via first h1 */
-  h1, h2 {
-    border: 0 none; } }
+  h1, h2, h3 {
+    border: 0 none;
+  }
 
-footer h3 {
-  border: 0 none; }
-
-footer {
+  a {
+    color: #777;
+    &:hover, &:focus, &:active {
+      color: #999;
+    }
+  }
   #info {
     float: left;
     width: 25em; }
@@ -337,7 +334,9 @@ footer {
       margin-left: 0;
       list-style-type: none; }
     ul {
-      margin-bottom: 1em; } } }
+      margin-bottom: 1em; }
+  }
+}
 
 /* 
  * print styles

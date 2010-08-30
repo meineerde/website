@@ -8,12 +8,11 @@ preprocess do
   # update_twitter
 end
 
-compile '/css/_*' do
+compile '/assets/css/_*' do
   # Don't compile partials
-  # 
 end
 
-compile '/css/*' do
+compile '/assets/css/*' do
   filter :sass, {
     :load_paths => [Dir.pwd+"/content/css"],
     :full_exception => true,
@@ -23,16 +22,22 @@ compile '/css/*' do
 end
 
 compile '*' do
+  # item[:extension] returns 'html.erb' for multi-dotted filename
+  ext = item[:extension].nil? ? nil : item[:extension].split('.').last
+  
   unless rep.binary?
-    case item[:extension]
+    filter :erb
+
+    case ext
     when 'html'
-      filter :erb
     when 'textile'
-      filter :erb
       filter :redcloth
     when 'md','markdown'
-      filter :erb
       filter :bluecloth
+    when 'haml', nil
+      filter :haml
+    else
+      raise "Filter is not configured for #{item.identifier} in Rules file."
     end
     
     layout item[:layout] || 'blog'
@@ -40,8 +45,9 @@ compile '*' do
   end
 end
 
-route '/css/*' do
+route '/assets/css/*' do
   unless item.identifier.include? '/_'
+    # only render non-partial css files
     item.identifier.gsub(/\/$/, '') + '.css'
   end
 end
@@ -54,4 +60,6 @@ route '*' do
     end
 end
 
-layout '*', :haml, :format => :html5
+layout '*', :haml, {
+  :ugly => :true
+}

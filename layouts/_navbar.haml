@@ -1,11 +1,11 @@
 #navbar
   %ul.sites
     %li
-      %a{ :href => "http://meine-er.de", :class => ("active" if ["blog", nil].include? item[:layout]) } Blog
+      %a{ :href => "/meine-er.de/", :class => ("active" if ["blog", nil].include? item[:layout]) } Blog
       %li
         %a{ :href => "http://hlgr.de", :class => ("active" if item[:layout] == "hlgr") } Tumblr
       %li
-        %a{ :href => "http://holgerjust.de", :class => ("active" if item[:layout] == "holgerjust") } About
+        %a{ :href => "/holgerjust.de/", :class => ("active" if item[:layout] == "holgerjust") } About
       
   %ul.actions
     %li

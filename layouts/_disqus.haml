@@ -1,0 +1,6 @@
+- if disqus_shortname
+  .comments
+    #disqus_thread
+    %script(type="text/javascript" src="http://disqus.com/forums/#{disqus_shortname}/embed.js")
+    %noscript
+      %a(href="http://disqus.com/forums/#{disqus_shortname}/?url=ref") View the discussion thread

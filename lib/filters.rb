@@ -1,5 +1,6 @@
-module Nanoc3::Helpers::Filtering
+include Nanoc3::Helpers::Filtering
 
+module Nanoc3::Helpers::Filtering
   def highlight(syntax, options = {}, &block)
     # Seamlessly ripped off from the filter method...
     # Capture block
@@ -12,7 +13,4 @@ module Nanoc3::Helpers::Filtering
     buffer = eval('_erbout', block.binding)
     buffer << filtered_data
   end
-
 end
-
-include Nanoc3::Helpers::Filtering
