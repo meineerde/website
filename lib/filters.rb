@@ -1,16 +1,22 @@
-include Nanoc3::Helpers::Filtering
-
-module Nanoc3::Helpers::Filtering
-  def highlight(syntax, options = {}, &block)
-    # Seamlessly ripped off from the filter method...
-    # Capture block
-    data = capture(&block)
-    # Reconvert 
-    data.gsub! /<%/, ''
-    # Filter captured data
-    filtered_data = "\n<notextile>"+Albino.colorize(data, syntax)+"</notextile>\n" rescue data 
-    # Append filtered data to buffer
-    buffer = eval('_erbout', block.binding)
-    buffer << filtered_data
+module Nanoc3::Filters
+  class Code < Nanoc3::Filter
+    identifiers :code
+    def run(content, lang=nil)
+      return content unless lang
+      
+      options = {'O' => 'linenos=table'}
+      code = Albino.new(content, lang).colorize(options)
+      @item[:extension] == 'textile' ? "<notextile>#{code}</notextile>" : code
+    end
+  end
+  
+  class CodeSimple < Nanoc3::Filter
+    identifiers :code_simple
+    def run(content, lang = nil)
+      return content unless lang
+      
+      code = Albino.new(content, lang).colorize()
+      @item[:extension] == 'textile' ? "<notextile>#{code}</notextile>" : code
+    end
   end
 end

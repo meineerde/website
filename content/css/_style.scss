@@ -14,6 +14,7 @@
   html5doctor.com/html-5-reset-stylesheet/
 */
 
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -231,6 +232,7 @@ body { background-color: #000;}
 p { margin-bottom: 1em; }
 
 header, #main  {
+  width: 100%;
   background-color: #333;
 }
 
@@ -301,11 +303,27 @@ header, #main  {
   padding: 1em 4em 2em 3em;
   /* 2em additional top padding via first h1 */
   width: 49em;
-  background: #eee;
+  background-color: $background;
   box-shadow: 3px 3px 15px #000;
   -moz-box-shadow: 3px 3px 15px #000;
   -webkit-box-shadow: 3px 3px 15px #000;
-  filter: progid:DXImageTransform.Microsoft.Shadow(color='#222222', Direction=135, Strength=6); }
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#222222', Direction=135, Strength=6);
+
+  h1,h2,h3,h4,h5,h6 {
+    a{text-decoration: none;}
+  }
+}
+
+.prevnext {
+  margin: 1em 0 0;
+  li {
+    width: 50%;
+    list-style-type: none;
+    margin: 0 0 1em;
+  }
+  .previous { float: left; }
+  .next { float: right; text-align: right;}
+}
 
 #byline {
   padding: .75em 0 1.5em; }

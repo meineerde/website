@@ -1,15 +1,24 @@
 ---
 title: Cross-browser CSS gradient
-created_at: 2010-07-26
+tags: [CSS, HTML]
+created_at: 2010-07-26 11:22:00
+
+kind: article
+publish: true
 ---
+
+<% content_for :summary do %>
+How to get CSS3 gradients for all browsers
+<% end %>
 
 Recently, I released a new version of the Redmine "Checkout plugin":http://dev.holgerjust.de/news/10. This release sports a nifty protocol selector with buttons styled entirely in CSS (as good as it gets). To be able to support as many browsers as possibly while not having to fall back to pixel graphics I had to apply some tricks which I want to describe here.
 
-!(left)/images/2010/button_gradient.png(Button with gradient)! The buttons take most of their appearance from a background gradient with a light color at the top and a darker color at the bottom. This gives them some kind of three-dimensional effect compared to the plain-colored background. We are going to style the unselected button on the right. The left selected button is styled equivalent with just some different colors.
+!(left)/media/2010/button_gradient.png(Button with gradient)! The buttons take most of their appearance from a background gradient with a light color at the top and a darker color at the bottom. This gives them some kind of three-dimensional effect compared to the plain-colored background. We are going to style the unselected button on the right. The left selected button is styled equivalent with just some different colors.
 
 An unselected standard button is styled as follows:
 
-<% highlight :css, :linenos => :table do %>
+
+<% filter :code, :css do %>
 ul#checkout_protocols li a {
   background-color: #eee;
   background:  url(button.svg) 0 0 no-repeat; /* Opera  needs an "image" :( - using svg for this so it will scale properly without looking too ugly */
@@ -56,7 +65,7 @@ This technique, however, allows us to even target browsers which do not match on
 
 The referenced SVG is rather simple:
 
-<% highlight :xml, :linenos => 'table' do %>
+<% filter :code_simple, :xml do %>
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">

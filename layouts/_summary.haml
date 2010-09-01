@@ -1,0 +1,7 @@
+.article.summary
+  %h1
+    = link_to(item[:title], item, :title => "Full article", :class => "permalink")
+  .body
+    %p
+      = item[:summary] || item[:content_for_summary] || "!!! Missing excerpt metadata for <code>#{item[:filename]}</code>"
+  -# = render('_meta', :item => item)

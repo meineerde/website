@@ -1,0 +1,5 @@
+- if item[:kind] == 'article'
+  %ul.prevnext
+    %li.previous= link_to_previous(item)
+    %li.next= link_to_next(item)
+  .clearfix

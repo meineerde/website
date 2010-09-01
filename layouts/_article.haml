@@ -1,0 +1,15 @@
+- is_embedded ||= false
+.article
+  %h1
+    - if is_embedded
+      = link_to(item[:title], item, :title => "Full article", :class => "permalink" )
+    - else
+      = link_to(item[:title], item, :class => "permalink" )
+  
+  - if not is_embedded
+    = render('_previous_next', :item => item)
+  
+  != content || partial(item)
+  
+  - if not is_embedded
+    = render('_previous_next', :item => item)

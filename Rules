@@ -5,14 +5,15 @@ preprocess do
   items.delete_if { |item| item[:publish] == false }
 
   copy_static
+  create_tag_pages
   # update_twitter
 end
 
-compile '/assets/css/_*' do
+compile '/css/_*' do
   # Don't compile partials
 end
 
-compile '/assets/css/*' do
+compile '/css/*' do
   filter :sass, {
     :load_paths => [Dir.pwd+"/content/css"],
     :full_exception => true,
@@ -27,25 +28,23 @@ compile '*' do
   
   unless rep.binary?
     filter :erb
-
     case ext
     when 'html'
     when 'textile'
       filter :redcloth
     when 'md','markdown'
-      filter :bluecloth
+      filter :rdiscount, :extensions => [:smart]
     when 'haml', nil
-      filter :haml
+      filter :haml, :ugly => true
     else
       raise "Filter is not configured for #{item.identifier} in Rules file."
     end
     
-    layout item[:layout] || 'blog'
     layout 'default'
   end
 end
 
-route '/assets/css/*' do
+route '/css/*' do
   unless item.identifier.include? '/_'
     # only render non-partial css files
     item.identifier.gsub(/\/$/, '') + '.css'
@@ -53,11 +52,7 @@ route '/assets/css/*' do
 end
 
 route '*' do
-   if item.binary?
-     item.identifier.chop + '.' + item[:extension]
-   else
-     item.identifier + 'index.html'
-    end
+  route_path(item)
 end
 
 layout '*', :haml, {

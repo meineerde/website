@@ -3,17 +3,32 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title
-      = title
+      &= @item[:title] ? "#{@item[:title]} || meine erde" : "meine erde"
     %meta{:content => "Holger Just", :name => "author"}/
     %meta{:content => "width=device-width; initial-scale=1.0; maximum-scale=1.0;", :name => "viewport"}/
-    %link{:href => "/assets/favicon.ico", :rel => "shortcut icon"}/
-    %link{:href => "/assets/apple-touch-icon.png", :rel => "apple-touch-icon"}/
-    %link{:href => "/assets/css/main.css", :rel => "stylesheet"}/
-  = "<!--[if lt IE 7 ]> <body class=\"ie ie6 #{site_name}\"> <![endif]-->"
-  = "<!--[if IE 7 ]> <body class=\"ie ie7 #{site_name}\"> <![endif]-->"
-  = "<!--[if IE 8 ]> <body class=\"ie ie8 #{site_name}\"> <![endif]-->"
-  = "<!--[if IE 9 ]> <body class=\"ie ie9 #{site_name}\"> <![endif]-->"
-  = "<!--[if (gt IE 9)|!(IE)]><!--> <body class=\"non-ie #{site_name}\"> <!--<![endif]-->"
-  = yield
-  / Javascript at the bottom for fast page loading
-  </body>
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
+    %link{:href => "/apple-touch-icon.png", :rel => "apple-touch-icon"}/
+    %link{:href => "/css/main.css", :rel => "stylesheet"}/
+  /[if lt IE 7 ] <body class="ie ie6">
+  /[if IE 7 ] <body class="ie ie7">
+  /[if IE 8 ] <body class="ie ie8">
+  /[if IE 9 ] <body class="ie ie9">
+  <!--[if (gt IE 9)|!(IE)]><!-->
+  %body.non-ie
+    <!--<![endif]-->
+    %header
+      = render '_header', :item => @item
+    #main
+      #content
+        - if @item[:kind] == 'article'
+          = render('_article', :item => @item, :content => content)
+          .clear
+          - if disqus_shortname && !is_front_page?
+            = render('_disqus', :item => @item)
+        - else
+          = content
+      #byline
+        <em>m</em>eine <em>e</em>rde
+    %footer
+      = render '_footer', :item => @item
+    / Javascript at the bottom for fast page loading

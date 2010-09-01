@@ -1,0 +1,1 @@
+The structure of this website is based on and includes some code from "nanoc3_blog":http://github.com/mgutz/nanoc3_blog by Mario L Gutierrez.

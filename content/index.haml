@@ -1,0 +1,16 @@
+-sorted_articles[0..0].each do |item|
+  .featured
+    = render('_article', :item => item, :is_embedded => true)
+
+-sorted_articles[1..-1].each do |item|
+  = render('_summary', :item => item)
+
+.clear
+
+-# for SEO, but make it disappear
+#taglist
+  - tags = count_tags()
+  - tags.each.sort_by {|k,v| k}.each do |tag_count|
+    - tag = tag_count[0]
+    %a(href="/tags/#{tag}/" class='tag')= tag
+
