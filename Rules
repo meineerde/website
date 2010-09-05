@@ -32,6 +32,7 @@ compile '*' do
     when 'html'
     when 'textile'
       filter :redcloth
+      filter :rubypants
     when 'md','markdown'
       filter :rdiscount, :extensions => [:smart]
     when 'haml', nil
