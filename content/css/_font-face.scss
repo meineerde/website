@@ -3,7 +3,7 @@
     font-family: $family;
     $prefix: "/fonts/" + $family + "/" + $filename;
     src: url($prefix + ".eot");
-    src: local("\u263a"), url($prefix + ".woff") format("woff"), url($prefix + ".otf") format("opentype"), url("#{$prefix}.svg##{$filename}") format("svg");
+    src: local($family), url($prefix + ".woff") format("woff"), url($prefix + ".otf") format("opentype"), url("#{$prefix}.svg##{$filename}") format("svg");
   }
 }
 
