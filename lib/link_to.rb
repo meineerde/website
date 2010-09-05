@@ -1,11 +1,11 @@
 module LinkTo
   def link_to_previous(item)
-    previous = next_item(item, -1)
+    previous = next_item(item, 1)
     link_to("« #{previous[:title]}", previous, :title => "Previous Article") if previous
   end
 
   def link_to_next(item)
-    nxt = next_item(item, 1)
+    nxt = next_item(item, -1)
     link_to("#{nxt[:title]} »", nxt, :title => "Next Article") if nxt
   end
 
