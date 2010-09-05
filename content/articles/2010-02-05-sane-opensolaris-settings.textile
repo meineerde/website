@@ -1,0 +1,56 @@
+---
+title: Sane Opensolaris Settings
+tags: [Opensolaris]
+created_at: 2010-02-05 13:46:41
+
+kind: article
+publish: true
+---
+
+<% content_for :summary do %>
+Sane Opensolaris Settings
+<% end %>
+
+Opensolaris has done some huge steps towards being usable by a normal person. Sadly there are still some things lacking sane defaults which I try to provide here. I will try to update this post if I stumble over more of these hiccups.
+
+h2. Correct colors on exit of an ncurses program
+
+If an ncurses program (like @nano@) exits, the default xterm-color does not properly restore the colors of the terminal. The background color is shown in a dark gray. For a quick relieve you can issue a short
+
+<% filter :code_simple, :bash do %>
+tput rs1
+<% end %>
+
+As this is rather cumbersome, I think it is better to adjust out terminfo definitions.
+
+<% filter :code, :bash do %>
+TERM=xterm-color infocmp > /tmp/xterm-color.src
+sed -i -e 's/op=\\E\[100m,/op=\\E\[m,/' /tmp/xterm-color.src
+pfexec tic -v /tmp/xterm-color.src
+rm /tmp/xterm-color.src
+<% end %>
+
+The solution is from the "Opensolaris Bug":http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6902588, the rough steps from "Peter Harvey":http://blogs.sun.com/peteh/entry/fixing_terminfo_so_that_terminal.
+
+h2. Fixing some key bindings
+
+By default some essential key bindings do not work properly. This can be fixed by just reassigning them. The following statement has to be run as root.
+
+<% filter :code, :bash do %>
+cat >> /etc/profile <<EOF
+# home key
+bind '"\e[1~":beginning-of-line'
+# del key
+bind '"\e[3~":delete-char'
+# end key
+bind '"\e[4~":end-of-line'
+# pgup key
+bind '"\e[5~":history-search-forward'
+# pgdn key
+bind '"\e[6~":history-search-backward'
+EOF
+<% end %>
+
+You have to logout and login again for these settings to take effect. Alternatively you could just enter the individual @bind@ statements into your current terminal.
+
+The bindings are from "Epiphanic Networks' Wikka":http://wiki.epiphanic.org/MiscOpenSolaris.

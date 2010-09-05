@@ -1,0 +1,96 @@
+---
+title: How to compile Postfix+SASL+LDAP on Opensolaris
+tags: [Opensolaris, Postfix]
+created_at: 2010-06-14 20:44:12
+
+kind: article
+publish: true
+---
+
+<% content_for :summary do %>
+How to compile Postfix+SASL+LDAP on Opensolaris
+<% end %>
+
+Currently, Opensolaris does "not provide":http://defect.opensolaris.org/bz/show_bug.cgi?id=6067 a Postfix package. Although there exist packages on "blastwave":http://www.blastwave.org/jir/pkgcontents.ftd?software=postfix&style=brief&state=5&arch=i386 and on "OpenCSW":http://www.opencsw.org/packages/CSWpostfix/ they are either outdated or do not play well together.
+
+Fortunately, "Ihsan Dogan":http://ihsan.dogan.ch did create a "script":http://ihsan.dogan.ch/postfix/ to create Postfix packages from scratch as well as some precompiled packages. Unfortunately, these packages miss SASL support. So I was in need to compile these myself.
+
+You will obviously need the Postfix sources and the package script:
+
+<% filter :code_simple, :bash do %>
+wget http://de.postfix.org/ftpmirror/official/postfix-2.7.1.tar.gz
+gunzip -c postfix-2.7.1.tar.gz | tar -xf -
+
+wget http://ihsan.dogan.ch/postfix/downloads/makePostfixPkg.sh
+chmod +x makePostfixPkg.sh
+
+cd postfix-2.7.1
+<% end %>
+
+Since Opensolaris b130, NIS+ was removed from the system. As Postfix does not know that, it will not compile as it defines a dependency to it. However, this can be disabled by simply applying the following patch:
+
+<% filter :code, :diff do %>
+--- src/util/sys_defs.h	2010-06-02 01:56:57.000000000 +0200
++++ src/util/sys_defs.h	2010-06-14 22:08:35.596113543 +0200
+@@ -400,7 +400,6 @@
+ #define DEF_DB_TYPE	"dbm"
+ #define ALIAS_DB_MAP	"dbm:/etc/mail/aliases"
+ #define HAS_NIS
+-#define HAS_NISPLUS
+ #define USE_SYS_SOCKIO_H		/* Solaris 2.5, changed sys/ioctl.h */
+ #define GETTIMEOFDAY(t)	gettimeofday(t)
+ #define ROOT_PATH	"/bin:/usr/bin:/sbin:/usr/sbin:/usr/ucb"
+<% end %>
+
+Just put that patch into a file called @nisplus.patch@ and patch the code:
+
+<% filter :code_simple, :bash do %>
+patch -p0 < nisplus.patch
+<% end %>
+
+(found on "estibi's Solaris blog":http://estseg.blogspot.com/2010/03/postfix-w-opensolaris-nis.html)
+
+Before actually compiling Postfix, we need some packages:
+
+
+<% filter :code_simple, :bash do %>
+# First install the sunstudio compilers and some additional
+# development tools
+pkg install sunstudio12u1 object-file
+    
+# ...and some additional libraries and tools
+pkg install libsasl pcre
+<% end %>
+
+Now we can generate the makefile, compile and generate the SRV4 package. We will tell the compilers to include the default Cyrus SASL library for client authentication as well as the Dovecot library which I will use later to connect both servers and authenticate SMTP users.
+
+<% filter :code_simple, :bash do %>
+# Clean up first and after failed attempts
+make tidy
+
+# Generate the makefile
+make makefiles CCARGS='-DUSE_TLS -DHAS_LDAP \
+-DUSE_SASL_AUTH -DDEF_SERVER_SASL_TYPE=\"dovecot\" \
+-DUSE_CYRUS_SASL -I/usr/include/sasl'
+AUXLIBS="-L/usr/lib -lsasl -lssl -lcrypto -lldap"
+CC=/opt/sunstudio12.1/bin/cc
+
+# Build
+make
+
+# Create the package if the build succeeded
+../makePostfixPkg.sh
+<% end %>
+
+The @makePostfixPkg@ will create a Solaris package named something like @CNDpostfix-2.7.1,REV=100614-SunOS5.11-i386.pkg@ inside the Postfix directory. This package can then be installed like this:
+
+<% filter :code_simple, :bash do %>
+# make sure you removed the default Sendmail package first if it installed
+pkg uninstall sendmail
+
+# install the package
+pkgadd -d CNDpostfix-2.7.1,REV=100614-SunOS5.11-i386.pkg CNDpostfix
+
+# Configure the package to your needs. Then enable the service
+svcadm enable svc:/network/postfix:default
+<% end %>
