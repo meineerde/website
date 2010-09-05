@@ -55,7 +55,7 @@ Line 6 targets Gecko-based browsers like Firefox, Thunderbird or Mozilla. These 
 
 h2. Internet Explorer
 
-Line 7-9 focus on Internet Explorer. Here we use filters which are very old IE-only features, originally invented to allow DHTML animations. They are rather slow and show strange behavior sometimes, but it the only way to get gradients to IE.- On the other hand, these even work on IE 5.5. The HTML element must have "layout":http://www.satzansatz.de/cssd/onhavinglayout.html. So we use @position: relative@ in line 9. If you omit this, it is showing some really strange renderings. The parameters of the filters should be rather self-explaining. As the filter syntax has slightly changed from IE7 to IE8 we include both variants here. Additional documentation is available from "Microsoft":http://msdn.microsoft.com/en-us/library/ms532997%28VS.85%29.aspx.
+Line 7–9 focus on Internet Explorer. Here we use filters which are very old IE-only features, originally invented to allow DHTML animations. They are rather slow and show strange behavior sometimes, but it the only way to get gradients to IE. On the other hand, these even work on IE 5.5. The HTML element must have "layout":http://www.satzansatz.de/cssd/onhavinglayout.html. So we use @position: relative@ in line 9. If you omit this, it is showing some really strange renderings. The parameters of the filters should be rather self-explaining. As the filter syntax has slightly changed from IE7 to IE8 we include both variants here. Additional documentation is available from "Microsoft":http://msdn.microsoft.com/en-us/library/ms532997%28VS.85%29.aspx.
 
 h2. Opera
 
