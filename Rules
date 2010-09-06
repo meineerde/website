@@ -17,7 +17,7 @@ compile '/css/*' do
   filter :sass, {
     :load_paths => [Dir.pwd+"/content/css"],
     :full_exception => true,
-    :style => :compressed,
+#    :style => :compressed,
     :syntax => :scss
   }
 end
@@ -36,7 +36,7 @@ compile '*' do
     when 'md','markdown'
       filter :rdiscount, :extensions => [:smart]
     when 'haml', nil
-      filter :haml, :ugly => true
+      filter :haml, :format => :html5, :ugly => true
     else
       raise "Filter is not configured for #{item.identifier} in Rules file."
     end
@@ -57,5 +57,6 @@ route '*' do
 end
 
 layout '*', :haml, {
+  :format => :html5,
   :ugly => :true
 }
