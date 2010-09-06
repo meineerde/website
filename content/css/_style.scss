@@ -142,38 +142,33 @@ address {
    Author: 
 */
 
+header, #main, footer { min-width: $content-width + 3em; }
+header, #main  { background-color: $outer-background; }
 body {
   background-color: #000;
   font-family: MuseoSans, "Trebuchet MS",Helvetica,Verdana,sans-serif;
 }
 p { line-height: 1.25em; margin-bottom: 1em; }
 
-header, #main  {
-  width: 100%;
-  background-color: #333;
-}
 
 #navbar {
-  background: #000;
-  font-size: .75em;
-  /* 12px */
+  font-size: .75em; // 12px
   line-height: 1em;
   font-family: "Lucia Grande",Verdana,Helvetica,Arial,sans-serif;
+  height: 2.5em;
+  background-color: #000;
+  
   ul {
-    padding: 0 10em;
-    height: 2.5em;
+    float: left;
+    padding: 0 0 0 3em;
     margin: 0;
-    padding: 0 1.75em; }
-  li {
-    margin-right: .8em;
-    list-style-type: none; }
-  ul {
-    &.sites {
-      li {
-        float: left; }
-      float: left; }
-    &.actions li {
-      float: right; } }
+    li {
+      float: left;
+      margin-right: .8em;
+      list-style-type: none;
+    }
+  }
+  
   a {
     display: block;
     padding: .75em .625em .75em;
@@ -190,10 +185,16 @@ header, #main  {
       text-shadow: 0 0 10px #fff; } }
 }
 
+#github-ribbon img {
+  position: absolute;
+  top: 1.875em;
+  right: 0;
+}
+
 #title, #content, #byline {
   clear: both;
   margin: 0 auto;
-  width: 56em; }
+  width: $content-width; }
 
 #title, #byline {
   text-rendering: optimizeLegibility;
@@ -218,7 +219,7 @@ header, #main  {
 #content {
   padding: 1em 4em 2em 3em;
   /* 2em additional top padding via first h1 */
-  width: 49em;
+  width: $content-width - 7em;
   background-color: $background;
   box-shadow: 3px 3px 15px #000;
   -moz-box-shadow: 3px 3px 15px #000;
@@ -244,8 +245,11 @@ header, #main  {
 #byline {
   padding: .75em 0 1.5em; }
 
+
+$footer-color: #777;
 footer {
-  color: #777;
+  color: $footer-color;
+  min-width: $content-width - 4em;
 
   padding: 1em 4em 2em 3em;
   /* 2em additional top padding via first h1 */
@@ -254,7 +258,7 @@ footer {
   }
 
   a {
-    color: #777;
+    color: $footer-color;
     &:hover, &:focus, &:active {
       color: #999;
     }
@@ -270,6 +274,11 @@ footer {
     ul {
       margin-bottom: 1em; }
   }
+}
+
+#legal {
+  font-size: .75em;
+  color: darken($footer-color, 10%);
 }
 
 /* 
