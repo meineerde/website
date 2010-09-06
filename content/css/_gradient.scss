@@ -1,0 +1,19 @@
+@mixin vertical-gradient($start-color, $end-color, $svg-url) {
+  background-color: #eee;
+  background:  url($svg-url) 0 0 no-repeat; /* Opera  needs an "image" :( - using svg for this so it will scale properly without looking too ugly */
+  background: -khtml-gradient(linear, left top, left bottom, from($start-color), to($end-color)); /* Konqueror */
+  background: -webkit-gradient(linear, left top, left bottom, from($start-color), to($end-color));   /* Webkit (Chrome, Safari, ...) */
+  background: -moz-linear-gradient(top,  $start-color,  $end-color); /* Gecko (Firefox, ...) */
+  filter:progid:DXImageTransform.Microsoft.gradient(StartColorStr=#{$start-color}, EndColorStr=#{$end-color}); /* IE 5.5 - 7 */
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(StartColorStr=#{$start-color}, EndColorStr=#{$end-color}); /* IE 8 */
+}
+
+@mixin horizontal-gradient($start-color, $end-color, $svg-url) {
+  background-color: #eee;
+  background:  url($svg-url) 0 0 no-repeat; /* Opera  needs an "image" :( - using svg for this so it will scale properly without looking too ugly */
+  background: -khtml-gradient(linear, left top, right top, from($start-color), to($end-color)); /* Konqueror */
+  background: -webkit-gradient(linear, left top, right top, from($start-color), to($end-color));   /* Webkit (Chrome, Safari, ...) */
+  background: -moz-linear-gradient(left,  $start-color,  $end-color); /* Gecko (Firefox, ...) */
+  filter:progid:DXImageTransform.Microsoft.gradient(StartColorStr=#{$start-color}, EndColorStr=#{$end-color}, GradientType=1); /* IE 5.5 - 7 */
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(StartColorStr=#{$start-color}, EndColorStr=#{$end-color}, GradientType=1); /* IE 8 */
+}
