@@ -1,8 +1,0 @@
----
-title: A bartastic article
-tags: [Foo, Bar]
-created_at: 2010-09-01 10:55:00
-
-kind: article
-publish: true
----
