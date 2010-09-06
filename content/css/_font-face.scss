@@ -1,10 +1,37 @@
-@mixin font-face($family, $filename) {
+@mixin font-face($family, $filename, $weight: normal, $style: normal, $variant: normal) {
+  @if $weight != normal { $filename: $filename + "_" + $weight; }
+  @if $style != normal { $filename: $filename + "_" + $style; }
+  $prefix: "/fonts/" + $family + "/" + $filename;
+  
+  // Special handling for font-variant.
+  // It is not fully supported by most browsers today...
+  @if $variant != normal {
+    $filename: $filename + "_smallcaps";
+    $family: "#{$family} SC";
+  }
+  
   @font-face {
     font-family: $family;
-    $prefix: "/fonts/" + $family + "/" + $filename;
     src: url($prefix + ".eot");
-    src: local($family), url($prefix + ".woff") format("woff"), url($prefix + ".otf") format("opentype"), url("#{$prefix}.svg##{$filename}") format("svg");
+    src: local("\u263a"), url($prefix + ".woff") format("woff"), url($prefix + ".otf") format("opentype"), url("#{$prefix}.svg##{$filename}") format("svg");
+    font-weight: $weight;
+    font-style: $style;
+    font-variant: $variant;
   }
 }
 
 @include font-face(Inconsolata, Inconsolata);
+
+/* http://www.josbuivenga.demon.nl/calluna.html */
+@include font-face(Calluna, Calluna_regular);
+
+/* http://www.josbuivenga.demon.nl/museosans.html */
+@include font-face(MuseoSans, MuseoSans_500);
+@include font-face(MuseoSans, MuseoSans_500, normal, italic);
+
+/* http://www.josbuivenga.demon.nl/fontinsans.html */
+@include font-face(FontinSans, FontinSans);
+@include font-face(FontinSans, FontinSans, bold);
+@include font-face(FontinSans, FontinSans, normal, italic);
+@include font-face(FontinSans, FontinSans, bold, italic);
+@include font-face(FontinSans, FontinSans, normal, normal, small-caps);
