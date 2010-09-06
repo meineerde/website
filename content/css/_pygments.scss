@@ -1,4 +1,5 @@
-$linenumberbg: darken($background, 5%);
+$pygments-bg: darken($background,2%);
+$pygments-bg-dark: darken($pygments-bg, 5%);
 
 .highlighttable, .highlight {
     margin: 0 0 1em;
@@ -18,21 +19,21 @@ $linenumberbg: darken($background, 5%);
   width: 47.375em;
   overflow: auto;
 
-  background-color: $background;
-  border: 1px solid $linenumberbg;
+  background-color: $pygments-bg;
+  border: 1px solid $pygments-bg-dark;
 
   padding: .25em .75em;
   overflow: auto;
 }
 
 td.linenos {
-  background-color: $linenumberbg;
+  background-color: $pygments-bg-dark;
   width: 2em;
 }
 
 .linenodiv {
   color: #444;
-  border: 1px solid $linenumberbg;
+  border: 1px solid $pygments-bg-dark;
   padding: .25em;
   vertical-align: top;
   text-align: right;

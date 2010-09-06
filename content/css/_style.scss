@@ -8,13 +8,6 @@
     praegnanz.de/weblog/htmlcssjs-kickstart
 */
 
-/* 
-  html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
-  v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
-  html5doctor.com/html-5-reset-stylesheet/
-*/
-
-
 body {
   font: 100% / 1.125 sans-serif;
   &.non-ie { font-size: 16px; }
@@ -22,7 +15,7 @@ body {
 
 table {
   font-size: inherit;
-  font: 100%;
+  font-size: 100%;
 }
 
 select, input, textarea { font: 99% sans-serif; }
@@ -149,8 +142,11 @@ address {
    Author: 
 */
 
-body { background-color: #000;}
-p { margin-bottom: 1em; }
+body {
+  background-color: #000;
+  font-family: MuseoSans, "Trebuchet MS",Helvetica,Verdana,sans-serif;
+}
+p { line-height: 1.25em; margin-bottom: 1em; }
 
 header, #main  {
   width: 100%;
@@ -200,7 +196,6 @@ header, #main  {
   width: 56em; }
 
 #title, #byline {
-  font-family: "Trebuchet MS",Helvetica,Verdana,sans-serif;
   text-rendering: optimizeLegibility;
   color: #9ac13a;
   text-decoration: none;
