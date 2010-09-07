@@ -6,8 +6,15 @@
   %h1.title= link_to(item[:title], item, :title => "Full article", :class => "permalink" )
   %p.meta
     written by #{item[:author] || "Holger Just"} on #{time(item[:created_at], '%B %d, %Y')}
+    and tagged with
+    - tags = item[:tags].select{|t| not t.include? ":"}
+    - tags.each_with_index do |tag, index|
+      <a href="/tags/#{tag}/" class="tag">#{tag}</a>#{(index+1 < tags.length) ? ", " : "."}
   
   != content || partial(item)
   
+  - if disqus_shortname && !is_front_page?
+    = render('_disqus', :item => @item)
+
   - if not is_embedded
     = render('_previous_next', :item => item, :position => 'bottom')

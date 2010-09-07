@@ -24,9 +24,6 @@
       #content
         - if @item[:kind] == 'article'
           = render('_article', :item => @item, :content => content)
-          .clear
-          - if disqus_shortname && !is_front_page?
-            = render('_disqus', :item => @item)
         - else
           = content
       #byline

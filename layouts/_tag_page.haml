@@ -1,6 +1,7 @@
-%h1
-  = "#{tag.capitalize} Articles"
-
-.tag-page
-  - items_with_tag(tag).each do |item|
-    = render('_summary', :item => item)
+#archive
+  %h1= "#{tag.capitalize} Articles"
+  %ul
+    - items_with_tag(tag).each do |item|
+      %li
+        %span= time(item[:created_at], '%d %b %Y') + " » "
+        = link_to(item[:title], item, :class => "permalink")

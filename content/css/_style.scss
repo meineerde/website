@@ -280,7 +280,7 @@ h1.title {
     list-style-type: none;
   }
   &.top li { margin: 2em 0 1em; }
-  &.bottom li {}
+  &.bottom li { margin: 1em 0 0; }
 
   .previous { float: left; }
   .next { float: right; text-align: right;}
