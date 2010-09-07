@@ -21,14 +21,17 @@
 
 @include font-face(Inconsolata, Inconsolata);
 
-/* http://www.josbuivenga.demon.nl/calluna.html */
+// http://www.josbuivenga.demon.nl/calluna.html
+// A font by Jos Buivenga (exljbris) -> www.exljbris.com
 @include font-face(Calluna, Calluna_regular);
 
-/* http://www.josbuivenga.demon.nl/museosans.html */
+// http://www.josbuivenga.demon.nl/museosans.html
+// A font by Jos Buivenga (exljbris) -> www.exljbris.com
 @include font-face(MuseoSans, MuseoSans_500);
 @include font-face(MuseoSans, MuseoSans_500, normal, italic);
 
-/* http://www.josbuivenga.demon.nl/fontinsans.html */
+// http://www.josbuivenga.demon.nl/fontinsans.html
+// A font by Jos Buivenga (exljbris) -> www.exljbris.com
 @include font-face(FontinSans, FontinSans);
 @include font-face(FontinSans, FontinSans, bold);
 @include font-face(FontinSans, FontinSans, normal, italic);
