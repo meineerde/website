@@ -1,0 +1,17 @@
+---
+title: New System, Same Content, Better Everything
+tags: [lang:English, Django]
+created_at: 2009-07-07 02:01:06
+author: Holger Just
+
+kind: article
+publish: true
+---
+
+So this is it. My next try of a content management system. Yes, again written from scratch. Yes, I know but Wordpress looks _not_ very sexy to me. And somehow I started to hate PHP while falling in love with Python, thanks to "Martin von Löwis":http://www.dcl.hpi.uni-potsdam.de/people/loewis/. So well, here we are...
+
+p(center). "!/media/2009/django_ponies.png(Django Ponies)!":http://djangoproject.com/
+
+This time I tested the magical powers of the Django ponies. It might be still rough around the edges and lacking some obvious features like a comment facility. But I'm certain that we will see some updates here soon. Once the codebase has matured a bit and the security-by-obscurity-factor is not _so_ important any more I will open source the system. Stay tuned.
+
+But until then you can expect some more posts here. At least more than in the recent 18 month.
