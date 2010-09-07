@@ -17,7 +17,7 @@ compile '/css/*' do
   filter :sass, {
     :load_paths => [Dir.pwd+"/content/css"],
     :full_exception => true,
-#    :style => :compressed,
+    :style => :compressed,
     :syntax => :scss
   }
 end
@@ -29,7 +29,7 @@ compile '*' do
   unless rep.binary?
     filter :erb
     case ext
-    when 'html'
+    when 'html', 'xml'
     when 'textile'
       filter :redcloth
       filter :rubypants
@@ -41,7 +41,8 @@ compile '*' do
       raise "Filter is not configured for #{item.identifier} in Rules file."
     end
     
-    layout 'default'
+    item[:layout] = "none" unless item[:layout] || File.extname(route_path(item)) == '.html'
+    layout 'default' unless item[:layout] == "none"
   end
 end
 

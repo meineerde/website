@@ -9,6 +9,7 @@ text_extensions: [ 'css', 'erb', 'haml', 'htm', 'html', 'js', 'less', 'markdown'
 index_filenames: [ 'index.html' ]
 
 twitter_username: meineerde
-
 # disabled for now
 #disqus_shortname: meineerde
+
+base_url: http://meine-er.de

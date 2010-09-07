@@ -28,7 +28,13 @@ def route_path(item)
     
     "/#{time.strftime('%Y/%m')}/#{filename}/index.html"
   else
-    item.identifier + "index.html"
+    ext = item[:extension].nil? ? nil : item[:extension].split('.').last
+    case ext
+    when 'xml'
+      item.identifier.chop + "." + ext
+    else
+      item.identifier + "index.html"
+    end
   end
 end
 

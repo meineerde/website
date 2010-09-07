@@ -1,0 +1,7 @@
+---
+title: meineerde
+author_name: Holger Just
+author_uri: http://meine-er.de
+is_hidden: true
+---
+<%= atom_feed %>
