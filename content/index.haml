@@ -1,16 +1,14 @@
--sorted_articles[0..0].each do |item|
-  .featured
-    = render('_article', :item => item, :is_embedded => true)
-
--sorted_articles[1..-1].each do |item|
-  = render('_summary', :item => item)
-
+#archive
+  - articles_by_year_month.reverse_each do |year, months|
+    %h2= year
+    - months.reverse_each do |month, items|
+      %dl
+        - items.each do |item|
+          %dt= time(item[:created_at], '%Y-%m-%d')
+          %dd= link_to(item[:title], item)
 .clear
 
--# for SEO, but make it disappear
-#taglist
-  - tags = count_tags()
-  - tags.each.sort_by {|k,v| k}.each do |tag_count|
-    - tag = tag_count[0]
-    %a(href="/tags/#{tag}/" class='tag')= tag
-
+#tagcloud
+  - tags = rank_tags(5)
+  - tags.sort_by{|k, v| k}.each do |tag, count|
+    %a{:href => "/tags/#{tag}/", :class => "tag cloud-#{count}"}= tag
