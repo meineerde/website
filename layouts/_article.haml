@@ -1,13 +1,11 @@
 - is_embedded ||= false
 .article
-  %h1
-    - if is_embedded
-      = link_to(item[:title], item, :title => "Full article", :class => "permalink" )
-    - else
-      = link_to(item[:title], item, :class => "permalink" )
-  
   - if not is_embedded
     = render('_previous_next', :item => item)
+
+  %h1.title= link_to(item[:title], item, :title => "Full article", :class => "permalink" )
+  %p.meta
+    written by #{item[:author] || "Holger Just"} on #{time(item[:created_at], '%B %d, %Y')}
   
   != content || partial(item)
   

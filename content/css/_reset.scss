@@ -30,7 +30,6 @@ article, aside, figure, footer, header, hgroup, nav, section {
   display: block;
 }
 
-nav ul { list-style: none; }
 blockquote, q { quotes: none; }
 blockquote { &:before, &:after { content: ''; content: normal; } }
 q { &:before, &:after { content: ''; content: normal; } }
