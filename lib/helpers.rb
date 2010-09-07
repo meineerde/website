@@ -26,7 +26,7 @@ def route_path(item)
     filename.gsub!(/\.[a-zA-Z0-9]+$/, '') # remove extension
     filename.gsub!(/^(\d+-)+/, '') # remove leading date information
     
-    "/#{time.strftime('%Y/%m/%d')}/#{filename}/index.html"
+    "/#{time.strftime('%Y/%m')}/#{filename}/index.html"
   else
     item.identifier + "index.html"
   end
@@ -104,21 +104,10 @@ def site_name
   @config[:site_name]
 end
 
-def pretty_time(time)
-  Time.parse(time).strftime("%b %d, %Y") if !time.nil?
+def time(time, format)
+  Time.parse(time).strftime(format) unless time.nil?
 end
 
-def featured_count
-  @config[:featured_count].to_i
-end
-
-def excerpt_count
-  @config[:excerpt_count].to_i
-end
-
-def disqus_shortname 
-  @config[:disqus_shortname]
-end
 
 def to_month_s(month)
   Date.new(2010, month).strftime("%B")
