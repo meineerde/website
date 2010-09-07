@@ -10,12 +10,9 @@ module TaggingExtra
   #are considered.
   def tag_set(items=nil) 
     items = @items if items.nil?
-    tags = Set.new
-    items.each do |item|
-      next if item[:tags].nil?
-      item[:tags].each { |tag| tags << tag }
-    end
-    tags.to_a
+    items = [items] unless items.is_a? Array
+    
+    items.collect{|i| i[:tags] || [] }.flatten.uniq!
   end
 
   #Return true if an items has a specified tag
@@ -40,18 +37,18 @@ module TaggingExtra
   #The result is an hash such as: { tag => count }.
   def count_tags(items=nil)
     items = @items if items.nil?
-    count = Hash.new( 0 )
+    items = [items] unless items.is_a? Array
+
+    result = Hash.new( 0 )
     @items.each do |item|
-      if item[:tags]
-        item[:tags].each do |tag|
-          count[ tag ] += 1
-        end
-      end
+      item[:tags].each do |tag|
+        result[tag] += 1 unless tag.include? ":"
+      end if item[:tags]
     end
-    count
+    result.default = nil
+    result
   end
 
-  
   #Sort the tags of an item collection (defaults
   #to all site items) in 'n' classes of rank.
   #The rank 0 corresponds to the most frequent
