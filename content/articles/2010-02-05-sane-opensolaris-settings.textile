@@ -8,10 +8,6 @@ kind: article
 publish: true
 ---
 
-<% content_for :summary do %>
-Sane Opensolaris Settings
-<% end %>
-
 Opensolaris has done some huge steps towards being usable by a normal person. Sadly there are still some things lacking sane defaults which I try to provide here. I will try to update this post if I stumble over more of these hiccups.
 
 h2. Correct colors on exit of an ncurses program

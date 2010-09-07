@@ -8,10 +8,6 @@ kind: article
 publish: true
 ---
 
-<% content_for :summary do %>
-How to compile Postfix+SASL+LDAP on Opensolaris
-<% end %>
-
 Currently, Opensolaris does "not provide":http://defect.opensolaris.org/bz/show_bug.cgi?id=6067 a Postfix package. Although there exist packages on "blastwave":http://www.blastwave.org/jir/pkgcontents.ftd?software=postfix&style=brief&state=5&arch=i386 and on "OpenCSW":http://www.opencsw.org/packages/CSWpostfix/ they are either outdated or do not play well together.
 
 Fortunately, "Ihsan Dogan":http://ihsan.dogan.ch did create a "script":http://ihsan.dogan.ch/postfix/ to create Postfix packages from scratch as well as some precompiled packages. Unfortunately, these packages miss SASL support. So I was in need to compile these myself.

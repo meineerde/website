@@ -1,0 +1,13 @@
+---
+title: Trailer for Tron 2... errrr... TRZ.... errm... Tron Legacy
+tags: [lang:English, Trailer, Movie]
+created_at: 2009-07-27 11:07:25
+author: Holger Just
+
+kind: article
+publish: true
+---
+
+So, after about a thousand renamings, we seem to have finally come to a rest. We are about to see Tron Legacy in cinemas in 2010. And judging from the trailer, the movie is going to be awesome (however maybe not *so* awesome as the original Tron but still awesome).
+
+<object width="640" height="385" class="center"><param name="movie" value="http://www.youtube-nocookie.com/v/a1IpPpB3iWI&amp;hl=de&amp;fs=1&amp;color1=0x3a3a3a&amp;color2=0x999999&amp;hd=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube-nocookie.com/v/a1IpPpB3iWI&amp;hl=de&amp;fs=1&amp;color1=0x3a3a3a&amp;color2=0x999999&amp;hd=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object>

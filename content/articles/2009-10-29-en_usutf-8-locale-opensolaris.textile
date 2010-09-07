@@ -8,10 +8,6 @@ kind: article
 publish: true
 ---
 
-<% content_for :summary do %>
-en_us.utf-8 locale on OpenSolaris
-<% end %>
-
 _This is mainly a pointer for me to remember things..._
 
 If you have an OpenSolaris 200x.xx installed as a minimal image (like "that one":http://alexeremin.blogspot.com/2008/12/minimum-opensolaris-200811-install.html) you will notice that there is a rather unfriendly assortment of locales installed:

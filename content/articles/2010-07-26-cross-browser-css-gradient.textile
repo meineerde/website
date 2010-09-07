@@ -8,10 +8,6 @@ kind: article
 publish: true
 ---
 
-<% content_for :summary do %>
-How to get CSS3 gradients for all browsers
-<% end %>
-
 Recently, I released a new version of the Redmine "Checkout plugin":http://dev.holgerjust.de/news/10. This release sports a nifty protocol selector with buttons styled entirely in CSS (as good as it gets). To be able to support as many browsers as possibly while not having to fall back to pixel graphics I had to apply some tricks which I want to describe here.
 
 !(left)/media/2010/button_gradient.png(Button with gradient)! The buttons take most of their appearance from a background gradient with a light color at the top and a darker color at the bottom. This gives them some kind of three-dimensional effect compared to the plain-colored background. We are going to style the unselected button on the right. The left selected button is styled equivalent with just some different colors.

@@ -1,0 +1,27 @@
+---
+title: My try on Opensolaris
+tags: [lang:English, Solaris, Opensolaris, NAS]
+created_at: 2009-07-21 21:01:03
+author: Holger Just
+
+kind: article
+publish: true
+---
+
+Two years ago I bought a ReadyNAS NV+ with 4 500 GB drives based on the "recommendation":http://vowe.net/archives/008666.html of Volker Weber. It served its purpose well and runs 24/7 without any problem at all. However recently I started to have issues. The most important one was simply that the device is now filled to the rim. While that could be solved by just using larger disks (or not ripping all of my DVDs onto disk), the other major issue would still stand.
+
+The device is just too slow. Using AFP or CIFS I barely get more than 10 MByte/sec top (measured using dd from @/dev/zero@ with a blocksize of 32k). This doesn't look like a device capable of Gigabit speed. Besides, during these tests the CPU of the ReadyNAS ran at about 90% load so there is obviously not much more to expect from that device.
+
+So being too cheap to buy one of the new ReadyNAS Pros while craving for that extra speed and wanting to learn something new, I opted into building a new system from ground up. As I have heard very nice stories about (Open)solaris (I'm looking a you, "Jörg":http://c0t0d0s0.org) I decided that Opensolaris would be the new OS of choice. I just wanted to see and use all that ZFS goodness by myself.
+
+Unfortunately as I bought only Macs recently I was fairly outdated regarding a diverse knowledge of PC hardware. So I started browsing ("Heise":http://heise.de FTW!) and finally found some decent hardware (at least on paper) which I ordered today. The main problem here was Solaris compatibility, so amost everything was checked against the "HCL":http://www.sun.com/bigadmin/hcl/data/os/.
+
+For me, the most important piece was the enclosure as I intended to put a lot of disks in it. Or at least could be able to add more of them later without having to add additional enclosures. There are some modestly prices server enclosures on the market. However, as I don't own a rack (yet) these where of reach. So I opted into a tower case from Lian Li - more specifically the "PC-A17B":http://lian-li.com/v2/en/product/product06.php?pr_index=135&cl_index=1&sc_index=25&ss_index=62. Which allows to add 9 external 5.25″ devices. As I obviously not want to insert 5.25″ disk drives, I searched for an enclosure to convert that bays into 3.5″ bays for normal hard disks. Initially I fell in love with the Lian Li "EX-H34B":http://lian-li.com/v2/en/product/product06.php?pr_index=285&cl_index=2&sc_index=5&ss_index=12 which allows 4 disk drives to be used in 3 5.25″ bays while providing hot-plug capabilities. Unfortunately these babes were nowhere to find for delivery in the german internets in a reasonably timeframe.
+
+So I opted into 3 "Silverstone CFP52B":http://www.silverstonetek.com/products/p_contents.php?pno=CFP52B together with 12 "Silverstone CP05":http://www.silverstonetek.com/products/p_contents.php?pno=CP05 which also provide hot-plug capabilities while looking pretty decent together with the Lian Li enclosure.
+
+For the other hardware, I had a hard time deciding between Intel and AMD. Finally I settled with Intel as it promised a wee bit more compatibility with Opensolaris (at least on consumer boards and CPUs). I ordered an "Asus P5QL-CM":http://www.asus.com/product.aspx?P_ID=KO1Q2EGHFX3qBo5U together with an Intel E7400 (45nm, 2.8 GHz, 65W TDP) and 4 GB of Kingston RAM. The board combination allows me to use 6 SATA disk drives now and add an additional controller and more drives later if needed. I'm a bit concerned regarding the Realtek network chip on board. Fortunately I have two spare Intel Pro/1000 GT adapter lying around. So this hopefully will not be a huge problem
+
+Regarding the drives, I ordered 6 Western Digital WD10EADS which are going to be connected to the onboard SATA ports and a "DeLOCK IDE Flash Modul 40Pin 8GB Vertical":http://www.delock.de/produkte/gruppen/flash+speicher/IDE_Flash_Modul_40Pin_8GB_Vertikal_54115.html?setLanguage=EN as a boot device connected to the "old" PATA port. Let's see how that works...
+
+I further entries, I will go into details about my journey into Solaris. But first I'm going to wait for my hardware to arrive.
