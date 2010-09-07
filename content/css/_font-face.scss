@@ -13,7 +13,7 @@
   @font-face {
     font-family: $family;
     src: url($prefix + ".eot");
-    src: local("\u263a"), url($prefix + ".woff") format("woff"), url($prefix + ".otf") format("opentype"), url("#{$prefix}.svg##{$filename}") format("svg");
+    src: local("\u263a"), url($prefix + ".woff") format("woff"), url($prefix + ".ttf") format("truetype"), url("#{$prefix}.svg##{$filename}") format("svg");
     font-weight: $weight;
     font-style: $style;
   }
