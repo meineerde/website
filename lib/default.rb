@@ -6,3 +6,12 @@ include Nanoc3::Helpers::Filtering
 include Nanoc3::Helpers::LinkTo
 include Nanoc3::Helpers::Rendering
 include Nanoc3::Helpers::XMLSitemap
+
+
+%w(twitter_username disqus_shortname).each do |cfg|
+  eval <<-EOF
+    def #{cfg}
+      @config[:#{cfg}]
+    end
+  EOF
+end

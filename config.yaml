@@ -7,3 +7,5 @@ data_sources:
   
 text_extensions: [ 'css', 'erb', 'haml', 'htm', 'html', 'js', 'less', 'markdown', 'md', 'php', 'rb', 'sass', 'scss', 'textile', 'txt', 'xhtml', 'xml' ]
 index_filenames: [ 'index.html' ]
+
+twitter_username: 'meineerde'

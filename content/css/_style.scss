@@ -263,20 +263,31 @@ footer {
       color: #999;
     }
   }
-  #info {
-    float: left;
-    width: 25em; }
-  #twitter {
-    border-left: 27em #000 solid;
-    ul, li {
-      margin-left: 0;
-      list-style-type: none; }
-    ul {
-      margin-bottom: 1em; }
-  }
 }
+#info {
+  $size: .75;
+  font-size: 1em * $size;
+
+  float: left;
+  width: 25em/$size;
+}
+#twitter {
+  $size: .75;
+  font-size: 1em * $size;
+  
+  border-left: 27em/$size #000 solid;
+  h2 {
+    background: url(/media/common/twitter.png) no-repeat 0 25%;
+    padding-left: 30px;
+  }
+  ul { list-style-type: none; margin: 0em; }
+  li { margin: 0 0 1em 0; }
+}
+.twitter_date { font-size: .75em;}
+
 
 #legal {
+  margin-top: 2em;
   font-size: .75em;
   color: darken($footer-color, 10%);
 }

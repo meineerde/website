@@ -16,7 +16,8 @@
       %em web (at) meine-er (dot) de
 #twitter
   %h2 The real life
-  %a{:href => "http://twitter.com/meineerde"} Read more...
+  = get_tweets(twitter_username)
+  %a{:href => "http://twitter.com/#{twitter_username}"} Follow me on twitter...
 .clearfix
 %p#legal
   All textual work on this website is licensed under
