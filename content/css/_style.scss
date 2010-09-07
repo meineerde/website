@@ -122,7 +122,7 @@ address {
 
 .left  { float: left;  margin: .5em .5em .5em 0; }
 .right { float: right; margin: .5em 0 .5em .5em; }
-.center { display: block; margin: .5em auto; }
+.center { display: block; margin: .5em auto; text-align: center;}
 
 /* >> The Magnificent CLEARFIX << */
 .clearfix {
@@ -149,7 +149,12 @@ body {
   font-family: MuseoSans, "Trebuchet MS",Helvetica,Verdana,sans-serif;
 }
 p { line-height: 1.25em; margin-bottom: .75em; }
-
+blockquote {
+  border-left: 5px solid #ccc;
+  clear:both;
+  margin: .5em 0 1em 1em;
+  padding-left: .5em;
+}
 
 #navbar {
   font-size: .75em; // 12px
@@ -218,7 +223,7 @@ header { position: relative; }
 }
 
 #content {
-  padding: 3em 4em 2em 3em;
+  padding: 1em 4em 2em 3em; // Additional 2em on top by first child
   width: $content-width - 7em;
   background-color: $background;
   box-shadow: 3px 3px 15px #000;
@@ -230,17 +235,36 @@ header { position: relative; }
     a{text-decoration: none;}
   }
 }
-.article {
-  h1.title { margin: 0 0 .25em;}
-  p.meta {
+
+.article p.meta {
+  color: lighten($color, 20%);
+  margin-bottom: 1em;
+}
+h1.title {
+  margin: 0 0 .25em;
+  a { color: lighten($color, 10%) !important; }
+}
+
+#archive{
+  padding-top: .5em; // to have a 2em top margin
+  h1 { font-size: 1.5em; }
+  
+  ul { list-style-type: none; margin: 0;}
+  li { line-height: 1.25em; }
+  span {
+    font-family: Inconsolata, monospace, sans-serif; 
+    font-size: .875em;
     color: lighten($color, 20%);
-    margin-bottom: 1em;
   }
 }
 
-
-
 #tagcloud {
+  h1 { font-size: 1.5em; }
+  
+  .tags {
+    width: 70%;
+    margin: 0 auto;
+  }
   .cloud-0 { font-size: 2em;   }
   .cloud-1 { font-size: 1.5em; }
   .cloud-2 { font-size: 1.2em; }
@@ -254,8 +278,10 @@ header { position: relative; }
   li {
     width: 50%;
     list-style-type: none;
-    margin: 0 0 1em;
   }
+  &.top li { margin: 2em 0 1em; }
+  &.bottom li {}
+
   .previous { float: left; }
   .next { float: right; text-align: right;}
 }
