@@ -43,11 +43,13 @@ def item_by_identifier(identifier)
 end
 
 #=> { 2010 => { 12 => [item0, item1], 3 => [item0, item2]}, 2009 => {12 => [...]}}
-def articles_by_year_month
+def articles_by_year_month(items = nil)
   result = {}
   current_year = current_month = year_h = month_a = nil
+  
+  articles = items ? (sorted_articles & items) : sorted_articles
 
-  sorted_articles.each do |item|
+  articles.each do |item|
     d = Date.parse(item[:created_at])
     if current_year != d.year
       current_month = nil
@@ -64,6 +66,10 @@ def articles_by_year_month
   end
 
   result
+end
+
+def items_by_year(year)
+  articles_by_year_month[year.to_i].collect{|k, v| v}.flatten
 end
 
 def is_front_page?

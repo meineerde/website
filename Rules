@@ -6,7 +6,7 @@ preprocess do
 
   copy_static
   create_tag_pages
-  # update_twitter
+  create_archive_pages
 end
 
 compile '/css/_*' do

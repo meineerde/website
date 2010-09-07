@@ -1,0 +1,19 @@
+
+
+#archive
+  - articles_by_year_month(items).reverse_each do |year, months|
+    %h1= year
+    - months.reverse_each do |month, month_items|
+      %ul
+        - month_items.each do |item|
+          %li
+            %span= time(item[:created_at], '%d %b %Y') + " » "
+            = link_to(item[:title], item, :class => "permalink")
+.clear
+
+#tagcloud
+  %h1 Tags
+  - tags = rank_tags(5, items)
+  .tags
+    - tags.sort_by{|k, v| k}.each do |tag, count|
+      %a{:href => "/tags/#{tag}/", :class => "tag cloud-#{count}"}= tag

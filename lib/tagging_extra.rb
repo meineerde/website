@@ -55,7 +55,6 @@ module TaggingExtra
   #tags. The rank 'n-1' to the least frequents.
   #The result is a hash such as: { tag => rank }
   def rank_tags(n, items=nil) 
-
     items = @items if items.nil?
     count = count_tags( items )
 

@@ -1,7 +1,7 @@
 - is_embedded ||= false
 .article
   - if not is_embedded
-    = render('_previous_next', :item => item)
+    = render('_previous_next', :item => item, :position => 'top')
 
   %h1.title= link_to(item[:title], item, :title => "Full article", :class => "permalink" )
   %p.meta
@@ -10,4 +10,4 @@
   != content || partial(item)
   
   - if not is_embedded
-    = render('_previous_next', :item => item)
+    = render('_previous_next', :item => item, :position => 'bottom')
