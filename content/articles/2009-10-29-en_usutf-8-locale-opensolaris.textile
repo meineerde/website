@@ -1,0 +1,92 @@
+---
+title: en_us.utf-8 locale on OpenSolaris
+tags: [lang:English, Opensolaris]
+created_at: 2009-10-29 23:11:44
+author: Holger Just
+
+kind: article
+publish: true
+---
+
+<% content_for :summary do %>
+en_us.utf-8 locale on OpenSolaris
+<% end %>
+
+_This is mainly a pointer for me to remember things..._
+
+If you have an OpenSolaris 200x.xx installed as a minimal image (like "that one":http://alexeremin.blogspot.com/2008/12/minimum-opensolaris-200811-install.html) you will notice that there is a rather unfriendly assortment of locales installed:
+
+<% filter :code, :bash do %>
+locale -a
+C
+POSIX
+iso_8859_1
+<% end %>
+
+What we (or at least I) want instead is the "default" locale en_us.UTF-8
+Google has pointed me to the @localeadm@ tool to solve this. However this tool seems not to be available anymore on Opensolaris. Instead, one is expected to do the following:
+
+<% filter :code_simple, :bash do %>
+pkg install lang-support-english
+<% end %>
+
+This installs ca. 135 MB of packages. Unfortunately one of them is a complete X.org server which I specifically did not want to install in the first place as the system is intended to be a server where I deem an X server to be just unnecessary cruft. Fortunately, it is not started by default, so it seems, I have to live with that.
+
+Another call of @locale -a@ shows us a much friendlier view on the system:
+
+<% filter :code, :bash do %>
+locale -a
+C
+POSIX
+en_AU
+en_AU.ISO8859-1
+en_AU.UTF-8
+en_CA
+en_CA.ISO8859-1
+en_CA.UTF-8
+en_GB
+en_GB.ISO8859-1
+en_GB.ISO8859-15
+en_GB.ISO8859-15@euro
+en_GB.UTF-8
+en_IE
+en_IE.ISO8859-1
+en_IE.ISO8859-15
+en_IE.ISO8859-15@euro
+en_IE.UTF-8
+en_MT.UTF-8
+en_NZ
+en_NZ.ISO8859-1
+en_NZ.UTF-8
+en_US
+en_US.ISO8859-1
+en_US.ISO8859-15
+en_US.ISO8859-15@euro
+en_US.UTF-8
+iso_8859_1
+<% end %>
+
+To setup our newly installed locale, just put this line
+
+<% filter :code_simple, :bash do %>
+LANG="en_US.UTF-8"
+<% end %>
+
+into the file @/etc/default/init@ and reboot the system.
+
+*Sigh*, sometimes are things so much easier on the Linux side of life.
+
+The hint to the solution came from the "OpenSolaris Forum":http://opensolaris.org/jive/thread.jspa?threadID=13807 btw.
+
+h2. Update 2010-02-23
+
+You can also just install the locale files without the overhead that comes from @lang-support-english@. Just install on Opensolaris < Build 133
+
+<% filter :code_simple, :bash do %>
+pkg install SUNWlang-enUS
+<% end %>
+or on Opensolaris >= Build 133
+
+<% filter :code_simple, :bash do %>
+pkg install system/locale/en_us
+<% end %>

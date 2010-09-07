@@ -1,7 +1,8 @@
 ---
 title: Cross-browser CSS gradient
-tags: [CSS, HTML]
+tags: [lang:English, CSS, HTML]
 created_at: 2010-07-26 11:22:00
+author: Holger Just
 
 kind: article
 publish: true

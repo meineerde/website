@@ -1,0 +1,29 @@
+---
+title: The pain of SPF records
+tags: [lang:English, DNS, Schlundtech, Fsck, Fail, Mail]
+created_at: 2009-08-13 01:26:13
+author: Holger Just
+
+kind: article
+publish: true
+---
+
+Mainly based on curiosity (and the discussion about "#zensursula":http://search.twitter.com/search?q=%23zensursula) I decided to run my own name server and only use the server of my provider as the secondary one (which is mandated by the "denic":http://denic.de for .de domains)
+
+Since all my domains are registered via "Schlundtech":http://schlundtech.de, one of the largest DNS providers in Germany, I trivially used their server as secondary. They are able to fetch changes via AXFR, albeit not automatically.
+
+Trying to be a nice fellow, I inserted "SPF records":http://en.wikipedia.org/wiki/Sender_Policy_Framework to all my domains. This allows other servers to query the DNS for mail servers which are allowed to _send_ mail for a domain -- in contrast to the MX record which point to serves which receive mail. 
+
+For this domain, the SPF record is
+
+<% filter :code_simple, :text do %>
+meine-er.de.    86400 IN  TXT "v=spf1 mx -all"
+<% end %>
+
+Which states, that this is a SPF version 1 information which grants all MX hosts of this domain the right to send mail (@mx@) and disallows any other hosts (@-all@). Of course these records have to be evaluated by the receiving mail server. Today these checks are mostly incorporated into spam filters.
+
+As can be seen above the SPF records are traditionally stored in simple TXT records, which were invented to be optional free-text fields. As the SPF "standard" demands a fixed syntax it seems rather inappropriate to misuse such a free-text field.
+
+So _they_ (they are watching us, you have to look out) found an own record type for SPF with the number 99 as specified in "RFC 4408":http://www.ietf.org/rfc/rfc4408.txt which is currently in experimental state (which I apparently failed to notice). So it seemed as all went well as I included both record types into my zone (using tinydns). However, I failed to check the DNS results of Schludtech properly and so missed that its DNS updates which I triggered manually on their website failed silently on the new SPF record (the non-TXT one). It just didn't update its zone and reported stale data. It seems like bind and many other DNS tools out there do not like record types the do not know. Time to update everyone. Just throw out that bloated piece of crap that BIND is.
+
+So fsck it. It just took me 2 hours to figure that out. Maybe I should have tried an AXFR zone transfer using @dig@ earlier -- this attempt beautifully failed on first try. But the simplest things are always the hardest to track, even if you think of them. Fortunately, everything went well in the end and the DNS glitches which some of you have seen should be EOLd once the changes have properly propagated (which should be in about 23 hours from now)

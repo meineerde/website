@@ -1,0 +1,51 @@
+---
+title: Chili con Carne
+tags: [lang:German, Chili, Rezept]
+created_at: 2010-10-01 17:16:03
+author: Holger Just
+
+kind: article
+publish: true
+---
+
+Schee war's g'wesen auf'm Oktoberfest. Jetzt bin ich wieder da und muss daher auch wieder selbst für mich sorgen. Angesichts des sehr pünktlich angebrochenen Oktobers und der damit verbundenen Kälte wird es damit wieder Zeit für Wärme von innen. Und was ist dafür besser geeignet als ein ordentliches Chili?
+
+Richtig: nix. Und genau deswegen habe ich mir grade eins gekocht. Und im Sinne von Open Sourcing soll natürlich auch das Rezept dazu den Weg in die Welt finden. Guten Hunger!
+
+h2. Zutaten für 2 ordentliche Portionen
+
+* 500g gemischtes Hackfleisch
+* 500ml Rinderbrühe
+* 2 EL Tomatenmark
+* 1-2 weiße oder rote Zwiebeln
+* 2-3 Knoblauchzehen
+* 1 Dose Tomaten (400g)
+* 1 Dose rote Kidneybohnen (420g)
+* 2-5 Chilischoten (je nach Geschmack, aber unbedingt frisch)
+* etwas Chilipulver (je nach Geschmack)
+* etwas Paprikapulver
+* 1/2 TL gemahlener Kreuzkümmel (oder Kumin)
+* 1 TL gemhischte Kräuter (Oregano, Thymian, Rossmarin)
+* 2 TL Honig
+
+h3. Zum Anrichten
+
+* Crème fraîche oder Schmand
+* etwas Gartenkresse, Schnittlauch o.ä.
+* ein *frisches* Baguettebrot oder Bauernbrot
+
+h2. Zubereitung
+
+Das Hackfleisch in einer Pfanne mit etwas Olivenöl (oder anderem Pflanzenöl) gut anbraten bis es anfängt krümelich zu werden. Währenddessen in einem großen Topf die Rinderbrühe erhitzen. Sobald das Fleisch vollständig durch gegarrt ist und anfängt braun zu werden alles in den Topf mit der heißen Rinderbrühe geben und aufkochen.
+
+Die Zwiebeln und den Knoblauch fein hacken. Der Knoblauch schmeckt besser und riecht nicht so stark, wenn er gehackt und nicht gepresst wird und wenn das grüne Herz entfernt wird, das riecht am meisten.
+
+Beides in die Pfanne geben in der gerade das Fleisch war und anbraten bis es glasig wird und das Tomatenmark sowie einen Esslöfel Wasser oder Brühe dazu geben. Kurz weiterbraten und dann in den Topf mit der Fleischbrühe geben. Jetzt die Dosentomaten und die kleingehackten Chilischoten dazu geben.
+
+Jetzt mit Kreuzkümmel, Chillipulver, dem Parikapulver sowie Pfeffer und Salz würzen. und jetzt das ganze ca. 30 Minuten bei mittlerer Hitze zugedeckt köcheln lassen. Hier noch nicht zu stark würzen, da sich der Geschmack durch das Kochen noch verändert und wesentlich _runder_ wird.
+
+Währenddessen die Kidneybohnen abtropfen und ggf. den Saft anwaschen. Erst ca. 10 Minuten vor Ende der Kochzeit die Bohnen dazugeben. So fallen sie nicht auseinander. Die Kräuter dazugeben, das ganze mit dem Honig abrunden. Noch etwas abschmecken und das Chili noch etwas köcheln lassen, aber die Bohnen nicht auseinander fallen lassen.
+
+Zum Schluss die scharfe Angelegenheit in Schüsseln mit etwas Crème fraîche und Kresse obendrauf servieren. Dazu das Brot und ein kühles Bier.
+
+Auf einen guten...
