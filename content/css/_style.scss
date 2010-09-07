@@ -314,6 +314,11 @@ footer {
 
   float: left;
   width: 25em/$size;
+  
+  h2 {
+    background: url(/media/common/holgerjust.jpg) no-repeat 0 -.0625em;
+    padding-left: 30px;
+  }
 }
 #twitter {
   $size: .875;

@@ -3,7 +3,7 @@
   - if not is_embedded
     = render('_previous_next', :item => item, :position => 'top')
 
-  %h1.title= link_to(item[:title], item, :title => "Full article", :class => "permalink" )
+  %h1.title= link_to(item[:title], item, :title => "Permalink", :class => "permalink" )
   %p.meta
     written by #{item[:author] || "Holger Just"} on #{time(item[:created_at], '%B %d, %Y')}
     and tagged with
