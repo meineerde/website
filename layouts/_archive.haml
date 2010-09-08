@@ -1,9 +1,7 @@
-
-
 #archive
-  - articles_by_year_month(items).reverse_each do |year, months|
+  - articles_by_year_month(items).sort.reverse_each do |year, months|
     %h1= year
-    - months.reverse_each do |month, month_items|
+    - months.sort.reverse_each do |month, month_items|
       %ul
         - month_items.each do |item|
           %li
