@@ -49,8 +49,8 @@ a {
   color: #777;
 }
 
-ul { margin-left: 30px; }
-ol { margin-left: 30px; list-style-type: decimal; }
+ul { margin: 0 0 1em 30px; }
+ol { margin: 0 0 1em 30px; list-style-type: decimal; }
 
 small { font-size: 85%; }
 strong, th { font-weight: bold; }
