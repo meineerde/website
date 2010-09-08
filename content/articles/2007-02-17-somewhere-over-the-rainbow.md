@@ -1,6 +1,6 @@
 ---
 title: "Somewhere over the rainbow"
-tags: [s9y bbcode]
+tags: [lang:German, s9y bbcode]
 created_at: 2007-02-17 17:39:17 CET
 updated_at: 2009-07-02 22:16:18 CEST
 author: Holger Just
@@ -17,6 +17,6 @@ Um trotzdem dieses heimische Gefühl zu wahren, hab ich mich dazu entschlossen, 
 
 Aber, um mich für mein fast zweimonatiges Schweigen zu entschuldigen hab ich hier noch eine Kleinigkeit von Youtube.
 
-<object width="560" height="340"><param name="movie" value="http://www.youtube.com/v/brRsRTTp1Pw&hl=de&fs=1&color1=0x3a3a3a&color2=0x999999&hd=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/brRsRTTp1Pw&hl=de&fs=1&color1=0x3a3a3a&color2=0x999999&hd=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="560" height="340"></embed></object>
+<object width="560" height="340"><param name="movie" value="http://www.youtube.com/v/brRsRTTp1Pw&amp;hl=de&amp;fs=1&amp;color1=0x3a3a3a&amp;color2=0x999999&amp;hd=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/brRsRTTp1Pw&amp;hl=de&amp;fs=1&amp;color1=0x3a3a3a&amp;color2=0x999999&amp;hd=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="560" height="340"></embed></object>
 
 Rest in peace, Somewhere Over The Rainbow...

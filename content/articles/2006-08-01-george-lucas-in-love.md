@@ -1,6 +1,6 @@
 ---
 title: "George Lucas in Love"
-tags: ["George Lucas in Love"]
+tags: [lang:German, "George Lucas in Love"]
 created_at: 2006-08-01 21:48:57 CEST
 updated_at: 2009-07-06 21:13:28 CEST
 author: Holger Just

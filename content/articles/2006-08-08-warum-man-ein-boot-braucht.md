@@ -1,6 +1,6 @@
 ---
 title: "Warum man ein Boot braucht"
-tags: [Sommer, Boot, Schwielowsee]
+tags: [lang:German, Sommer, Boot, Schwielowsee]
 created_at: 2006-08-08 21:45:24 CEST
 updated_at: 2009-07-06 19:54:16 CEST
 author: Holger Just
@@ -19,6 +19,6 @@ Die ganze Zeit (also 4 Stunden lang) ist dabei eine Ente immer im Kreis um das B
 
 <a href="http://www.flickr.com/photos/meine-erde/210300297/"><img src="http://static.flickr.com/83/210300297_05d410e493.jpg" alt="Ente 2" title="Das Vieh hat die die ganze Zeit auf mein Handy gestarrt" class="center"/></a>
 
-Also dann langsam die Sonne hinter den Bäumen verschwand wurde es dann doch ein wenig kalt. Die heißen Tage hab ich ja [verpasst](/2006/07/25/sommer-sonne-sonnenschein). Also ab nach Hause. Mit einem wunderschönen Sonnenuntergang im Rücken.
+Also dann langsam die Sonne hinter den Bäumen verschwand wurde es dann doch ein wenig kalt. Die heißen Tage hab ich ja [verpasst](/2006/07/sommer-sonne-sonnenschein). Also ab nach Hause. Mit einem wunderschönen Sonnenuntergang im Rücken.
 
 <a href="http://www.flickr.com/photos/meine-erde/210300299/"><img src="http://static.flickr.com/59/210300299_386ba13ba8.jpg" alt="Sonnenuntergang" title="Sonnenuntergang am Schwielowsee" class="center"/></a>

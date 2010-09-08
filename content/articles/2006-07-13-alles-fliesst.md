@@ -1,6 +1,6 @@
 ---
 title: "Alles fließt"
-tags: [Wetter, Sommer]
+tags: [lang:German, Wetter, Sommer]
 created_at: 2006-07-13 19:24:14 CEST
 updated_at: 2009-07-06 21:16:22 CEST
 author: Holger Just

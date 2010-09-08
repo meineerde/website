@@ -1,6 +1,6 @@
 ---
 title: "Spam des Tages 2"
-tags: [Spam]
+tags: [lang:German, Spam]
 created_at: 2006-05-04 18:03:42 CEST
 updated_at: 2009-07-07 00:11:43 CEST
 author: Holger Just

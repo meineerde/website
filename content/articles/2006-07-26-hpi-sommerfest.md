@@ -1,6 +1,6 @@
 ---
 title: "HPI Sommerfest"
-tags: [HPI, Sommerfest, BossHoss]
+tags: [lang:German, HPI, Sommerfest, BossHoss]
 created_at: 2006-07-26 09:27:13 CEST
 updated_at: 2009-07-07 00:27:01 CEST
 author: Holger Just

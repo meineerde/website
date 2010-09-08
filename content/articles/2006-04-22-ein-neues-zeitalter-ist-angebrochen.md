@@ -1,6 +1,6 @@
 ---
 title: "Ein neues Zeitalter ist angebrochen..."
-tags: []
+tags: [lang:German]
 created_at: 2006-04-22 20:44:49 CEST
 updated_at: 2009-07-06 20:15:34 CEST
 author: Holger Just

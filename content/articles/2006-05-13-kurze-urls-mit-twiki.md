@@ -1,6 +1,6 @@
 ---
 title: "Kurze URLs mit TWiki"
-tags: [TWiki, ShortURLs, mod_rewrite]
+tags: [lang:German, TWiki, ShortURLs, mod_rewrite]
 created_at: 2006-05-13 00:59:01 CEST
 updated_at: 2009-09-01 14:48:21 CEST
 author: Holger Just
@@ -25,9 +25,7 @@ Folgende Anforderungen sind dabei berücksichtigt worden:
 * Standard-URLs müssen auch funktionieren.
 * Passwörter dürfen nicht im Klartext übertragen werden.
 
-<!--more-->
-
-**Alle Konfigurationsdateien (bzw. -fragmente), die im folgenden erwähnt werden können auch [heruntergeladen](/media/entry/2006/05/13/config.zip) werden.**
+**Alle Konfigurationsdateien (bzw. -fragmente), die im folgenden erwähnt werden können auch [heruntergeladen](/media/2006/config.zip) werden.**
 
 ### Die Apache-Konfiguration
 Die Anleitung beruht auf der [Version 4.0.2](http://twiki.org/cgi-bin/view/Codev/TWikiRelease04x00x02) (Dakar) von TWiki.
@@ -41,201 +39,203 @@ Beachtet werden sollte außerdem, dass die Konfiguration den `TemplateLogin` ver
 
 Es gibt zwei Virtual Hosts für HTTP und HTTPS.
 
-    #!apache
-    <VirtualHost _default_:80>
-        ServerName www.example.com
-        ServerAdmin admin@example.com
+<% filter :code, :apache do %>
+<VirtualHost _default_:80>
+  ServerName www.example.com
+  ServerAdmin admin@example.com
 
-        DocumentRoot /var/www/twiki
-        ScriptAlias /twiki/bin/ "/usr/lib/cgi-bin/twiki/"
-        Alias /twiki/ "/var/www/twiki/"
+  DocumentRoot /var/www/twiki
+  ScriptAlias /twiki/bin/ "/usr/lib/cgi-bin/twiki/"
+  Alias /twiki/ "/var/www/twiki/"
 
-        # Pub Dirs
-        <Directory "/var/www/twiki/pub">
-    	Options FollowSymLinks +Includes -Indexes
-    	AllowOverride None
-    	Allow from all
-        </Directory>
+  # Pub Dirs
+  <Directory "/var/www/twiki/pub">
+    Options FollowSymLinks +Includes -Indexes
+    AllowOverride None
+    Allow from all
+  </Directory>
 
-        # We set an environment variable called anonymous_spider
-        # Setting a BrowserMatchNoCase to ^$ is important. It prevents
-        # TWiki fromincluding its own topics as URLs and also prevents
-        # other TWikis from doing the same. This is important to
-        # prevent the most obvious Denial of Service attacks.
-        # You can expand this by adding more BrowserMatchNoCase
-        # statements to block evil browser agents trying the impossible
-        # task of mirroring a twiki
-        # Example:
-        # BrowserMatchNoCase ^SiteSucker anonymous_spider
-        BrowserMatchNoCase ^$ anonymous_spider
+  # We set an environment variable called anonymous_spider
+  # Setting a BrowserMatchNoCase to ^$ is important. It prevents
+  # TWiki fromincluding its own topics as URLs and also prevents
+  # other TWikis from doing the same. This is important to
+  # prevent the most obvious Denial of Service attacks.
+  # You can expand this by adding more BrowserMatchNoCase
+  # statements to block evil browser agents trying the impossible
+  # task of mirroring a twiki
+  # Example:
+  # BrowserMatchNoCase ^SiteSucker anonymous_spider
+  BrowserMatchNoCase ^$ anonymous_spider
 
-        <Directory "/usr/lib/cgi-bin/twiki">
-    	Options +ExecCGI FollowSymLinks
-    	SetHandler cgi-script
-    	Order Allow,Deny
-    	Allow from all
-    	Deny from env=anonymous_spider
-        </Directory>
-    
-        # The other dirs should not be visible to the web at all,
-        # but just to be safe: deny from all
+  <Directory "/usr/lib/cgi-bin/twiki">
+    Options +ExecCGI FollowSymLinks
+    SetHandler cgi-script
+    Order Allow,Deny
+    Allow from all
+    Deny from env=anonymous_spider
+  </Directory>
 
-        <Directory "/var/lib/twiki/data">
-    	 deny from all
-        </Directory>
+  # The other dirs should not be visible to the web at all,
+  # but just to be safe: deny from all
 
-        <Directory "/var/lib/twiki/templates">
-    	 deny from all
-        </Directory>
+  <Directory "/var/lib/twiki/data">
+    deny from all
+  </Directory>
 
-        <Directory "/var/lib/twiki/lib">
-    	 deny from all
-        </Directory>
+  <Directory "/var/lib/twiki/templates">
+    deny from all
+  </Directory>
 
-        <Directory "/var/lib/twiki/tools">
-    	 deny from all
-        </Directory>
+  <Directory "/var/lib/twiki/lib">
+    deny from all
+  </Directory>
 
-        <Directory "/var/lib/twiki/locale">
-    	deny from all
-        </Directory>
-    
-        # This is the ShorterURL stuff as found in
-        # http://wiki.boum.org/TechStdOut/BoumTWikiSetup
-        <IfModule mod_rewrite.c>
-    	RewriteEngine On
-	
-    	#/ displays homepage
-    	RewriteRule ^/$ /twiki/bin/view/Public/WebHome [PT]
-	
-    	# Nicer, and to prevent anyone to bypass the
-            # following redirect
-    	RewriteRule ^/twiki/bin/(.*) /$1 [R=permanent,L]
-	
-    	# Scripts that need to be authentificated can
-            # *only* be accessed via httpS
+  <Directory "/var/lib/twiki/tools">
+    deny from all
+  </Directory>
 
-    	RewriteRule ^/(viewauth|edit|preview|save|attach|upload|rename|rdiffauth|manage|installpasswd|logon|logout)(.*)    https://%{SERVER_NAME}/$1$2 [R,L]
-	
-    	# !!! ATTENTION !!!
-    	# This rules assume, webs AND topics each starting with a caps
+  <Directory "/var/lib/twiki/locale">
+    deny from all
+  </Directory>
 
-    	# if (URL begins with a caps) then
-    	#   rewrite /twiki/bin/view/URL and stop
-    	# end if
-    	# if (URL begins with view) then
-    	#   redirect to Web/Topic without view and stop
-    	# end if
-    	# if (URL begins with a script) then
-    	#   rewrite /twiki/bin/URL
-    	# end if
-	
-    	RewriteRule ^/([[:upper:]].*) /twiki/bin/view/$1 [PT]
-    	RewriteRule ^/([[:upper:]].*) /twiki/bin/view/$1 [PT]
-    	RewriteRule ^/view/(.*) /$1 [R=permanent,L]
-	
-    	RewriteCond /usr/lib/cgi-bin/twiki/$1 -f
-    	RewriteRule ^/([a-z]+)(.*) /twiki/bin/$1$2 [PT]
-        </IfModule>
-    </VirtualHost>
+  # This is the ShorterURL stuff as found in
+  # http://wiki.boum.org/TechStdOut/BoumTWikiSetup
+  <IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    #/ displays homepage
+    RewriteRule ^/$ /twiki/bin/view/Public/WebHome [PT]
+
+    # Nicer, and to prevent anyone to bypass the
+    # following redirect
+    RewriteRule ^/twiki/bin/(.*) /$1 [R=permanent,L]
+
+    # Scripts that need to be authentificated can
+    # *only* be accessed via httpS
+    RewriteRule ^/(viewauth|edit|preview|save|attach|upload|rename|rdiffauth|manage|installpasswd|logon|logout)(.*)    https://%{SERVER_NAME}/$1$2 [R,L]
+
+    # !!! ATTENTION !!!
+    # This rules assume, webs AND topics each starting with a caps
+
+    # if (URL begins with a caps) then
+    #   rewrite /twiki/bin/view/URL and stop
+    # end if
+    # if (URL begins with view) then
+    #   redirect to Web/Topic without view and stop
+    # end if
+    # if (URL begins with a script) then
+    #   rewrite /twiki/bin/URL
+    # end if
+
+    RewriteRule ^/([[:upper:]].*) /twiki/bin/view/$1 [PT]
+    RewriteRule ^/([[:upper:]].*) /twiki/bin/view/$1 [PT]
+    RewriteRule ^/view/(.*) /$1 [R=permanent,L]
+
+    RewriteCond /usr/lib/cgi-bin/twiki/$1 -f
+    RewriteRule ^/([a-z]+)(.*) /twiki/bin/$1$2 [PT]
+  </IfModule>
+</VirtualHost>
+<% end %>
 
 Und der HTTPS-VirtualHost:
 
-    #!apache
-    <VirtualHost _default_:443>
-        SSLEngine On
-        SSLCertificateFile /etc/apache2/ssl/apache.pem
+<% filter :code, :apache do %>
+<VirtualHost _default_:443>
+  SSLEngine On
+  SSLCertificateFile /etc/apache2/ssl/apache.pem
 
-        ServerName www.example.com
-        ServerAdmin admin@example.com
-    
-        DocumentRoot /var/www/twiki
-        ScriptAlias /twiki/bin/ "/usr/lib/cgi-bin/twiki/"
-        Alias /twiki/ "/var/www/twiki/"
-    
-        # We set an environment variable called anonymous_spider
-        # Setting a BrowserMatchNoCase to ^$ is important. It prevents
-        # TWiki fromincluding its own topics as URLs and also prevents
-        # other TWikis from doing the same. This is important to
-        # prevent the most obvious Denial of Service attacks.
-        # You can expand this by adding more BrowserMatchNoCase
-        # statements to block evil browser agents trying the impossible
-        # task of mirroring a twiki
-        # Example:
-        # BrowserMatchNoCase ^SiteSucker anonymous_spider
-        BrowserMatchNoCase ^$ anonymous_spider
+  ServerName www.example.com
+  ServerAdmin admin@example.com
 
-        <Directory "/usr/lib/cgi-bin/twiki">
-    	Options +ExecCGI FollowSymLinks
-    	SetHandler cgi-script
-    	Order Allow,Deny
-    	Allow from all
-    	Deny from env=anonymous_spider
-        </Directory>
-    
-        # This is the ShorterURL stuff as found in
-        # http://wiki.boum.org/TechStdOut/BoumTWikiSetup
-        <IfModule mod_rewrite.c>
-    	RewriteEngine On
-	
-    	# / displays homepage
-    	RewriteRule ^/$ /twiki/bin/view/Main/WebHome [PT]
-	
-    	# if (URL begins with a caps) then
-    	#   rewrite /twiki/bin/view/URL and stop
-    	# end if
-    	# if (URL begins with view) then
-    	#   redirect to Web/Topic without view and stop
-    	# end if
-    	# if (URL begins with a script) then
-    	#   rewrite /twiki/bin/URL
-    	# end if
+  DocumentRoot /var/www/twiki
+  ScriptAlias /twiki/bin/ "/usr/lib/cgi-bin/twiki/"
+  Alias /twiki/ "/var/www/twiki/"
 
-    	RewriteRule ^/([[:upper:]].*) /twiki/bin/view/$1 [PT]
-    	RewriteRule ^/view/(.*) /$1 [R=permanent,L]
-	
-    	RewriteCond /usr/lib/cgi-bin/twiki/$1 -f
-    	RewriteRule ^/([a-z]+)(.*) /twiki/bin/$1$2 [PT]
-        </IfModule>
-    </VirtualHost>
+  # We set an environment variable called anonymous_spider
+  # Setting a BrowserMatchNoCase to ^$ is important. It prevents
+  # TWiki fromincluding its own topics as URLs and also prevents
+  # other TWikis from doing the same. This is important to
+  # prevent the most obvious Denial of Service attacks.
+  # You can expand this by adding more BrowserMatchNoCase
+  # statements to block evil browser agents trying the impossible
+  # task of mirroring a twiki
+  # Example:
+  # BrowserMatchNoCase ^SiteSucker anonymous_spider
+  BrowserMatchNoCase ^$ anonymous_spider
 
-### TWiki-Konfiguration
+  <Directory "/usr/lib/cgi-bin/twiki">
+    Options +ExecCGI FollowSymLinks
+    SetHandler cgi-script
+    Order Allow,Deny
+    Allow from all
+    Deny from env=anonymous_spider
+  </Directory>
+
+  # This is the ShorterURL stuff as found in
+  # http://wiki.boum.org/TechStdOut/BoumTWikiSetup
+  <IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # / displays homepage
+    RewriteRule ^/$ /twiki/bin/view/Main/WebHome [PT]
+
+    # if (URL begins with a caps) then
+    #   rewrite /twiki/bin/view/URL and stop
+    # end if
+    # if (URL begins with view) then
+    #   redirect to Web/Topic without view and stop
+    # end if
+    # if (URL begins with a script) then
+    #   rewrite /twiki/bin/URL
+    # end if
+
+    RewriteRule ^/([[:upper:]].*) /twiki/bin/view/$1 [PT]
+    RewriteRule ^/view/(.*) /$1 [R=permanent,L]
+
+    RewriteCond /usr/lib/cgi-bin/twiki/$1 -f
+    RewriteRule ^/([a-z]+)(.*) /twiki/bin/$1$2 [PT]
+  </IfModule>
+</VirtualHost>
+<% end %>
+
+## TWiki-Konfiguration
 
 Editiere die Datei `/var/lib/twiki/lib/LocalSite.cfg` und nimm darin die folgenden Einstellungen vor. Der Hostname ist dabei durch den DNS-Namen der Maschine zu ersetzen.
 
-    #!perl
-    $cfg{ScriptUrlPath} = '';
-    $TWiki::cfg{ScriptUrlPaths}{view} = 'http://www.example.com';
-    $TWiki::cfg{ScriptUrlPaths}{login} = 'https://www.example.com/login';
-    $TWiki::cfg{ScriptUrlPaths}{logon} = 'https://www.example.com/logon';
-    $TWiki::cfg{ScriptUrlPaths}{logout} = 'https://www.example.com/logout';
-    $TWiki::cfg{ScriptUrlPaths}{viewauth} = 'https://www.example.com/viewauth';
-    $TWiki::cfg{ScriptUrlPaths}{edit} = 'https://www.example.com/edit';
-    $TWiki::cfg{ScriptUrlPaths}{preview} = 'https://www.example.com/preview';
-    $TWiki::cfg{ScriptUrlPaths}{save} = 'https://www.example.com/save';
-    $TWiki::cfg{ScriptUrlPaths}{attach} = 'https://www.example.com/attach';
-    $TWiki::cfg{ScriptUrlPaths}{upload} = 'https://www.example.com/upload';
-    $TWiki::cfg{ScriptUrlPaths}{rename} = 'https://www.example.com/rename';
-    $TWiki::cfg{ScriptUrlPaths}{rdiffauth} = 'https://www.example.com/rdiffauth';
-    $TWiki::cfg{ScriptUrlPaths}{manage} = 'https://www.example.com/manage';
-    $TWiki::cfg{ScriptUrlPaths}{installpasswd} = 'https://www.example.com/installpasswd';
+<% filter :code, :perl do %>
+$cfg{ScriptUrlPath} = '';
+$TWiki::cfg{ScriptUrlPaths}{view} = 'http://www.example.com';
+$TWiki::cfg{ScriptUrlPaths}{login} = 'https://www.example.com/login';
+$TWiki::cfg{ScriptUrlPaths}{logon} = 'https://www.example.com/logon';
+$TWiki::cfg{ScriptUrlPaths}{logout} = 'https://www.example.com/logout';
+$TWiki::cfg{ScriptUrlPaths}{viewauth} = 'https://www.example.com/viewauth';
+$TWiki::cfg{ScriptUrlPaths}{edit} = 'https://www.example.com/edit';
+$TWiki::cfg{ScriptUrlPaths}{preview} = 'https://www.example.com/preview';
+$TWiki::cfg{ScriptUrlPaths}{save} = 'https://www.example.com/save';
+$TWiki::cfg{ScriptUrlPaths}{attach} = 'https://www.example.com/attach';
+$TWiki::cfg{ScriptUrlPaths}{upload} = 'https://www.example.com/upload';
+$TWiki::cfg{ScriptUrlPaths}{rename} = 'https://www.example.com/rename';
+$TWiki::cfg{ScriptUrlPaths}{rdiffauth} = 'https://www.example.com/rdiffauth';
+$TWiki::cfg{ScriptUrlPaths}{manage} = 'https://www.example.com/manage';
+$TWiki::cfg{ScriptUrlPaths}{installpasswd} = 'https://www.example.com/installpasswd';
 
-    $TWiki::cfg{LoginManager} = 'TWiki::Client::TemplateLogin';
+$TWiki::cfg{LoginManager} = 'TWiki::Client::TemplateLogin';
+<% end %>
 
-
-### Die Patches
+## Die Patches
 
 Leider verwendet der Pattern-Skin, der standardmäßig von TWiki verwendet wird einen fehlerhaften Mechanismus, um die URLs zu generieren. Darum müssen wir patchen.
 
-    #!bash
-    cd /var/lib/twiki
-    find templates -name '*.tmpl' -exec perl -pi -e  's,%SCRIPTURL%/view%SCRIPTSUFFIX%,%SCRIPTURL{\"view\"%,g' {} \;
-    find templates -name '*.tmpl' -exec perl -pi -e 's,%SCRIPTURLPATH%/login%SCRIPTSUFFIX%,%SCRIPTURLPATH{\"login\"%,g' {} \;
-    find templates -name '*.tmpl' -exec perl -pi -e 's,%SCRIPTURLPATH%/edit%SCRIPTSUFFIX%,%SCRIPTURLPATH{\"edit\"%,g' {} \;
-    find templates -name '*.tmpl' -exec perl -pi -e 's,%SCRIPTURLPATH%/attach%SCRIPTSUFFIX%,%SCRIPTURLPATH{\"attach\"%,g' {} \;
+<% filter :code, :bash do %>
+cd /var/lib/twiki
+find templates -name '*.tmpl' -exec perl -pi -e 's,%SCRIPTURL%/view%SCRIPTSUFFIX%,%SCRIPTURL{\"view\"%,g' {} \;
+find templates -name '*.tmpl' -exec perl -pi -e 's,%SCRIPTURLPATH%/login%SCRIPTSUFFIX%,%SCRIPTURLPATH{\"login\"%,g' {} \;
+find templates -name '*.tmpl' -exec perl -pi -e 's,%SCRIPTURLPATH%/edit%SCRIPTSUFFIX%,%SCRIPTURLPATH{\"edit\"%,g' {} \;
+find templates -name '*.tmpl' -exec perl -pi -e 's,%SCRIPTURLPATH%/attach%SCRIPTSUFFIX%,%SCRIPTURLPATH{\"attach\"%,g' {} \;
+<% end %>
 
-### To Do
+## To Do
 
-* Im https-Modus werden einige Daten uber http geladen. Der Benutzer erhält dadurch möglicherweise eine Warnung vom Browser.
+* Im https-Modus werden einige Daten über http geladen. Der Benutzer erhält dadurch möglicherweise eine Warnung vom Browser.
 * Topics eines ausgewählten Webs sollten auch ohne Angabe des Webs ansprechbar sein.
 * Möglicherweise sind noch Stellen im Pattern-Skin, an denen die URLs noch nicht korrekt gebildet werden.

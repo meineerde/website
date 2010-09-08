@@ -1,6 +1,6 @@
 ---
 title: "Arbeitszeitvernichtung"
-tags: [Samorost, Spiel, Flash]
+tags: [lang:German, Samorost, Spiel, Flash]
 created_at: 2006-06-11 20:10:07 CEST
 updated_at: 2009-07-06 21:54:28 CEST
 author: Holger Just
@@ -15,7 +15,7 @@ Was tut man aber, wenn man schon bei der Arbeit ist und trotzdem keine Lust hat?
 
 Man geht hin und spielt [Samorost 2](http://www.samorost2.net/). Das ist ein nettes kleines Flash-Game, in dem man einem kleinen Männlein dabei hilft, seinen Hund wieder zu bekommen, der vom Heimatasteroiden der Beiden entführt wurde.
 
-![Samorost 2](/media/entry/2006/06/11/samorost2.jpg)
+![Samorost 2](/media/2006/samorost2.jpg)
 
 Dabei haben die Entwickler sehr liebevolle Animationen eingebaut.
 

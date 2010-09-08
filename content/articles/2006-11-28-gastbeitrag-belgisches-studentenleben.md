@@ -1,15 +1,15 @@
 ---
 title: "Gastbeitrag: belgisches Studentenleben"
-tags: [Franzi "Université Libre de Bruxelles"]
+tags: [lang:German, Université Libre de Bruxelles"]
 created_at: 2006-11-28 22:58:54 CET
 updated_at: 2009-07-02 22:27:06 CEST
-author: Holger Just
+author: Franziska Schulze
 
 kind: article
 publish: true
 ---
 
-Weil mir [noch mal](/2006/11/08/gastbeitrag-studieren-auf-belgisch) das Wort erteilt wurde, schreibe ich nun eine nächste Episode aus meinem belgischen Studentenleben. Heute möchte ich euch nämlich erzählen, was ein "TD" ist. Die Buchstaben stehen an sich erst mal für thé dansant, was auf Deutsch nichts anderes bedeutet als Tanztee. Dieser Begriff im Deutschen lässt einen ja eher an ältere Herrschaften denken, die sich am Sonntagnachmittag zum Tanze treffen. In Verbindung mit den belgischen TDs ist das eine ganz falsche Assoziation.
+Weil mir [noch mal](/2006/11/gastbeitrag-studieren-auf-belgisch) das Wort erteilt wurde, schreibe ich nun eine nächste Episode aus meinem belgischen Studentenleben. Heute möchte ich euch nämlich erzählen, was ein "TD" ist. Die Buchstaben stehen an sich erst mal für thé dansant, was auf Deutsch nichts anderes bedeutet als Tanztee. Dieser Begriff im Deutschen lässt einen ja eher an ältere Herrschaften denken, die sich am Sonntagnachmittag zum Tanze treffen. In Verbindung mit den belgischen TDs ist das eine ganz falsche Assoziation.
 
 Das Besondere bei einem TD hier ist, dass man sein Bier (es gibt da eigentlich nur Bier) nie ganz austrinkt, sondern den Becher mit einem Rest drin einfach in die Luft wirft. Hm, das klingt sicher ein wenig komisch... also, wie muss man sich das vorstellen? 
 

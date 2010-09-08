@@ -1,6 +1,6 @@
 ---
 title: "Das Ende des Sommerlochs"
-tags: [Natascha Kampusch]
+tags: [lang:German, Natascha Kampusch]
 created_at: 2006-09-06 23:22:16 CEST
 updated_at: 2009-07-06 18:43:09 CEST
 author: Holger Just
@@ -31,5 +31,5 @@ Anscheinend hat der Harald Staun, der Autor dieser Zeilen, damit die Situation k
 
 Hoffen wir für Natascha, dass die Sache wieder relativ schnell aus der Öffentlichkeit verschwindet und sie endlich Zeit hat, ihre neue, ihre eigene Normalität zu finden.
 
-### Nachtrag 23:35
+## Nachtrag 23:35
 Die FAZ [stellt die Frage](http://www.faz.net/s/Rub475F682E3FC24868A8A5276D4FB916D7/Doc~E46847250C2274F0FAE126F773B595C23~ATpl~Ecommon~Scontent.html), ob Natascha und die Bewältigung ihrer Erfahrungen überhaupt noch die Hauptrolle spielt, oder ob nicht das hinter der Vermarktung ihrer Geschichte stehende viele Geld den wichtigsten Aspekt darstellt.

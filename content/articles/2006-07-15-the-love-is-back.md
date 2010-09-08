@@ -1,6 +1,6 @@
 ---
 title: "The Love is Back"
-tags: [Loveparade]
+tags: [lang:German, Loveparade]
 created_at: 2006-07-15 15:35:08 CEST
 updated_at: 2009-07-06 21:17:21 CEST
 author: Holger Just

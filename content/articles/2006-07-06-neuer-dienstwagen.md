@@ -1,6 +1,6 @@
 ---
 title: "neuer Dienstwagen"
-tags: [HPI, Ferrari]
+tags: [lang:German, HPI, Ferrari]
 created_at: 2006-07-06 22:19:17 CEST
 updated_at: 2009-07-06 21:20:38 CEST
 author: Holger Just

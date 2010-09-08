@@ -1,6 +1,6 @@
 ---
 title: "Ruhig ists geworden"
-tags: [Rock im Park, Sicherheit]
+tags: [lang:German, Rock im Park, Sicherheit]
 created_at: 2006-06-07 20:05:03 CEST
 updated_at: 2009-07-06 22:05:53 CEST
 author: Holger Just

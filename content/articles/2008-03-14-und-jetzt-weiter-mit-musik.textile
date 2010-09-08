@@ -1,0 +1,14 @@
+---
+title: "und jetzt weiter mit Musik"
+tags: [lang:German, Placebo, Video]
+created_at: 2008-03-14 17:06:04 CET
+updated_at: 2009-07-06 19:45:50 CEST
+author: Holger Just
+
+kind: article
+publish: true
+---
+
+"Damals":/2006/06/ruhig-ists-geworden noch bei Rock im Park gesehen und heute wiedergefunden, allerdings diesmal als Aufnahme von Rock am Ring. Placebo mit Running up that Hill. Die Jungs haben es einfach drauf.
+
+p(center). <object width="560" height="340"><param name="movie" value="http://www.youtube.com/v/M66xAPy7El8&amp;hl=de&amp;fs=1&amp;color1=0x3a3a3a&amp;color2=0x999999&amp;hd=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/M66xAPy7El8&amp;hl=de&amp;fs=1&amp;color1=0x3a3a3a&amp;color2=0x999999&amp;hd=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="560" height="340"></embed></object>

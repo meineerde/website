@@ -1,6 +1,6 @@
 ---
 title: "Philosophie der Decke"
-tags: []
+tags: [lang:German]
 created_at: 2006-10-18 10:23:37 CEST
 updated_at: 2009-07-05 12:52:01 CEST
 author: Holger Just

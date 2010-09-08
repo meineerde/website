@@ -1,6 +1,6 @@
 ---
 title: "Die Statistik um Mitternacht"
-tags: [Spam]
+tags: [lang:German, Spam]
 created_at: 2006-08-22 00:00:32 CEST
 updated_at: 2009-07-06 18:57:58 CEST
 author: Holger Just

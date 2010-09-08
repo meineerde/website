@@ -1,6 +1,6 @@
 ---
 title: "Brechreiz-Theorie"
-tags: [Uni]
+tags: [lang:German, Uni]
 created_at: 2006-05-04 17:27:50 CEST
 updated_at: 2009-07-07 00:18:59 CEST
 author: Holger Just

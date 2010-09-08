@@ -1,6 +1,6 @@
 ---
 title: "Reverse Ajax"
-tags: [Reverse AJAX, AJAX]
+tags: [lang:German, Reverse AJAX, AJAX]
 created_at: 2006-05-27 18:19:24 CEST
 updated_at: 2009-07-06 22:47:21 CEST
 author: Holger Just

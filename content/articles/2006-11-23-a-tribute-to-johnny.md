@@ -1,6 +1,6 @@
 ---
 title: "A Tribute to Johnny"
-tags: [Johnny Cash]
+tags: [lang:German, Johnny Cash]
 created_at: 2006-11-23 09:23:50 CET
 updated_at: 2009-07-06 15:45:53 CEST
 author: Holger Just

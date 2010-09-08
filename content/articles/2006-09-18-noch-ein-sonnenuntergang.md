@@ -1,6 +1,6 @@
 ---
 title: "Noch ein Sonnenuntergang"
-tags: [Sonnenuntergang, Schwielowsee]
+tags: [lang:German, Sonnenuntergang, Schwielowsee]
 created_at: 2006-09-18 20:51:02 CEST
 updated_at: 2009-07-06 18:45:05 CEST
 author: Holger Just

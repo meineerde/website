@@ -1,6 +1,6 @@
 ---
 title: "Monday, bloody Monday"
-tags: [Finagle, Cron, Mail]
+tags: [lang:German, Finagle, Cron, Mail]
 created_at: 2006-09-18 14:08:38 CEST
 updated_at: 2009-07-03 09:50:49 CEST
 author: Holger Just

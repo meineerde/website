@@ -1,6 +1,6 @@
 ---
 title: "Aus, Ende und Vorbei"
-tags: [WM, Fußball, Deutschland]
+tags: [lang:German, WM, Fußball, Deutschland]
 created_at: 2006-07-06 20:59:29 CEST
 updated_at: 2009-07-06 21:21:28 CEST
 author: Holger Just
@@ -13,4 +13,4 @@ publish: true
 
 Deutschland kehrt zurück in seinen alten Trott.
 
-[]weiterlesen](http://antsinp.antville.org/stories/1426442/) bei Herrn Paulsen
+[weiterlesen](http://antsinp.antville.org/stories/1426442/) bei Herrn Paulsen

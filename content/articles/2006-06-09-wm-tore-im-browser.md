@@ -1,6 +1,6 @@
 ---
 title: "WM Tore im Browser"
-tags: [Footiefox, Fußball, WM]
+tags: [lang:German, Footiefox, Fußball, WM]
 created_at: 2006-06-09 13:12:12 CEST
 updated_at: 2009-07-06 21:58:51 CEST
 author: Holger Just
@@ -9,7 +9,7 @@ kind: article
 publish: true
 ---
 
-[<img alt="Footiefox" src="/media/entry/2006/06/09/footiefox-1.jpg" class="left" />](http://www.hpi.uni-potsdam.de/footiefox/)Heute geht die WM los. Aber nicht jeder kann sich die Spiele live und in Farbe anschauen. Irgendwer muss schließlich das Bruto<del>sozial</del>inlandsprodukt hoch halten.
+[<img alt="Footiefox" src="/media/2006/footiefox-1.jpg" class="left" />](http://www.hpi.uni-potsdam.de/footiefox/)Heute geht die WM los. Aber nicht jeder kann sich die Spiele live und in Farbe anschauen. Irgendwer muss schließlich das Bruto<del>sozial</del>inlandsprodukt hoch halten.
 
 Aber dafür gibt es jetzt eine Firefox-Erweiterung, mit deren Hilfe man wenigstens alle Tore zeitnah mitbekommt.
 

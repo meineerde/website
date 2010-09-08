@@ -1,6 +1,6 @@
 ---
 title: "Witzige Dinge"
-tags: [Sonne, Regen]
+tags: [lang:German, Sonne, Regen]
 created_at: 2006-07-29 18:21:11 CEST
 updated_at: 2009-07-06 20:26:22 CEST
 author: Holger Just

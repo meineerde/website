@@ -1,6 +1,6 @@
 ---
 title: "Das machte meinen Tag"
-tags: [Hub, LAN, That made my day]
+tags: [lang:German, Hub, LAN, That made my day]
 created_at: 2006-05-17 09:20:55 CEST
 updated_at: 2009-07-06 23:00:27 CEST
 author: Holger Just

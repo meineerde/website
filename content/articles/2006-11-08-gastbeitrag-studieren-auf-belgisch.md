@@ -1,9 +1,9 @@
 ---
 title: "Gastbeitrag: Studieren auf Belgisch"
-tags: [Franzi, Université Libre de Bruxelles]
+tags: [lang:German, Université Libre de Bruxelles]
 created_at: 2006-11-08 18:17:26 CET
 updated_at: 2009-07-03 09:39:21 CEST
-author: Holger Just
+author: Franziska Schulze
 
 kind: article
 publish: true
@@ -11,12 +11,12 @@ publish: true
 
 *So, heute bin ich aufgestiegen, in die Riege der F-Blogger. Der Franzi sei dank lernen wir heute etwas über den Studienalltag an der [Université Libre de Bruxelles](http://www.ulb.ac.be/homepage.html).*
 
-![Université Libre de Bruxelles](/media/entry/2006/11/08/uni.jpg)
+![Université Libre de Bruxelles](/media/2006/uni.jpg)
 
 Hallo liebe Leute,
 
 nun will ich mich auch mal aus Brüssel melden und ein wenig für Holgers Erde berichten. Ich verbringe hier ein Erasmus-Semester an der ULB (Université Libre de Bruxelles) und möchte mich hier ein wenig über bestimmte belgische Studententraditionen auslassen.
-<!--more-->
+
 
 Hier gibt es - und das ist etwas ganz traditionelles - zu jeder Fachrichtung einen ["Cercle"](http://www.ulb.ac.be/docs/folklore/folklore.html) (das Wort bedeutet an sich nur "Kreis", wird hier aber oft auch im Sinne von Gruppe oder Verein verwendet). Das sind also Vereinigungen von Studenten, die organisieren so einiges (hauptsächlich feuchtfröhliche Parties) für ihre Mitglieder aber auch für andere organisieren.
 
@@ -26,7 +26,7 @@ Das wichtigste Event am Anfang des neuen Studienjahres ist die Taufe der neuen M
 
 Nun aber mal zu einem Teil der öffentlichen Taufe, dem "Pique-Nique". An dem Tag des Pique-Nique (die Cercles machen auch noch einiges mit ihren Deliquenten vorher, aber da war ich nicht dabei) zieht jeder Cercle mit seinen Bleues auf einen zentralen Platz des Campus. Man muss sich das so vorstellen, dass der König in einer Sänfte getragen wird (die Sänfte tragen die flämischen Bleues), dahinter die normalen Mitglieder und danach in Reih und Glied (wie bei der Armee) die Bleues. Dabei müssen sie die ganze Zeit singen, dass sie glücklich sind, dass sie zum Picknick gehen können.
 
-![Casquette](/media/entry/2006/11/08/casquette.jpg)
+![Casquette](/media/2006/casquette.jpg)
 
 Auf dem zentralen Platz müssen sich die Bleues dann alle hinknien und nach unten schauen und dann gibt es bestimmte Cercle-Mitglieder (dass man das machen darf, muss man sich über die Zeit auch erst noch verdienen), die dann das Pique-Nique durchführen. Sie gehen rum und bespritzen die Bleues mit Ketchup – in die Haare, ins T-Shirt, in die Ohren… Sie werden aber auch mit Bier begossen und bespuckt. Dann bekommen sie Zuckerrübensirup ins Gesicht geschmiert. Sie werden auch mit Mehl, Rotkohl und Eiern beworfen und beschmiert. Damit das auch was mit einem Picknick zu tun hat, müssen sie z.B. trockenes Hundefutter und Knoblauchzehen essen. Um das alles dahin zu transportieren, haben die einen ganzen Einkaufswagen mit den Lebensmitteln voll. Ach, das Öl habe ich noch vergessen. Nach dieser Prozedur waren die alle so dreckig und beschmiert und sie haben so was von eklig gerochen (die Mischung Bier-Knoblauch-Ketchup könnte man als Brechmittel verwenden), dass mir davon schlecht geworden wäre, wenn ich das die ganze Zeit an meinem Körper gehabt hätte.
 

@@ -1,6 +1,6 @@
 ---
 title: "Endlich gemütlich sitzen"
-tags: [sitzen]
+tags: [lang:German, sitzen]
 created_at: 2006-11-30 19:32:03 CET
 updated_at: 2009-07-02 22:24:58 CEST
 author: Holger Just
