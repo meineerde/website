@@ -36,7 +36,7 @@ module TaggingExtra
   #site items.
   #The result is an hash such as: { tag => count }.
   def count_tags(items=nil)
-    items = @items if items.nil?
+    items ||= @items
     items = [items] unless items.is_a? Array
 
     result = Hash.new( 0 )
@@ -55,15 +55,17 @@ module TaggingExtra
   #tags. The rank 'n-1' to the least frequents.
   #The result is a hash such as: { tag => rank }
   def rank_tags(n, items=nil) 
-    items = @items if items.nil?
+    items ||= @items
     count = count_tags( items )
 
     max, min = 0, items.size
-    count.keys.each do |t|
-      max = count[t] if count[t] > max
-      min = count[t] if count[t] < min
-    end    
-    divisor = ( ( max.to_f - min )  / n )    
+    max, min = count.keys.inject([0, items.size]) do |(max, min), t|
+      max = count[t] > max ? count[t] : max
+      min = count[t] < min ? count[t] : min
+      [max, min]
+    end
+    divisor = ( ( max.to_f - min )  / n )
+    divisor = 1 if divisor == 0
 
     ranks = {}
     count.keys.each do |t|
