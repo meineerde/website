@@ -11,4 +11,4 @@ publish: true
 
 Wo wären wir ohne Spam? Wir hätten niemals die Chance, von diesen tollen neuen Produkten erfahren.
 
-![Luft in Farben](/media/entry/2006/12/16/luft_in_farben.gif)
+![Luft in Farben](/media/2006/luft_in_farben.gif)

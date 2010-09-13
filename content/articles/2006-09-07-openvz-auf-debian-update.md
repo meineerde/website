@@ -11,7 +11,7 @@ publish: true
 
 Anfang August hatte ich auf ein etwas umfangreicheres Howto zur Installation von OpenVZ auf Debian Sarge [verwiesen](/2006/08/04/openvz-auf-debian). Dabei hatte ich noch bemängelt, dass relativ viel Handarbeit, sprich das Kompilieren eines Kernels nötig war. Die Userlevel-Tools, also vzctl und vzquote, waren damals schon über das APT-Repository von Thorsten Schifferdecker auf [debian.systs.org](http://debian.systs.org) verfügbar, die Kernel eben noch nicht.
 
-Neulich hab ich bei einen `apt-get update` festestellt, dass jetzt das komplette OpenVZ-Paket verfügbar ist. (OK, Thorsten hat mit in einem Kommentar auch darauf [hingewiesen](/2006/08/04/openvz-auf-debian#comment-204).)
+Neulich hab ich bei einen `apt-get update` festestellt, dass jetzt das komplette OpenVZ-Paket verfügbar ist. (OK, Thorsten hat mit in einem Kommentar auch darauf [hingewiesen](/2006/08/openvz-auf-debian#comment-204).)
 
 Das Tolle daran ist, dass sich die Installation von OpenVZ auf einem laufenden Debian-System damit auf 6 Zeilen reduziert.
 

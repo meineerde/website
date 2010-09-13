@@ -9,6 +9,6 @@ kind: article
 publish: true
 ---
 
-![Wo kommt das Loch her?](/media/entry/2006/12/12/dreiecke.jpg)
+![Wo kommt das Loch her?](/media/2006/dreiecke.jpg)
 
 (gefunden bei [IRCimages](http://ircimages.com/popup/1152))
