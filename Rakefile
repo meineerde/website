@@ -5,7 +5,7 @@ task :default => ["create:article"]
 
 namespace :deploy do
   desc "Fully deploy the website"
-  task :new do
+  task :full do
     dir = File.dirname(__FILE__)
     FileUtils.rm_rf(Dir.glob(File.join(dir, 'output/*')), :secure => true)
     Rake::Task['deploy:update'].invoke
