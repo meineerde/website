@@ -13,7 +13,9 @@ namespace :deploy do
   
   desc "Deploy the website. No items are deleted."
   task :update do
-    system("nanoc3", "compile")
+    Dir.chdir(File.dirname(__FILE__)) do
+      system("nanoc3", "compile")
+    end
   end
 end
 
