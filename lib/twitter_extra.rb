@@ -71,7 +71,8 @@ module TwitterExtra
     while tweets.empty? && failcount < 3
       sleep 5 * failcount if failcount > 0 # wait a bit before trying again
 
-      tweets = Twitter::Search.new.from(username).per_page(count).entries
+      tweets = Twitter.timeline(username).entries
+      tweets = tweets[0..count] if count < tweets.count
       if tweets.empty?
         puts "Error retrieving tweets for #{username}."
         failcount += 1 
