@@ -1,6 +1,6 @@
 ---
 title: "Gastbeitrag: belgisches Studentenleben"
-tags: [lang:German, Université Libre de Bruxelles"]
+tags: [lang:German, Université Libre de Bruxelles]
 created_at: 2006-11-28 22:58:54 CET
 updated_at: 2009-07-02 22:27:06 CEST
 author: Franziska Schulze
