@@ -1,0 +1,15 @@
+---
+title: "GTFO"
+tags: [lang:English, image]
+created_at: 2010-09-17 20:09:36 CEST
+updated_at: 2010-09-17 20:09:36 CEST
+author: Holger Just
+
+kind: article
+publish: true
+---
+
+Would you be so kind and provide us with a so called "stack trace":http://en.wikipedia.org/wiki/Stack_trace so that we can help you with your issue which is very important to us. Or just get the fuck out...
+
+p(center). !/media/2010/stacktrace-or-gtfo.jpg!
+(from the "internets":http://ircimages.com/page580565.html)
