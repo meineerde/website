@@ -4,4 +4,4 @@ author_name: Holger Just
 author_uri: http://meine-er.de
 is_hidden: true
 ---
-<%= atom_feed %>
+<%= atom_feed :limit => 10 %>
