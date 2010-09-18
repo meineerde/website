@@ -2,6 +2,11 @@ require 'builder'
 require 'fileutils'
 require 'time'
 
+$KCODE = 'UTF8'
+require 'active_support/core_ext'
+require 'active_support/multibyte'
+
+
 # Hyphens are converted to sub-directories in the output folder.
 #
 # If a file has two extensions like Rails naming conventions, then the first extension

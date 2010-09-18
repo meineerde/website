@@ -14,4 +14,4 @@
   - tags = rank_tags(5, items)
   .tags
     - tags.sort_by{|k, v| k}.each do |tag, count|
-      %a{:href => "/tags/#{tag}/", :class => "tag cloud-#{count}"}= tag
+      %a{:href => "/tags/#{tag.parameterize("-")}/", :class => "tag cloud-#{count}"}= tag
