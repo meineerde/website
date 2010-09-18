@@ -3,4 +3,10 @@
   %img{:src => "/media/common/forkme.png", :alt => "Fork me on GitHub", :height => "149", :width => "149"}
 #title
   %p
-    <a href="/"><em>m</em>eine <em>e</em>rde</a>
+    %a{ :href => "/"}
+      - case item[:layout]
+        - when nil, "default"
+          <em>m</em>eine <em>e</em>rde</a>
+        - when "hlgr", "holgerjust"
+          Holger Just
+          

@@ -41,8 +41,7 @@ compile '*' do
       raise "Filter is not configured for #{item.identifier} in Rules file."
     end
     
-    item[:layout] = "none" unless item[:layout] || File.extname(route_path(item)) == '.html'
-    layout 'default' unless item[:layout] == "none"
+    layout item[:layout] || 'default'
   end
 end
 

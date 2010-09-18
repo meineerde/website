@@ -1,0 +1,27 @@
+ul.linklist {
+  list-style-type: none;
+  margin: 0;
+  li, .icon { float: left; }
+  li {
+    width: 33%;
+    margin-bottom: 1em;
+  }
+  .icon {
+    padding-right: .5em;
+  }
+  .description {
+    color: $color;
+    a {
+      color: $color;
+      text-decoration: none;
+      &:hover, &:focus, &:active { text-decoration: underline; }
+    }
+    span {
+      display: block;
+      font-size: .75em;
+      color: lighten($color, 10%);
+      text-decoration: none !important;
+    }
+  } 
+  
+}

@@ -1,0 +1,30 @@
+!!! 5
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title
+      &= @item[:title] ? "#{@item[:title]} || Holger Just" : "Holger Just"
+    %meta{:content => "Holger Just", :name => "author"}/
+    %meta{:content => "width=device-width; initial-scale=1.0; maximum-scale=1.0;", :name => "viewport"}/
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
+    
+    -# Do not wait for css on conditional comments
+    /[if IE 6]
+    %link{:href => "/css/main.css", :rel => "stylesheet"}
+  /[if lt IE 7 ] <body class="ie ie6">
+  /[if IE 7 ] <body class="ie ie7">
+  /[if IE 8 ] <body class="ie ie8">
+  /[if IE 9 ] <body class="ie ie9">
+  <!--[if (gt IE 9)|!(IE)]><!-->
+  %body.non-ie
+    <!--<![endif]-->
+    %header
+      = render '_header', :item => @item
+    #main
+      #content
+        = content
+      #byline
+        <em>Holger Just</em>
+    %footer
+      = render '_legal'
+    -# Javascript at the bottom for fast page loading
