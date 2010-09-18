@@ -17,5 +17,5 @@ At the very least, provide a link to "http://meine-er.de":http://meine-er.de and
 The fonts inside the @static/fonts@ directory are copyrighted by the respective artists. They were all transformed for the web using the awesome "@font-face generator":http://www.fontsquirrel.com/fontface/generator by Font Squirrel.
 
 - "Inconsolata":http://www.levien.com/type/myfonts/inconsolata.html := copyright by Raph Levien, licensed under "SIL Open Font License":http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&item_id=OFL&_sc=1
-- "Calluna":http://www.josbuivenga.demon.nl/calluna.html, "Fontin Sans":http://www.josbuivenga.demon.nl/fontinsans.html, "Museo":http://www.josbuivenga.demon.nl/museo.html, "Museo Sans":http://www.josbuivenga.demon.nl/museosans.html := Copyright by "Jos Buivenga":http://www.exljbris.nl/
+- "Calluna":http://www.josbuivenga.demon.nl/calluna.html, "Fontin Sans":http://www.josbuivenga.demon.nl/fontinsans.html, "Museo":http://www.josbuivenga.demon.nl/museo.html, "Museo Sans":http://www.josbuivenga.demon.nl/museosans.html := Copyright by "Jos Buivenga":http://www.exljbris.nl/, licensed under the "exljbris Font Foundry Free Font License":http://www.josbuivenga.demon.nl/eula.html
 
