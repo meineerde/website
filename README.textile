@@ -1,1 +1,21 @@
-The structure of this website is based on and includes some code from "nanoc3_blog":http://github.com/mgutz/nanoc3_blog by Mario L Gutierrez.
+h1. meine erde
+
+This is the data for my blog. It is automatically transformed to HTML using "nanoc":http://nanoc.stoneship.org/
+
+After having developed some content management systems on my own (two in PHP, one in Python/Django), I finally grew up enough to use something others have developed.
+
+Being kind-of a hacker and realizing that every system I looked at would have to be heavily customized to feel like home, I came across those static site generators like "Jekyll":http://github.com/mojombo/jekyll and "nanoc":http://nanoc.stoneship.org/ I felt right at home. So here it is. The complete source of "meine erde":http://meine-er.de is stored inside this git repository.
+
+And should I ever feel like abandoning the site, I will not have to maintain an outdated system anymore. Plain HTML files are easy to keep alive :)
+
+h2. License
+
+All textual and media content (especially everything inside the @content/articles@ and @static/media@ directories) is licensed under "cc by-sa 3.0 de":http://creativecommons.org/licenses/by-sa/3.0/de/. Everything else including code snippets inside the articles, the CSS, design and the nanoc additions are licensed under MIT. Possible exceptions are stated in the respective files.
+
+At the very least, provide a link to "http://meine-er.de":http://meine-er.de and mention my name (Holger Just).
+
+The fonts inside the @static/fonts@ directory are copyrighted by the respective artists. They were all transformed for the web using the awesome "@font-face generator":http://www.fontsquirrel.com/fontface/generator by Font Squirrel.
+
+- "Inconsolata":http://www.levien.com/type/myfonts/inconsolata.html := copyright by Raph Levien, licensed under "SIL Open Font License":http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&item_id=OFL&_sc=1
+- "Calluna":http://www.josbuivenga.demon.nl/calluna.html, "Fontin Sans":http://www.josbuivenga.demon.nl/fontinsans.html, "Museo":http://www.josbuivenga.demon.nl/museo.html, "Museo Sans":http://www.josbuivenga.demon.nl/museosans.html := Copyright by "Jos Buivenga":http://www.exljbris.nl/
+
