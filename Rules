@@ -23,25 +23,27 @@ compile '/css/*' do
 end
 
 compile '*' do
-  # item[:extension] returns 'html.erb' for multi-dotted filename
-  ext = item[:extension].nil? ? nil : item[:extension].split('.').last
+  unless item[:publish] == false
+    # item[:extension] returns 'html.erb' for multi-dotted filename
+    ext = item[:extension].nil? ? nil : item[:extension].split('.').last
   
-  unless rep.binary?
-    filter :erb
-    case ext
-    when 'html', 'xml'
-    when 'textile'
-      filter :redcloth
-      filter :rubypants
-    when 'md','markdown'
-      filter :rdiscount, :extensions => [:smart]
-    when 'haml', nil
-      filter :haml, :format => :html5, :ugly => true
-    else
-      raise "Filter is not configured for #{item.identifier} in Rules file."
-    end
+    unless rep.binary?
+      filter :erb
+      case ext
+      when 'html', 'xml'
+      when 'textile'
+        filter :redcloth
+        filter :rubypants
+      when 'md','markdown'
+        filter :rdiscount, :extensions => [:smart]
+      when 'haml', nil
+        filter :haml, :format => :html5, :ugly => true
+      else
+        raise "Filter is not configured for #{item.identifier} in Rules file."
+      end
     
-    layout item[:layout] || 'default'
+      layout item[:layout] || 'default'
+    end
   end
 end
 
