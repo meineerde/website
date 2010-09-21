@@ -1,6 +1,6 @@
 ---
 title: "Mac Pro bald mit Radeon HD 3870?"
-tags: [lang:German, Apple, Radeon HD 3870, Mac Pro]
+tags: [lang:de, Apple, Radeon HD 3870, Mac Pro]
 created_at: 2008-02-18 16:41:55 CET
 updated_at: 2009-07-03 00:21:35 CEST
 author: Holger Just

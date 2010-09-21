@@ -1,6 +1,6 @@
 ---
 title: "Dönerstag"
-tags: [lang:German, Döner, Potsdam, Sanssouci]
+tags: [lang:de, Döner, Potsdam, Sanssouci]
 created_at: 2006-05-29 21:29:25 CEST
 updated_at: 2009-07-06 22:38:30 CEST
 author: Holger Just

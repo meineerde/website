@@ -1,6 +1,6 @@
 ---
 title: "Suspicious Looking Device"
-tags: [lang:English, Suspicious Looking Device]
+tags: [lang:en, Suspicious Looking Device]
 created_at: 2006-11-22 22:11:56 CET
 updated_at: 2009-07-06 18:47:23 CEST
 author: Holger Just

@@ -1,6 +1,6 @@
 ---
 title: "Meine Erde"
-tags: [lang:German, Erde]
+tags: [lang:de, Erde]
 created_at: 2006-05-09 00:03:21 CEST
 updated_at: 2009-07-06 23:07:00 CEST
 author: Holger Just

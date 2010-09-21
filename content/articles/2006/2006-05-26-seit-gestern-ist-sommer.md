@@ -1,6 +1,6 @@
 ---
 title: "Seit gestern ist Sommer"
-tags: [lang:German, Boot, Ente, Sommer]
+tags: [lang:de, Boot, Ente, Sommer]
 created_at: 2006-05-26 13:24:06 CEST
 updated_at: 2009-07-06 22:48:25 CEST
 author: Holger Just

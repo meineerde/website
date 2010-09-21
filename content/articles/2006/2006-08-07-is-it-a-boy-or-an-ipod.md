@@ -1,6 +1,6 @@
 ---
 title: "Is it a boy - or an iPod?"
-tags: [lang:German, iPod]
+tags: [lang:de, iPod]
 created_at: 2006-08-07 17:52:11 CEST
 updated_at: 2009-07-06 20:09:18 CEST
 author: Holger Just

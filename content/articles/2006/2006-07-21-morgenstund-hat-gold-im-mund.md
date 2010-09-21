@@ -1,6 +1,6 @@
 ---
 title: "Morgenstund hat Gold im Mund"
-tags: [lang:German, Potsdam, Hitze, Bombenentschärfung, Finagle]
+tags: [lang:de, Potsdam, Hitze, Bombenentschärfung, Finagle]
 created_at: 2006-07-21 10:43:34 CEST
 updated_at: 2009-07-06 20:40:40 CEST
 author: Holger Just

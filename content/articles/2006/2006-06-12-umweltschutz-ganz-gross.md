@@ -1,6 +1,6 @@
 ---
 title: "Umweltschutz ganz groß"
-tags: [lang:German, Müll, HPI]
+tags: [lang:de, Müll, HPI]
 created_at: 2006-06-12 20:15:32 CEST
 updated_at: 2009-07-06 21:49:03 CEST
 author: Holger Just

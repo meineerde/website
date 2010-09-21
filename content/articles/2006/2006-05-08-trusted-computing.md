@@ -1,6 +1,6 @@
 ---
 title: "Trusted Computing"
-tags: [lang:German, Trusted Computing, DRM]
+tags: [lang:de, Trusted Computing, DRM]
 created_at: 2006-05-08 21:19:57 CEST
 updated_at: 2009-07-06 23:36:11 CEST
 author: Holger Just

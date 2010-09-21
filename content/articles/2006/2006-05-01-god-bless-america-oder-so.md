@@ -1,6 +1,6 @@
 ---
 title: "God bless America... oder so"
-tags: [lang:German]
+tags: [lang:de]
 created_at: 2006-05-01 13:53:15 CEST
 updated_at: 2009-07-07 00:11:25 CEST
 author: Holger Just

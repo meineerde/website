@@ -1,6 +1,6 @@
 ---
 title: "Die Jugend beim Burger König"
-tags: [lang:German, Dummheit, Tanga]
+tags: [lang:de, Dummheit, Tanga]
 created_at: 2006-06-11 20:38:16 CEST
 updated_at: 2009-07-06 21:52:09 CEST
 author: Holger Just

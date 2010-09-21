@@ -1,6 +1,6 @@
 ---
 title: "Gummibärchen"
-tags: [lang:German, Gummibärchen, Werder]
+tags: [lang:de, Gummibärchen, Werder]
 created_at: 2006-09-11 19:34:27 CEST
 updated_at: 2009-07-06 15:52:48 CEST
 author: Holger Just

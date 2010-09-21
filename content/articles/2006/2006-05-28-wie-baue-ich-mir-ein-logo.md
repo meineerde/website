@@ -1,6 +1,6 @@
 ---
 title: "Wie baue ich mir ein Logo"
-tags: [lang:German, Logo]
+tags: [lang:de, Logo]
 created_at: 2006-05-28 20:27:09 CEST
 updated_at: 2009-07-06 22:43:13 CEST
 author: Holger Just

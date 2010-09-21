@@ -1,6 +1,6 @@
 ---
 title: "Give Peace a Chance"
-tags: [lang:German]
+tags: [lang:de]
 created_at: 2006-05-06 10:02:07 CEST
 updated_at: 2009-07-07 00:12:01 CEST
 author: Holger Just

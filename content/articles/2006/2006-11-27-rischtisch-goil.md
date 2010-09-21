@@ -1,6 +1,6 @@
 ---
 title: "Rischtisch Goil"
-tags: [lang:German, Robot, Dance]
+tags: [lang:de, Robot, Dance]
 created_at: 2006-11-27 17:01:25 CET
 updated_at: 2009-07-06 19:49:08 CEST
 author: Holger Just

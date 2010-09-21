@@ -1,6 +1,6 @@
 ---
 title: "April im Mai"
-tags: [lang:German, Wolken, Sommer, Winter, Psychologie]
+tags: [lang:de, Wolken, Sommer, Winter, Psychologie]
 created_at: 2006-05-28 19:08:49 CEST
 updated_at: 2009-07-06 22:45:45 CEST
 author: Holger Just

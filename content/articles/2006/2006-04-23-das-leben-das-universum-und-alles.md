@@ -1,6 +1,6 @@
 ---
 title: "Das Leben, das Universum und Alles"
-tags: [lang:German]
+tags: [lang:de]
 created_at: 2006-04-23 13:50:14 CEST
 updated_at: 2009-07-11 11:29:44 CEST
 author: Holger Just

@@ -1,6 +1,6 @@
 ---
 title: "Super Witze, selbstgemacht"
-tags: [lang:German, Blödsinn]
+tags: [lang:de, Blödsinn]
 created_at: 2006-10-31 16:18:42 CET
 updated_at: 2009-07-03 09:41:48 CEST
 author: Holger Just

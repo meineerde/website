@@ -1,6 +1,6 @@
 ---
 title: "Neue Hardware"
-tags: [lang:German, RAM, früher]
+tags: [lang:de, RAM, früher]
 created_at: 2006-09-07 20:38:12 CEST
 updated_at: 2009-07-06 16:04:58 CEST
 author: Holger Just

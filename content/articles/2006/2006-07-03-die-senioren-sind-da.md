@@ -1,6 +1,6 @@
 ---
 title: "Die Senioren sind da"
-tags: [lang:German, Bus, Senioren]
+tags: [lang:de, Bus, Senioren]
 created_at: 2006-07-03 20:22:59 CEST
 updated_at: 2009-07-06 21:25:56 CEST
 author: Holger Just

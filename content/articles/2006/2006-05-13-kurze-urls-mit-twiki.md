@@ -1,6 +1,6 @@
 ---
 title: "Kurze URLs mit TWiki"
-tags: [lang:German, TWiki, ShortURLs, mod_rewrite]
+tags: [lang:de, TWiki, ShortURLs, mod_rewrite]
 created_at: 2006-05-13 00:59:01 CEST
 updated_at: 2009-09-01 14:48:21 CEST
 author: Holger Just

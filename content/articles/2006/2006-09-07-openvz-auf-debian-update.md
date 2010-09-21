@@ -1,6 +1,6 @@
 ---
 title: "OpenVZ auf Debian - Update"
-tags: [lang:German, OpenVZ, Debian, Thorsten Schifferdecker]
+tags: [lang:de, OpenVZ, Debian, Thorsten Schifferdecker]
 created_at: 2006-09-07 12:03:44 CEST
 updated_at: 2009-07-06 16:54:01 CEST
 author: Holger Just

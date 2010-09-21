@@ -1,6 +1,6 @@
 ---
 title: "Gastbeitrag: Studieren auf Belgisch"
-tags: [lang:German, Université Libre de Bruxelles]
+tags: [lang:de, Université Libre de Bruxelles]
 created_at: 2006-11-08 18:17:26 CET
 updated_at: 2009-07-03 09:39:21 CEST
 author: Franziska Schulze

@@ -1,6 +1,6 @@
 ---
 title: "Es gibt Reis!"
-tags: [lang:German, China, CNN, Reissack]
+tags: [lang:de, China, CNN, Reissack]
 created_at: 2006-05-23 11:42:58 CEST
 updated_at: 2009-07-06 23:00:04 CEST
 author: Holger Just

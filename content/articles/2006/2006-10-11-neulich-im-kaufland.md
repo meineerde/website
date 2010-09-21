@@ -1,6 +1,6 @@
 ---
 title: "Neulich im Kaufland"
-tags: [lang:German, Kinder, Kinderzubehör, Kaufland]
+tags: [lang:de, Kinder, Kinderzubehör, Kaufland]
 created_at: 2006-10-11 14:17:40 CEST
 updated_at: 2009-07-06 19:54:28 CEST
 author: Holger Just

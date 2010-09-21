@@ -1,6 +1,6 @@
 ---
 title: "Nochmal Popetown"
-tags: [lang:German, Popetown]
+tags: [lang:de, Popetown]
 created_at: 2006-05-06 10:27:31 CEST
 updated_at: 2009-07-06 23:43:15 CEST
 author: Holger Just

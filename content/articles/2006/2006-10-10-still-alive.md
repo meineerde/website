@@ -1,6 +1,6 @@
 ---
 title: "Still alive"
-tags: [lang:German, weiter gehts]
+tags: [lang:de, weiter gehts]
 created_at: 2006-10-10 14:56:35 CEST
 updated_at: 2009-07-03 09:48:43 CEST
 author: Holger Just

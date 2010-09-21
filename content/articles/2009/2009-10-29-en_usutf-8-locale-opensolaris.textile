@@ -1,6 +1,6 @@
 ---
 title: en_us.utf-8 locale on OpenSolaris
-tags: [lang:English, Opensolaris]
+tags: [lang:en, Opensolaris]
 created_at: 2009-10-29 23:11:44 CET
 updated_at: 2010-07-27 00:19:29 CEST
 author: Holger Just

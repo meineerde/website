@@ -1,6 +1,6 @@
 ---
 title: "OpenVZ auf Debian"
-tags: [lang:German, OpenVZ, Debian]
+tags: [lang:de, OpenVZ, Debian]
 created_at: 2006-08-04 15:42:30 CEST
 updated_at: 2009-07-06 18:37:42 CEST
 author: Holger Just

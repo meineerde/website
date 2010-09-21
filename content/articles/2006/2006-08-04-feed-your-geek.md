@@ -1,6 +1,6 @@
 ---
 title: "Feed your Geek"
-tags: [lang:German, Userfriendly]
+tags: [lang:de, Userfriendly]
 created_at: 2006-08-04 20:57:42 CEST
 updated_at: 2009-07-06 18:49:50 CEST
 author: Holger Just

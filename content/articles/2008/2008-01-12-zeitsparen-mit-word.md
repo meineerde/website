@@ -1,6 +1,6 @@
 ---
 title: "Zeitsparen mit Word"
-tags: [lang:German, Word, Makro]
+tags: [lang:de, Word, Makro]
 created_at: 2008-01-12 14:17:12 CET
 updated_at: 2009-07-03 00:25:39 CEST
 author: Holger Just

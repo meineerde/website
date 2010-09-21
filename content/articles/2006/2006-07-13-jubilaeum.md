@@ -1,6 +1,6 @@
 ---
 title: "Jubiläum"
-tags: [lang:German, Spam, Akismet]
+tags: [lang:de, Spam, Akismet]
 created_at: 2006-07-13 17:31:37 CEST
 updated_at: 2009-07-06 21:18:50 CEST
 author: Holger Just

@@ -1,6 +1,6 @@
 ---
 title: "Menschenwürde 2.0"
-tags: [lang:German, Spreeblick, Justiz]
+tags: [lang:de, Spreeblick, Justiz]
 created_at: 2007-02-19 21:13:46 CET
 updated_at: 2009-07-07 03:49:07 CEST
 author: Holger Just

@@ -1,6 +1,6 @@
 ---
 title: "Popetown hat es mal wieder geschafft"
-tags: [lang:German, Popetown]
+tags: [lang:de, Popetown]
 created_at: 2006-05-05 09:55:59 CEST
 updated_at: 2009-07-07 00:06:00 CEST
 author: Holger Just

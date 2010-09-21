@@ -1,6 +1,6 @@
 ---
 title: "Leute gibts"
-tags: [lang:German, Link, Anzeige, Schwachsinn]
+tags: [lang:de, Link, Anzeige, Schwachsinn]
 created_at: 2006-05-22 23:25:09 CEST
 updated_at: 2009-07-06 23:00:11 CEST
 author: Holger Just

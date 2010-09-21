@@ -1,6 +1,6 @@
 ---
 title: "Abseits erklärt für Frauen"
-tags: [lang:German, Abseits, Schuhe, Fußball]
+tags: [lang:de, Abseits, Schuhe, Fußball]
 created_at: 2006-06-17 14:29:37 CEST
 updated_at: 2009-07-06 21:42:40 CEST
 author: Holger Just

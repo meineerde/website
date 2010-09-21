@@ -1,6 +1,6 @@
 ---
 title: "File Magic for Redmine"
-tags: [lang:English, redmine]
+tags: [lang:en, redmine]
 created_at: 2010-09-19 22:53:35 CEST
 updated_at: 2010-09-19 22:53:35 CEST
 author: Holger Just

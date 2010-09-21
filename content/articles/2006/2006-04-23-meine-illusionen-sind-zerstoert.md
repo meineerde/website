@@ -1,6 +1,6 @@
 ---
 title: "Meine Illusionen sind zerstört"
-tags: [lang:German]
+tags: [lang:de]
 created_at: 2006-04-23 16:47:37 CEST
 updated_at: 2009-07-07 00:22:47 CEST
 author: Holger Just

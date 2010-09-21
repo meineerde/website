@@ -1,6 +1,6 @@
 ---
 title: "Spiegel erklärt die Welt"
-tags: [lang:German, Survival, Deutschland]
+tags: [lang:de, Survival, Deutschland]
 created_at: 2006-05-28 21:45:33 CEST
 updated_at: 2009-07-06 22:42:19 CEST
 author: Holger Just

@@ -1,6 +1,6 @@
 ---
 title: "Spiegel Blog?"
-tags: [lang:German, Spiegel, Blog]
+tags: [lang:de, Spiegel, Blog]
 created_at: 2006-05-28 21:56:49 CEST
 updated_at: 2009-07-06 22:38:42 CEST
 author: Holger Just

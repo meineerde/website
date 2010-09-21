@@ -1,6 +1,6 @@
 ---
 title: "Spam des Tages 3"
-tags: [lang:German, Spam]
+tags: [lang:de, Spam]
 created_at: 2006-09-22 21:44:38 CEST
 updated_at: 2009-07-06 15:49:05 CEST
 author: Holger Just

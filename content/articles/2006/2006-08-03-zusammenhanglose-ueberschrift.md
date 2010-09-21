@@ -1,6 +1,6 @@
 ---
 title: "[zusammenhanglose Überschrift]"
-tags: [lang:German, Katzenbild, Wirres]
+tags: [lang:de, Katzenbild, Wirres]
 created_at: 2006-08-03 13:10:35 CEST
 updated_at: 2009-07-06 20:21:04 CEST
 author: Holger Just

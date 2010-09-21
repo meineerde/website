@@ -1,6 +1,6 @@
 ---
 title: "Sommer, Sonne, Sonnenschein"
-tags: [lang:German, Sommer, Hitze]
+tags: [lang:de, Sommer, Hitze]
 created_at: 2006-07-25 15:42:56 CEST
 updated_at: 2009-07-06 20:30:58 CEST
 author: Holger Just

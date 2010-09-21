@@ -1,6 +1,6 @@
 ---
 title: "die neue Generation"
-tags: [lang:German, Firefox, IE]
+tags: [lang:de, Firefox, IE]
 created_at: 2006-10-23 18:25:12 CEST
 updated_at: 2009-07-04 13:14:21 CEST
 author: Holger Just

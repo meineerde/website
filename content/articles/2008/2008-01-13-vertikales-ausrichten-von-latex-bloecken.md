@@ -1,6 +1,6 @@
 ---
 title: "Vertikales Ausrichten von LaTeX-Blöcken"
-tags: [lang:German, LaTeX, Minipage]
+tags: [lang:de, LaTeX, Minipage]
 created_at: 2008-01-13 23:46:40 CET
 updated_at: 2009-07-07 03:48:21 CEST
 author: Holger Just

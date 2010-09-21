@@ -1,6 +1,6 @@
 ---
 title: "Warum man ein Boot braucht"
-tags: [lang:German, Sommer, Boot, Schwielowsee]
+tags: [lang:de, Sommer, Boot, Schwielowsee]
 created_at: 2006-08-08 21:45:24 CEST
 updated_at: 2009-07-06 19:54:16 CEST
 author: Holger Just

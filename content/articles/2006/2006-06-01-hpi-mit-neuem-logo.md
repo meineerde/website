@@ -1,6 +1,6 @@
 ---
 title: "HPI mit neuem Logo"
-tags: [lang:German, HPI, Logo]
+tags: [lang:de, HPI, Logo]
 created_at: 2006-06-01 11:53:57 CEST
 updated_at: 2009-07-06 22:11:47 CEST
 author: Holger Just

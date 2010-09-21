@@ -1,6 +1,6 @@
 ---
 title: "IT-Systems-Engineering"
-tags: [lang:German, HPI, IT-Systems-Engineering, Modellierung]
+tags: [lang:de, HPI, IT-Systems-Engineering, Modellierung]
 created_at: 2006-08-19 20:58:12 CEST
 updated_at: 2009-07-06 19:05:02 CEST
 author: Holger Just

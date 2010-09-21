@@ -1,6 +1,6 @@
 ---
 title: "Dönerstag"
-tags: [lang:German, Döner, schaaaf]
+tags: [lang:de, Döner, schaaaf]
 created_at: 2006-05-15 22:30:13 CEST
 updated_at: 2009-07-06 23:00:53 CEST
 author: Holger Just

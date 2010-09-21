@@ -1,6 +1,6 @@
 ---
 title: "One for the Night"
-tags: [lang:German]
+tags: [lang:de]
 created_at: 2006-04-24 22:01:22 CEST
 updated_at: 2009-07-07 00:22:59 CEST
 author: Holger Just

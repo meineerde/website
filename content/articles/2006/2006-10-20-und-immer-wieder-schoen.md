@@ -1,6 +1,6 @@
 ---
 title: "Und immer wieder schön"
-tags: [lang:German, Windows]
+tags: [lang:de, Windows]
 created_at: 2006-10-20 15:24:52 CEST
 updated_at: 2009-07-03 00:04:46 CEST
 author: Holger Just

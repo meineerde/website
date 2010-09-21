@@ -1,6 +1,6 @@
 ---
 title: "Servervirtualisierung mit Linux"
-tags: [lang:German, OpenVZ, Xen, Virtualisierung]
+tags: [lang:de, OpenVZ, Xen, Virtualisierung]
 created_at: 2006-08-03 16:45:31 CEST
 updated_at: 2009-07-06 20:09:09 CEST
 author: Holger Just

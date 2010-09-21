@@ -1,6 +1,6 @@
 ---
 title: "Dönerstag"
-tags: [lang:German, Döner, Potsdam]
+tags: [lang:de, Döner, Potsdam]
 created_at: 2006-07-05 16:39:20 CEST
 updated_at: 2009-07-06 21:22:51 CEST
 author: Holger Just
