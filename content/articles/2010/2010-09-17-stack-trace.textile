@@ -9,7 +9,9 @@ kind: article
 publish: true
 ---
 
-Would you be so kind and provide us with a so called "stack trace":http://en.wikipedia.org/wiki/Stack_trace so that we can help you with your issue which is very important to us. Or just get the fuck out...
+Thank you for contacting support. Your issue is very important to us. Would you be so kind and provide us with a so called "stack trace":http://en.wikipedia.org/wiki/Stack_trace so that we can help you with your issue. You normally find it in the log file.
 
 p(center). !/media/2010/stacktrace-or-gtfo.jpg!
 (from the "internets":http://ircimages.com/page580565.html)
+
+Or you know what? Just get the fuck out...
