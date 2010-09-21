@@ -8,11 +8,12 @@ module TaggingExtra
   #The tags are only present once in the returned value.
   #When called whithout parameters, all the site items
   #are considered.
-  def tag_set(items=nil) 
+  def tag_set(items=nil, include_meta=false) 
     items = @items if items.nil?
     items = [items] unless items.is_a? Array
     
-    items.collect{|i| i[:tags] || [] }.flatten.uniq!
+    tags = items.collect{|i| i[:tags] || [] }.flatten.uniq!
+    include_meta ? tags : tags.select{|tag| not tag.include? ":"}
   end
 
   #Return true if an items has a specified tag
@@ -75,6 +76,15 @@ module TaggingExtra
     end
 
     ranks
+  end
+  
+  def link_to_tag(tag, options={})
+    link_to(tag, "/tag/#{tag.parameterize("-")}/", options)
+  end
+  
+  def language_tag(item)
+    return unless item[:tags]
+    item[:tags].find{|tag| tag[5..-1] if tag.start_with? 'lang:'}
   end
 end
 

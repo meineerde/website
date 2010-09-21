@@ -9,7 +9,7 @@
     and tagged with
     - tags = item[:tags].select{|t| not t.include? ":"}
     - tags.each_with_index do |tag, index|
-      <a href="/tags/#{tag}/" class="tag">#{tag}</a>#{(index+1 < tags.length) ? ", " : "."}
+      = link_to_tag(tag) + ((index+1 < tags.length) ? ", " : ".")
   
   != content || partial(item)
   
