@@ -38,7 +38,7 @@ namespace :create do
     template = <<-TEMPLATE
 ---
 title: "#{title.titleize}"
-tags: [lang:English]
+tags: [lang:en]
 created_at: #{@created_at.strftime("%Y-%m-%d %H:%M:%S %Z")}
 updated_at: #{@created_at.strftime("%Y-%m-%d %H:%M:%S %Z")}
 author: Holger Just
