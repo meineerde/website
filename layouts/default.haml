@@ -2,8 +2,7 @@
 %html{:lang => language_tag(item)}
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title
-      &= @item[:title] ? "#{@item[:title]} || meine erde" : "meine erde"
+    %title&= @item[:title] ? "#{@item[:title]} || meine erde" : "meine erde"
     %meta{:content => "Holger Just", :name => "author"}/
     %meta{:content => "width=device-width; initial-scale=1.0; maximum-scale=1.0;", :name => "viewport"}/
     %link{:href => "/favicon.ico", :rel => "shortcut icon"}/
