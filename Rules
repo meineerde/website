@@ -6,6 +6,7 @@ preprocess do
 
   copy_static
   create_tag_pages
+  create_language_pages
   create_archive_pages
 end
 
