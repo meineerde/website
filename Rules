@@ -24,27 +24,27 @@ compile '/css/*' do
 end
 
 compile '*' do
-  unless item[:publish] == false
+  unless item[:publish] == false || rep.binary?
     # item[:extension] returns 'html.erb' for multi-dotted filename
     ext = item[:extension].nil? ? nil : item[:extension].split('.').last
-  
-    unless rep.binary?
-      filter :erb
-      case ext
-      when 'html', 'xml'
-      when 'textile'
-        filter :redcloth
-        filter :rubypants
-      when 'md','markdown'
-        filter :rdiscount, :extensions => [:smart]
-      when 'haml', nil
-        filter :haml, :format => :html5, :ugly => true
-      else
-        raise "Filter is not configured for #{item.identifier} in Rules file."
-      end
-    
-      layout item[:layout] || 'default'
+    locale = (item[:tags] || []).find(Proc.new{'lang:en'}){|t| t.start_with? 'lang:'}[5..-1]
+
+    filter :erb
+    case ext
+    when 'html', 'xml'
+    when 'textile'
+      filter :redcloth
+      filter :rubypants, :locale => locale
+    when 'md','markdown'
+      filter :rdiscount
+      filter :rubypants, :locale => locale
+    when 'haml', nil
+      filter :haml, :format => :html5, :ugly => true
+    else
+      raise "Filter is not configured for #{item.identifier} in Rules file."
     end
+  
+    layout item[:layout] || 'default'
   end
 end
 

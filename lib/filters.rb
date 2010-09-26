@@ -19,4 +19,15 @@ module Nanoc3::Filters
       @item[:extension] == 'textile' ? "<notextile>#{code}</notextile>" : code
     end
   end
+  
+  # Patch for internationalized rubypants
+  # http://github.com/meineerde/rubypants
+  class RubyPants
+    def run(content, params={})
+      require 'rubypants'
+      
+      # Get result
+      ::RubyPants.new(content, [2], params).to_html
+    end
+  end
 end
