@@ -1,0 +1,21 @@
+---
+title: "Froscon 2010: Redmine, und dann?"
+tags: [lang:de, redmine, froscon]
+created_at: 2010-09-29 17:16:24 CEST
+updated_at: 2010-09-29 17:16:24 CEST
+author: Holger Just
+
+kind: article
+publish: true
+---
+
+Am 21. August 2010 war mal wieder "Froscon":http://froscon.de/ in St. Augustin (bei Bonn). Und ich war dabei, vor allem um einige Open Source Projekte näher kennen zu lernen, Leute zu treffen und vor allem, um dem Redmine-Vortrag von Felix Schäfer zu lauschen.
+
+Aus Gründen war der Felix leider verhindert, sodass ich mich spontan bereit erklärt habe, den Vortrag zu übernehmen. Damit hatte ich meinen ersten Talk auf einer Konferenz. Und mit nur ca. 3 Stunden Vorbereitung war der dann sogar ganz okay.
+
+Die Aufzeichnung des Vortrags ist jetzt bei "CCC-TV":http://media.ccc.de/browse/conferences/froscon/2010/froscon10_-_563_-_de_-_redmine_und_dann_-_holger_just.html online.
+
+bq. Redmine ist installiert, ein paar Projekte sind angelegt, und die Defaulteinstellungen scheinen gut zu klappen. Alles läuft gut, ein paar Kleinigkeiten scheinen allerdings noch zu fehlen, aber was? Redmine eignet sich nicht nur hervorragend zum verwalten von “einfachen” Softwareprojekten, sondern dank der hohen Anpassbarkeit des System zu komplexeren oder gar nicht softwarebezogenen Projekten.
+
+p(center). <object height="300" width="400" data="http://media.ccc.de/js/flowplayer-3.1.3.swf" type="application/x-shockwave-flash"><param name="movie" value="http://media.ccc.de/js/flowplayer-3.1.3.swf" /><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="flashvars" value="config={'playlist':[{'url':'http://media.ccc.de/media/conferences/froscon/2010/froscon10_-_563_-_de_-_redmine_und_dann_-_holger_just_preview.jpg'},{'autoPlay':false,'autoBuffering':false,'accelerated':true,'scaling':'fit','provider':'pseudo','url':'http://ftp.ccc.de/events/froscon/2010/mp4/froscon10_-_563_-_de_-_redmine_und_dann_-_holger_just.mp4'}],'plugins':{'pseudo':{'url':'flowplayer.pseudostreaming-3.1.3.swf'},'controls':{'url':'flowplayer.controls-3.1.3.swf','bottom':0,'height':24,'zIndex':1,'timeFontColor':'#ffffff','progressColor':'0x619ab2','bufferColor':'0x17446e','backgroundColor':'transparent','autoHide':'always','mute':false}},'clip':{}}" /></object>
+Aufzeichnung "Froscon":http://fronscon.org/ / "cc-by-nc-sa":http://creativecommons.org/licenses/by-nc-sa/3.0/de/
