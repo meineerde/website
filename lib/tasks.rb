@@ -8,7 +8,9 @@ def create_tag_pages
   tag_set(articles).each do |tag|
     items << Nanoc3::Item.new(
       "= render('_tag_page', :tag => '#{tag}')",            # use locals to pass data
-      { :title => "Category: #{tag}", :is_hidden => true},  # do not include in sitemap.xml
+      { :title => "Category: #{tag}",
+        :is_hidden => true,                                 # do not include in sitemap.xml
+        :layout => 'default' },
       "/tag/#{tag.parameterize("-")}/",                     # identifier
       :binary => false
     )
@@ -27,7 +29,9 @@ def create_language_pages
     lang = tag[5..-1]
     items << Nanoc3::Item.new(
       "= render('_language_page', :tag => '#{tag}', :title => '#{titles[lang]}')",
-      {:title => titles[lang], :is_hidden => true},         # do not include in sitemap.xml
+      { :title => titles[lang],
+        :is_hidden => true,                                 # do not include in sitemap.xml
+        :layout => 'default' },
       "/#{lang}/",                                          # identifier
       :binary => false
     )
@@ -39,7 +43,9 @@ def create_archive_pages
   articles_by_year_month.each do |year, months|
     items << Nanoc3::Item.new(
       "= render('_archive', :items => items_by_year(#{year}))",
-      {:title => "#{year}", :is_hidden => true},            # do not include in sitemap.xml
+      { :title => "#{year}",
+        :is_hidden => true,                                 # do not include in sitemap.xml
+        :layout => 'default' },
       "/#{year}/",                                          # identifier
       :binary => false
     )

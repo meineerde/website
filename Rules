@@ -43,8 +43,12 @@ compile '*' do
     else
       raise "Filter is not configured for #{item.identifier} in Rules file."
     end
-  
-    layout item[:layout] || 'default'
+    
+    if item[:layout]
+      layout item[:layout]
+    elsif item[:kind] == 'article'
+      layout 'default'
+    end
   end
 end
 
