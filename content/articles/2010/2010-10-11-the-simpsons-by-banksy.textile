@@ -1,0 +1,15 @@
+---
+title: "The Simpsons – by Banksy"
+tags: [lang:en, Simpsons, Banksy]
+created_at: 2010-10-11 19:49:50 CEST
+updated_at: 2010-10-11 19:49:50 CEST
+author: Holger Just
+
+kind: article
+publish: true
+---
+
+p(center). <object width="640" height="385"><param name="movie" value="http://www.youtube-nocookie.com/v/DX1iplQQJTo?fs=1&amp;hl=en_US&amp;rel=0&amp;hd=1&amp;color1=0x3a3a3a&amp;color2=0x999999"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube-nocookie.com/v/DX1iplQQJTo?fs=1&amp;hl=en_US&amp;rel=0&amp;hd=1&amp;color1=0x3a3a3a&amp;color2=0x999999" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385"></embed></object>
+"Direct Banksy":http://www.youtube.com/watch?v=DX1iplQQJTo, via "Nerdcore":http://www.nerdcore.de/wp/2010/10/11/simpsons-intro-directed-by-banksy/)
+
+Yes "René":http://www.nerdcore.de/wp/2010/10/11/simpsons-intro-directed-by-banksy/, you are right. This intro of the recent Simpsons episode by "Bansky":http://en.wikipedia.org/wiki/Banksy deserves to (and is going to) be on every blog on teh internets.
