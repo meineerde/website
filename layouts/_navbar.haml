@@ -1,7 +1,7 @@
 #navbar
   %ul
     %li
-      %a{ :href => "http://meine-er.de/", :class => ("active" if ["blog", nil].include? item[:layout]) } Blog
+      %a{ :href => "http://meine-er.de/", :class => ("active" if item[:layout] == "default") } Blog
     %li
       %a{ :href => "http://dev.holgerjust.de/" } dev.holgerjust.de
     %li
