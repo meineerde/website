@@ -5,13 +5,13 @@ end
 
 # Creates in-memory tag pages from partial: layouts/_tag_page.haml
 def create_tag_pages
-  tag_set(articles).each do |tag|
+  tag_set(articles).each do |tag, info|
     items << Nanoc3::Item.new(
       "= render('_tag_page', :tag => '#{tag}')",            # use locals to pass data
-      { :title => "Category: #{tag}",
+      { :title => "#{info[:tags].first} Articles",
         :is_hidden => true,                                 # do not include in sitemap.xml
         :layout => 'default' },
-      "/tag/#{tag.parameterize("-")}/",                     # identifier
+      "/tag/#{normalize_tag(tag)}/",                     # identifier
       :binary => false
     )
   end
@@ -24,11 +24,11 @@ def create_language_pages
     'de' => "Deutsche Artikel"
   }
   
-  tags = tag_set(articles, true).select{|t| t.start_with? 'lang:'}
-  tags.each do |tag|
+  tags = tag_set(articles, true).select{|tag, info| tag.start_with? 'lang:'}
+  tags.each do |tag, info|
     lang = tag[5..-1]
     items << Nanoc3::Item.new(
-      "= render('_language_page', :tag => '#{tag}', :title => '#{titles[lang]}')",
+      "= render('_language_page', :tag => '#{tag}')",
       { :title => titles[lang],
         :is_hidden => true,                                 # do not include in sitemap.xml
         :layout => 'default' },

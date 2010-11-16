@@ -1,5 +1,5 @@
 #archive
-  %h1= "#{tag.capitalize} Articles"
+  %h1= @item[:title]
   %ul
     - items_with_tag(tag).each do |item|
       %li

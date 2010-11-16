@@ -5,11 +5,9 @@
 
   %h1.title= link_to(item[:title], item, :title => "Permalink", :class => "permalink" )
   %p.meta
-    - tags = item[:tags].select{|t| not t.include? ":"}
-    written by #{item[:author] || "Holger Just"} on #{time(item[:created_at], '%B %d, %Y')}#{tags.blank? ? "." : " and tagged with"}
-    - tags.each_with_index do |tag, index|
-      = link_to_tag(tag) + ((index+1 < tags.length) ? ", " : ".")
-  
+    - tags = tag_set(item)
+    written by #{item[:author] || "Holger Just"} on #{time(item[:created_at], '%B %d, %Y')}#{tags.empty? ? "." : " and tagged with"}
+    = tags.collect{|t, info| link_to_tag(t, info[:tags].first)}.join(", ") + (tags.empty? ? "" : ".")
   != content || partial(item)
   
   - if disqus_shortname && !is_front_page?

@@ -13,5 +13,5 @@
   %h1 Tags
   - tags = rank_tags(5, items)
   .tags
-    - tags.sort_by{|k, v| k.to_s.downcase }.each do |tag, count|
-      = link_to_tag(tag, :class => "tag cloud-#{count}")
+    - tags.sort_by{|k, v| k.to_s.downcase }.each do |tag, info|
+      = link_to_tag(tag, info[:tags].first, :class => "tag cloud-#{info[:rank]}")
