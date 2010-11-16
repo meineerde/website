@@ -5,9 +5,8 @@
 
   %h1.title= link_to(item[:title], item, :title => "Permalink", :class => "permalink" )
   %p.meta
-    written by #{item[:author] || "Holger Just"} on #{time(item[:created_at], '%B %d, %Y')}
-    and tagged with
     - tags = item[:tags].select{|t| not t.include? ":"}
+    written by #{item[:author] || "Holger Just"} on #{time(item[:created_at], '%B %d, %Y')}#{tags.blank? ? "." : " and tagged with"}
     - tags.each_with_index do |tag, index|
       = link_to_tag(tag) + ((index+1 < tags.length) ? ", " : ".")
   
