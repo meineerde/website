@@ -157,19 +157,20 @@ blockquote {
 }
 
 #navbar {
-  font-size: .75em; // 12px
-  line-height: 1em;
-  font-family: "Lucia Grande",Verdana,Helvetica,Arial,sans-serif;
+  font-size: .625em; // 10px
+  line-height: 1.3em;
+  font-family: "Lucida Grande",Verdana,Helvetica,Arial,sans-serif;
   height: 2.5em;
   background-color: #000;
+  color: #aaa;
   
   ul {
     float: left;
-    padding: 0 0 0 3em;
+    padding: 0 0 0 1.6em;
     margin: 0;
     li {
       float: left;
-      margin-right: .8em;
+      margin: .6em .4em 0 0;
       list-style-type: none;
     }
   }
@@ -193,7 +194,7 @@ blockquote {
 header { position: relative; }
 #github-ribbon img {
   position: absolute;
-  top: 1.875em;
+  top: 0;
   right: 0;
 }
 
