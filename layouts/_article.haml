@@ -6,7 +6,7 @@
   %h1.title= link_to(item[:title], item, :title => "Permalink", :class => "permalink" )
   %p.meta
     - tags = tag_set(item)
-    written by #{item[:author] || "Holger Just"} on #{time(item[:created_at], '%B %d, %Y')}#{tags.empty? ? "." : " and tagged with"}
+    written by <a href="#info">#{item[:author] || "Holger Just"}</a> on #{time(item[:created_at], '%B %d, %Y')}#{tags.empty? ? "." : " and tagged with"}
     = tags.collect{|t, info| link_to_tag(t, info[:tags].first)}.join(", ") + (tags.empty? ? "" : ".")
   != content || partial(item)
   
