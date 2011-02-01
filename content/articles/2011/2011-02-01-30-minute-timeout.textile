@@ -1,0 +1,30 @@
+---
+title: "30 Minute Timeout"
+tags: [lang:en, "A walk in the park"]
+created_at: 2011-02-01 17:06:42 CET
+updated_at: 2011-02-01 17:06:42 CET
+author: Holger Just
+
+kind: article
+publish: true
+---
+
+After sitting days after days behind my laptop without much change of environment at all and starting to get really tired I thought I might go out, face the cold, and grab a nose-full of fresh air, taking the camera for a walk.
+
+p(center). !(photo)/media/2011/30-minute-timeout/mandarin-ducks.jpg(A pair of mandarin ducks)!
+
+Aiming for the Griebnitzsee – just around the corner – I immediately spotted a lovely pair of mandarin ducks slowly swimming along the river bank. I guess I annoyed them a bit, tying to snap a good photo, but at least they didn't escape in a hurry.
+
+!(photo-left)/media/2011/30-minute-timeout/winterlake.jpg(Griebnitzsee in winter)! I mean, nobody is to be expected to be in hurry during this kind of weather. Afternoon is in full swing, the sun starting to drown in its own misery. All together it creates that special melancholic mood you only get during those painfully slow winter days.
+
+How awesome would it be just to sit down in front of a huge fireplace, wrapping oneself into a nice and cozy blanket, having a nice cup of coffee, and watching the world sleeping outside through a window? Without having to worry about anything but when nature might wake up again, starting a new year full of fun, sunshine, and happy people.
+
+p(clearfix). 
+
+!(photo-right)/media/2011/30-minute-timeout/red-frog.jpg(A red frog)! And then, all of a sudden, a huge frog appears. Not just any frog but The Giant Red Frog Of Awesomeness having its well-deserved hibernation. But be aware once he awakes. Then he's going out to find -Mozilla- Godzilla to have a last epic fight about who's going to conquer the world. Then, after he won, he's going to swim to the next beach to entertain the kids. As he is truly an awesome frog.
+
+p(clearfix). 
+
+But first we have to wait for the sun to come up again. To haunt the ice and the cold and the strange thoughts. Then I might even start to enjoy the sunsets at our local mooring again.
+
+p(center). !(photo)/media/2011/30-minute-timeout/rail.jpg(A narrow deep-of-field rail at Griebnitzsee)!
