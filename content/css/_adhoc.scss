@@ -1,0 +1,23 @@
+@mixin photo() {
+  box-shadow: 3px 3px 8px #333;
+  -moz-box-shadow: 3px 3px 8px #333;
+  -webkit-box-shadow: 3px 3px 8px #333;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#555555', Direction=135, Strength=3);
+}
+
+.photo {
+  @include photo();
+  margin: .25em 0 .75em;
+}
+
+.photo-left {
+  @include photo();
+  margin: .25em 1em .75em 0;
+  float: left;
+}
+
+.photo-right {
+  @include photo();
+  margin: .25em 0 .75em 1em;
+  float: right;
+}
