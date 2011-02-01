@@ -29,7 +29,7 @@ def route_path(item)
     
     filename = item[:content_filename].scan(/[^\/]+$/)[0]
     filename.gsub!(/\.[a-zA-Z0-9]+$/, '') # remove extension
-    filename.gsub!(/^(\d+-)+/, '') # remove leading date information
+    filename.gsub!(/^\d+-\d+-\d+-/, '')   # remove leading date information
     
     "/#{time.strftime('%Y/%m')}/#{filename}/index.html"
   else
