@@ -1,8 +1,12 @@
 @mixin photo() {
-  box-shadow: 3px 3px 8px #333;
-  -moz-box-shadow: 3px 3px 8px #333;
-  -webkit-box-shadow: 3px 3px 8px #333;
+  box-shadow: 3px 3px 8px #555;
+  -moz-box-shadow: 3px 3px 8px #555;
+  -webkit-box-shadow: 3px 3px 8px #555;
   filter: progid:DXImageTransform.Microsoft.Shadow(color='#555555', Direction=135, Strength=3);
+  
+  padding: .5em;
+  background-color: #fff;
+  border: 1px solid #ddd;
 }
 
 .photo {
