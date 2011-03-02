@@ -71,8 +71,7 @@ module TwitterExtra
     while tweets.empty? && failcount < 3
       sleep 5 * failcount if failcount > 0 # wait a bit before trying again
     
-      tweets = Twitter.timeline(username).entries
-      tweets = tweets[0..count-1] if count < tweets.count
+      tweets = Twitter.user_timeline(username)[0..count-1]
       if tweets.empty?
         puts "Error retrieving tweets for #{username}."
         failcount += 1 
