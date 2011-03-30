@@ -1,16 +1,2 @@
 -# temporary content
-%h2 Holger Just
-%p
-  This is my personal website about computers, operating systems, teh
-  internets and my way around it. Sometimes you will find a short blip
-  of my offline life.
-%p
-  More about me can be found on
-  %a{:href => "http://twitter.com/meineerde"} Twitter
-  and
-  = succeed "." do
-    %a{:href => "http://xing.com/profile/Holger_Just"} Xing
-  You can also
-  write an e-mail to
-  = succeed "." do
-    %em web (at) meine-er (dot) de
+= render("about/_holger_just", :item => @item)
