@@ -1,6 +1,6 @@
 ---
 title: "Verbitterung"
-tags: [lang:de, ResistantX, Amoklauf]
+tags: [lang:de, Comment]
 created_at: 2006-11-24 20:51:53 CET
 updated_at: 2009-07-03 00:09:04 CEST
 author: Holger Just

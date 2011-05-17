@@ -1,6 +1,6 @@
 ---
 title: "und nun zu etwas völlig anderem"
-tags: [lang:de, Blödsinn]
+tags: [lang:de, "The Internets"]
 created_at: 2006-10-29 20:58:02 CET
 updated_at: 2009-07-03 09:56:31 CEST
 author: Holger Just

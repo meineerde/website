@@ -1,6 +1,6 @@
 ---
 title: "Großstadt"
-tags: [lang:de, Potsdam, Christen]
+tags: [lang:de, Religion]
 created_at: 2006-06-29 21:31:28 CEST
 updated_at: 2009-07-06 21:29:08 CEST
 author: Holger Just

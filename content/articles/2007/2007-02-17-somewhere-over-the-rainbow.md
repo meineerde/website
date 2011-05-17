@@ -1,6 +1,6 @@
 ---
 title: "Somewhere over the rainbow"
-tags: [lang:de, s9y, bbcode]
+tags: [lang:de, Serendipity]
 created_at: 2007-02-17 17:39:17 CET
 updated_at: 2009-07-02 22:16:18 CEST
 author: Holger Just

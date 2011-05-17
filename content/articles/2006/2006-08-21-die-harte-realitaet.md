@@ -1,6 +1,6 @@
 ---
 title: "Die harte Realität"
-tags: [lang:de, Software-Engineering]
+tags: [lang:de, Software]
 created_at: 2006-08-21 01:37:47 CEST
 updated_at: 2009-07-06 18:59:42 CEST
 author: Holger Just

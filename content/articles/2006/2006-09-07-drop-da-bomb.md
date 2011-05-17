@@ -1,6 +1,6 @@
 ---
 title: "Drop da Bomb"
-tags: [lang:de, Bombenentschärfung Potsdam]
+tags: [lang:de, "Me, Myself and I"]
 created_at: 2006-09-07 01:23:04 CEST
 updated_at: 2009-07-06 18:39:48 CEST
 author: Holger Just

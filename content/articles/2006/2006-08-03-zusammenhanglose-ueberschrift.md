@@ -1,6 +1,6 @@
 ---
 title: "[zusammenhanglose Überschrift]"
-tags: [lang:de, Katzenbild, Wirres]
+tags: [lang:de, "Me, Myself and I"]
 created_at: 2006-08-03 13:10:35 CEST
 updated_at: 2009-07-06 20:21:04 CEST
 author: Holger Just

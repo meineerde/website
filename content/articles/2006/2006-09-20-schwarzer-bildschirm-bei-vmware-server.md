@@ -1,6 +1,6 @@
 ---
 title: "Schwarzer Bildschirm bei VMware Server"
-tags: [lang:de, VMware, Black Screen]
+tags: [lang:de, VMware]
 created_at: 2006-09-20 12:22:40 CEST
 updated_at: 2009-07-06 15:50:47 CEST
 author: Holger Just

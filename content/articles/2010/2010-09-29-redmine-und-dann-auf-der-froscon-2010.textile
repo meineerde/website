@@ -1,6 +1,6 @@
 ---
-title: "Froscon 2010: Redmine, und dann?"
-tags: [lang:de, redmine, froscon]
+title: "FrOSCon 2010: Redmine, und dann?"
+tags: [lang:de, Redmine, FrOSCon]
 created_at: 2010-09-29 17:16:24 CEST
 updated_at: 2010-09-29 17:16:24 CEST
 author: Holger Just
@@ -9,7 +9,7 @@ kind: article
 publish: true
 ---
 
-Am 21. August 2010 war mal wieder "Froscon":http://froscon.de/ in St. Augustin (bei Bonn). Und ich war dabei, vor allem um einige Open Source Projekte näher kennen zu lernen, Leute zu treffen und vor allem, um dem Redmine-Vortrag von Felix Schäfer zu lauschen.
+Am 21. August 2010 war mal wieder "FriOSCon":http://froscon.de/ in St. Augustin (bei Bonn). Und ich war dabei, vor allem um einige Open Source Projekte näher kennen zu lernen, Leute zu treffen und vor allem, um dem Redmine-Vortrag von Felix Schäfer zu lauschen.
 
 Aus Gründen war der Felix leider verhindert, sodass ich mich spontan bereit erklärt habe, den Vortrag zu übernehmen. Damit hatte ich meinen ersten Talk auf einer Konferenz. Und mit nur ca. 3 Stunden Vorbereitung war der dann sogar ganz okay.
 

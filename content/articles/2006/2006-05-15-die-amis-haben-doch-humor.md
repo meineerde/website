@@ -1,6 +1,6 @@
 ---
 title: "Die Amis haben doch Humor..."
-tags: [lang:de, Bush, Blowjob, Humor]
+tags: [lang:de, pr0n]
 created_at: 2006-05-15 00:54:57 CEST
 updated_at: 2009-07-06 23:02:38 CEST
 author: Holger Just

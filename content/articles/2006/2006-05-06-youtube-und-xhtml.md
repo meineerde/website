@@ -1,6 +1,6 @@
 ---
 title: "YouTube und XHTML"
-tags: [lang:de, Youtube, XHTML]
+tags: [lang:de, HTML]
 created_at: 2006-05-06 20:16:28 CEST
 updated_at: 2009-07-06 23:40:09 CEST
 author: Holger Just

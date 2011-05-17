@@ -1,6 +1,6 @@
 ---
 title: "Daily Search"
-tags: [lang:de, Google]
+tags: [lang:de, The Internets]
 created_at: 2006-10-27 11:32:17 CEST
 updated_at: 2009-07-03 10:02:33 CEST
 author: Holger Just

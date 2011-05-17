@@ -1,6 +1,6 @@
 ---
 title: "5 Dinge, um richtig Stress zu haben"
-tags: [lang:de, Server, Password, Backup]
+tags: [lang:de, Servers]
 created_at: 2006-05-22 23:12:02 CEST
 updated_at: 2009-07-06 22:55:44 CEST
 author: Holger Just

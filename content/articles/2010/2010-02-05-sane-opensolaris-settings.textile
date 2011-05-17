@@ -1,6 +1,6 @@
 ---
 title: Sane Opensolaris Settings
-tags: [lang:en, Opensolaris]
+tags: [lang:en, OpenSolaris]
 created_at: 2010-02-05 13:46:41 CET
 updated_at: 2010-02-05 14:18:13 CET
 author: Holger Just

@@ -1,6 +1,6 @@
 ---
 title: "Das Ende des Sommerlochs"
-tags: [lang:de, Natascha Kampusch]
+tags: [lang:de, Comment]
 created_at: 2006-09-06 23:22:16 CEST
 updated_at: 2009-07-06 18:43:09 CEST
 author: Holger Just

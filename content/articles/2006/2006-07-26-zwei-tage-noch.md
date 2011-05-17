@@ -1,6 +1,6 @@
 ---
 title: "Zwei Tage noch..."
-tags: [lang:de, Klausuren]
+tags: [lang:de, "Me, Myself and I"]
 created_at: 2006-07-26 18:48:49 CEST
 updated_at: 2009-07-06 20:29:09 CEST
 author: Holger Just

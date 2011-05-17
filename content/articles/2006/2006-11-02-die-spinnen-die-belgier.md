@@ -1,6 +1,6 @@
 ---
 title: "Die Spinnen die Belgier"
-tags: [lang:de, Gent Knalprijs]
+tags: [lang:de, "A walk in the park"]
 created_at: 2006-11-02 09:56:04 CET
 updated_at: 2009-07-03 09:52:08 CEST
 author: Holger Just

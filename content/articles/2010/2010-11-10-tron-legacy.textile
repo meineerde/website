@@ -1,6 +1,6 @@
 ---
 title: "Tron Legacy"
-tags: [lang:en]
+tags: [lang:en, Trailer, Movie]
 created_at: 2010-11-10 17:28:02 CET
 updated_at: 2010-11-10 17:28:02 CET
 author: Holger Just

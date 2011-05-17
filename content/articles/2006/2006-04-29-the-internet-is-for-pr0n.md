@@ -1,6 +1,6 @@
 ---
 title: "The Internet is for prOn"
-tags: [lang:de, pr0n]
+tags: [lang:de, pr0n, The Internets, Video]
 created_at: 2006-04-29 13:45:18 CEST
 updated_at: 2009-07-07 00:18:27 CEST
 author: Holger Just

@@ -1,6 +1,6 @@
 ---
 title: "WM für Geeks"
-tags: [lang:de, ASCII, WM]
+tags: [lang:de, Football, "The Internets"]
 created_at: 2006-06-13 22:57:31 CEST
 updated_at: 2009-07-06 21:47:50 CEST
 author: Holger Just

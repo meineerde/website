@@ -1,6 +1,6 @@
 ---
 title: "Arbeitszeitvernichtung"
-tags: [lang:de, Samorost, Spiel, Flash]
+tags: [lang:de, Games, Flash]
 created_at: 2006-06-11 20:10:07 CEST
 updated_at: 2009-07-06 21:54:28 CEST
 author: Holger Just

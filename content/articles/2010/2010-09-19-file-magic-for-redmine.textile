@@ -1,6 +1,6 @@
 ---
 title: "File Magic for Redmine"
-tags: [lang:en, redmine]
+tags: [lang:en, Redmine]
 created_at: 2010-09-19 22:53:35 CEST
 updated_at: 2010-09-19 22:53:35 CEST
 author: Holger Just
@@ -9,7 +9,21 @@ kind: article
 publish: false
 ---
 
+h2. ruby-filemagic
+
+*Get it from http://github.com/blackwinter/ruby-filemagic*
+
 <% filter :code, :bash do %>
 brew install libmagic
 gem install ruby-filemagic -- --with-magic-dir=/usr/local/Cellar/libmagic/5.04
 <% end %>
+
+<% filter :code, :ruby do %>
+require 'rubygems'
+require 'filemagic'
+magic = FileMagic.new(FileMagic::MAGIC_MIME)
+<% end %>
+
+h2. mahoro
+
+*Get it from http://mahoro.rubyforge.org/*

@@ -1,6 +1,6 @@
 ---
 title: "The statistics of war"
-tags: [lang:de, war statistics]
+tags: [lang:de, The Internets]
 created_at: 2006-07-25 14:46:42 CEST
 updated_at: 2009-07-06 20:35:31 CEST
 author: Holger Just

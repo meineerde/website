@@ -1,6 +1,6 @@
 ---
 title: "WM Tore im Browser"
-tags: [lang:de, Footiefox, Fußball, WM]
+tags: [lang:de, Football]
 created_at: 2006-06-09 13:12:12 CEST
 updated_at: 2009-07-06 21:58:51 CEST
 author: Holger Just

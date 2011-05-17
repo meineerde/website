@@ -1,6 +1,6 @@
 ---
 title: "Viertelfinale"
-tags: [lang:de, Fußball, WM, Viertelfinale]
+tags: [lang:de, Football]
 created_at: 2006-07-01 22:15:39 CEST
 updated_at: 2009-07-06 21:27:49 CEST
 author: Holger Just

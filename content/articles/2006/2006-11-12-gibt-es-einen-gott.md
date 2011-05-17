@@ -1,6 +1,6 @@
 ---
 title: "Gibt es einen Gott?"
-tags: [lang:de, Acer, Garantie]
+tags: [lang:de, "Me, Myself and I"]
 created_at: 2006-11-12 15:46:31 CET
 updated_at: 2009-07-03 00:11:57 CEST
 author: Holger Just

@@ -1,6 +1,6 @@
 ---
 title: "Aus, Ende und Vorbei"
-tags: [lang:de, WM, Fußball, Deutschland]
+tags: [lang:de, Football]
 created_at: 2006-07-06 20:59:29 CEST
 updated_at: 2009-07-06 21:21:28 CEST
 author: Holger Just

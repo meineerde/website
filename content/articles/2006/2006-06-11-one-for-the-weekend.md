@@ -1,6 +1,6 @@
 ---
 title: "One for the Weekend"
-tags: [lang:de, Spin, Youtube]
+tags: [lang:de, Video]
 created_at: 2006-06-11 16:47:49 CEST
 updated_at: 2009-07-06 21:59:12 CEST
 author: Holger Just
